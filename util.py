@@ -1,22 +1,5 @@
 import pandas as pd
 
-# MEASUREMENT_TYPE = measurement = {
-#         "time": ['100 m', '200 m', '400 m', '800 m', '1500 m', '3000 m', '5000 m',
-#             '10 km', 'Halbmarathon', 'Marathon', '100 km', '100 m Huerden',
-#             '400 m Huerden', '3000 m Hindernis', '5000 m Gehen', '10 km Gehen',
-#             '20 km Gehen', '1000 m', '110 m Huerden', '10000 m',
-#             '10000 m Bahngehen', '50 km Gehen', '5 km', '80 m Huerden',
-#             '3000 m Bahngehen', '300 m', '300 m Huerden', '2000 m Hindernis',
-#             '2000 m', '1500 m Hindernis', '50 km Strassengehen',
-#             '10000 m Gehen', '1.500 m', '3.000 m', '5.000 m',
-#             '10.000 m', '3.000 m Hindernis', '5.000 m Bahngehen', '1.000 m', '10.000 m Bahngehen', '3.000 m Bahngehen', '2.000 m Hindernis', '2.000 m',
-#             '1.500 m Hindernis', '5.000 M'],
-#         "meter": ['Hochsprung', 'Stabhochsprung', 'Weitsprung',
-#         'Dreisprung', 'Kugelstoss', 'Diskuswurf', 'Hammerwurf',
-#         'Speerwurf'],
-#         "points": ['Fuenfkampf', 'Siebenkampf', 'Zehnkampf']
-#     }
-
 MEASUREMENT_TYPE = {
     "time": [
         '100 m', '200 m', '400 m', '800 m', '1500 m', '3000 m', '5000 m', '10 km',
@@ -52,14 +35,32 @@ def get_measurement_key(discipline):
             return key
     return None   # falls nicht gefunden
 
-def load_data():
-    df = pd.read_csv("Data.csv", sep=";")
-    print(df[df['disziplin'].isin(MEASUREMENT_TYPE['time'])]['disziplin'].unique())
-    print(df[df['disziplin'].isin(MEASUREMENT_TYPE['meter'])]['disziplin'].unique())
-    print(df[df['disziplin'].isin(MEASUREMENT_TYPE['points'])]['disziplin'].unique())
+def convert_seconds_to_time_repr(seconds):
+    """
+    Wandelt Sekunden in ein Zeitformat wie 'SS,SS', 'MM:SS,SS' oder 'H:MM:SS,SS' um.
+    """
+    if seconds is None:
+        return None
+    
+    try:
+        seconds = float(seconds)
+    except ValueError:
+        return None
 
+    hours = int(seconds // 3600)
+    seconds %= 3600
+    minutes = int(seconds // 60)
+    secs = seconds % 60
 
-load_data()
+    # Sekunden immer mit 2 Nachkommastellen
+    secs_str = f"{secs:0.2f}".replace('.', ',')
+
+    if hours > 0:
+        return f"{hours}:{minutes:02d}:{secs_str}"
+    elif minutes > 0:
+        return f"{minutes}:{secs_str}"
+    else:
+        return secs_str
 
 def convert_time_to_seconds(value):
     """Wandelt 'MM:SS,SS' oder 'SS,SS' in Sekunden um"""
@@ -79,6 +80,45 @@ def convert_time_to_seconds(value):
     except ValueError:
         return None
     
-print(convert_time_to_seconds("2:30,50"))  # Beispielaufruf
-print(convert_time_to_seconds("75,25"))    # Beispielaufruf
-print(convert_time_to_seconds("1:02:30,50"))  # Beispielaufr
+def convert_points_to_int(value):
+    """Wandelt 'AA,BB' in float um"""
+    if pd.isna(value):
+        return None
+    value = str(value).replace('.', '')
+    try:
+        return float(value)
+    except ValueError:
+        return None
+    
+def convert_meters_to_float(value):
+    """Wandelt 'AA,BB' in float um"""
+    if pd.isna(value):
+        return None
+    value = str(value).replace(',', '.')
+    try:
+        return float(value)
+    except ValueError:
+        return None
+    
+
+def load_data():
+    df = pd.read_csv("Data.csv", sep=";")
+
+    # Funktion, die je nach Disziplin den passenden Converter wählt
+    def convert_leistung(row):
+        disziplin = row['disziplin']
+        leistung = row['leistung']
+
+        if disziplin in MEASUREMENT_TYPE['time']:
+            return convert_time_to_seconds(leistung)
+        elif disziplin in MEASUREMENT_TYPE['meter']:
+            return convert_meters_to_float(leistung)
+        elif disziplin in MEASUREMENT_TYPE['points']:
+            return convert_points_to_int(leistung)
+        else:
+            return leistung  # falls Disziplin unbekannt, originalwert zurückgeben
+
+    # Spalte 'leistung' entsprechend anpassen
+    df['leistung'] = df.apply(convert_leistung, axis=1)
+
+    return df
