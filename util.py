@@ -101,7 +101,7 @@ def convert_meters_to_float(value):
         return None
     
 
-def load_data(path_file="Data.csv"):
+def load_data(path_file="C:\\Users\\Mattis\\OneDrive\\Kogni\\DataLiteracyProject\\Data-Literacy\\data_csv\\Data.csv"):
     df = pd.read_csv(path_file, sep=";")
 
     # Funktion, die je nach Disziplin den passenden Converter wählt
