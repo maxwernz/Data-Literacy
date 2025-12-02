@@ -1,0 +1,44 @@
+1. missing values
+1.1 name 4 methods to handle missing values
+1.2 describe one in detail
+
+2. PCA
+2.1 derive PCA by minimizing L2 loss (only derivation of loss with respect to b and a, get optimal values for those)
+
+3. Visualization
+3.1 given dataset with 8 variables, how to check for correlations between them with a visualization tool? Draw a sketch.
+3.2 Does the chosen tool scale well?
+
+4. Information Theory
+4.1 12 balls: which one is odd and is it lighter or heavier? Determine by using balance scale. How many weighings minimally needed? How do you get this number?
+4.2 describe optimal strategy
+
+5. UpSet
+5.1 draw UpSet plot from given distribution (pet; mammal; pet, mammal; dog, mammal; dog, pet, mammal)
+
+6. z-score
+6.1 what unit do z-scores have?
+6.2 For which kind of data is z-score useful?
+6.3 What colormap would you use for z-scores?
+
+7. visulaization clustering
+7.1 What visualization tool can be used to compare clusterings (with different number of clusters)? Draw sketch.
+
+8. ranks
+8.1 What is difference between the goal of classification and regression compared to ranking?
+8.2 What is the idea of graph-based ranking? Which computational problem needs to be solved?
+
+9. visual encoding
+9.1 given two plots (bar plot and scatter plot), what visual variables are used? (they meant channels)
+9.2 What is best/worst visual variable to encode ordinal data?
+
+10. independent/dependent
+10.1 experiment for treatment of high blood pressure. Randomly sort people with high blood pressure in two groups and give treatment according to group assignment. Record difference in blood pressure before and after treatment. What is the dependent, what is the independent variable?
+10.2 How does the selection bias come into play in this example?
+
+11. PCA and LDA (multiple choice)
+11.1 LDA assumes full rank covariance matrix
+11.2 PCA uses information about classes
+11.3 PCA differentiates between independent and dependent variables
+
+Downloaded from ppi.fsi.uni-tuebingen.de. Do not redistribute! uid: 3216
