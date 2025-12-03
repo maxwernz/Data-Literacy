@@ -1,0 +1,20 @@
+8 exercises. Here you find 7 of them: 
+
+- Given a text with a study: Name the independent and dependent variables. 
+Also specify whether the study is active, controlled or meta. 
+
+- PCA: What happens to the eigenvalues and eigenvectors if one dimension is very large and what happens when in one dimension all elements have the same value. 
+
+- There were 3 plots given with log x axes and / or log y axes. We had to find the function. For every function you could read of 3 x and y values. 
+
+- We were given a default Gaussian probability distribution with mean 0. First we had to calculate the Maximum Likelihood Estimator for the variance, 
+then we had to give the formal definition of the Fisher Information I_n and calculate the Fisher Information. Then we had to check, whether the estimator is asymptotically normal. 
+
+- Entropy: Show that H(P(X,y)) = H(X) + H(Y)
+
+- A plot with the probabilities of a binomial distribution and the survival-function was given. We had to read of the p-value. 
+  If we had 400 cases with the same p-value, how many errors would we expect? 
+
+- What are high level steps in data engineering, for each explain 1 problem. 
+
+Downloaded from ppi.fsi.uni-tuebingen.de. Do not redistribute! uid: 3216

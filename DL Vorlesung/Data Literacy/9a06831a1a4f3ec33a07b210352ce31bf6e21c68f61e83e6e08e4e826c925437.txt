@@ -1,0 +1,47 @@
+Data Literacy Second Exam, WiSe 2021/2022
+Lecturer: Prof. Dr. Philipp Hennig
+Time: 90 minutes
+Allowed: calculator, pen
+
+1. A text describes the probability of getting COVID (1%), the probability of a headache given COVID (10%) and the probability of a headache for the average healthy person (1%).
+a) Write up Bayes' theorem.
+b) Calculate the probability of having COVID given having a headache.
+c) Assume that we have a test with true positive rate 0.83 and false positive rate 0.01. What is the probability of having COVID given a headache and a positive test?
+For this, assume that having a headache and a positive test are conditionally independent on having COVID.
+
+2.
+a) The formula for the Poisson PMF is given. Give the maximum likelihood estimator for the parameter lambda from n i.i.d. samples.
+b) Define the Fisher information and compute it's exact formula for this case.
+c) Assume we have an i.i.d. sample x = [3, 6, 0, 2, 4] from a Poisson distribution. Using the formulas above, give an estimate for the lambda parameter and give a confidence interval for this estimate.
+
+3.
+a) The formula of the gamma distribution is given with parameters alpha_0, beta_0. Show that the gamma distribution is conjugate prior for the Poisson likelihood and give the exact parameters of the gamma posterior (alpha_n, beta_n).
+b) The formula for the mean and variance of a general gamma distribution is given. Use these to give the mean and standard deviation of the gamma posterior from a).
+c) For what values alpha_0, beta_0 do the frequentist and Bayesian confidence interval estimates coincide?
+
+4. A text describes a call center where complaints can be given for a company. The number of calls per a day is distributed as the Poisson distribution with mean 6.
+A table is given that contains the probabilities for the given number of complaints P(k) for k in {4, 5, ..., 14}, and P(X >= 15) is also provided.
+a) Under the null hypothesis that lambda = 1/6, write up the p-values for each k, k in {10, 11, ..., 15}. Which of these is considered historically statistically significant? Denote the smallest k that is significant by k*.
+b) A software is built that raises an error message when the number of calls that day is greater that k*. Write a possible, formally correct error message that the system can give.
+c) The call center has 300 workdays per year. What is the expected number of days on which an error is raised, under the null hypothesis alpha = 1/6?
+
+5. A text introduces the regularized version of linear regression, in which lambda * ||w||^2 is added to the standard loss. Derive the optimal weights w*.
+
+6. A text introduces the standard logistic regression model. Give the likelihood formula for N data points. Derive the partial derivative of the log-likelihood with respect to w.
+
+7. The following probability tables define a joint distribution p(R, A, Y) over the random variables
+A in {a, b} (sensitive attribute), Y in {0, 1} (true label), and R in {0, 1} (classifier score). Does
+this distribution satisfy the fairness criterion of independence? Why?
+p(A = a, R = 1, Y = 1) = 0.15 p(A = a, R = 0, Y = 1) = 0.07
+p(A = b, R = 1, Y = 0) = 0.2 p(A = b, R = 0, Y = 0) = 0.03
+p(A = a, R = 1, Y = 0) = 0.01 p(A = a, R = 0, Y = 0) = 0.25
+p(A = b, R = 1, Y = 1) = 0.04 p(A = b, R = 0, Y = 1) = 0.25
+Remark: probabilities not exactly the ones in the exam.
+
+8. Three plots are given, each showing the 3 same functions but with different scales (log-linear, log-log, linear-linear).
+From the plots, give the formula for the 3 functions. You can assume that the lines go exactly through the points.
+a) 4 * log_10(x) + 4
+b) 2^x / 16
+c) x^2 / 10
+
+Downloaded from ppi.fsi.uni-tuebingen.de. Do not redistribute! uid: 3216
