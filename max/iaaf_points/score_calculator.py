@@ -54,6 +54,7 @@ DISCIPLINE_TO_EVENT = {
     'Marathon': 'Road Marathon'
 }
 
+
 def get_iaaf_coeffs():
     base_path = Path(__file__).resolve().parent
 
@@ -62,11 +63,9 @@ def get_iaaf_coeffs():
     return coeffs
 
 
-
 def score_from_mark(gender, event, mark, coeffs, func=None):
     if mark is None:
         return None
-
     if type(coeffs) == dict:
         a, b, c = coeffs[gender][event]
     else:
@@ -78,7 +77,7 @@ def score_from_mark(gender, event, mark, coeffs, func=None):
         return int(math.ceil(points))
     elif func == 'floor':
         return int(math.floor(points))
-    
+
 
 if __name__ == "__main__":
 
