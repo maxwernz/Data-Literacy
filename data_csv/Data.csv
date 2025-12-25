@@ -22948,29 +22948,56 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2015;M;Maenner;Halbmarathon;1:06:34;;Salomon Merne Eshete;1983;TV Wasserlos;19.04.; Griesheim;937
 2015;M;Maenner;Halbmarathon;1:06:57;;Getachew Endisu Etana;1991;LAC Quelle Fuerth;04.10.; Koeln;923
 2015;M;Maenner;Halbmarathon;1:07:17;;Habtom Weldu;1986;LG Region Karlsruhe;20.09.; Karlsruhe;912
-2015;M;Maenner;Marathon;2:08:33;;Arne Gabius;1981;LT Haspa-Marathon Hamburg;25.10.; Frankfurt;1157
-2015;M;Maenner;Marathon;2:12:50;;Philipp Pflieger;1987;LG Telis Finanz Regensburg;27.09.; Berlin;1080
-2015;M;Maenner;Marathon;2:13:57;;Julian Fluegel;1986;TSG 08 Roth;27.09.; Berlin;1060
-2015;M;Maenner;Marathon;2:17:05;;Marcel Braeutigam;1987;GutsMuths Rennsteiglaufverein;25.10.; Frankfurt;1006
-2015;M;Maenner;Marathon;2:17:51;;Simon Stuetzel;1986;TSG 08 Roth;18.01.; Houston/USA;993
-2015;M;Maenner;Marathon;2:18:32;;Tobias Schreindl;1988;LG Passau;19.04.; Linz/AUT;981
-2015;M;Maenner;Marathon;2:18:49;;Andreas Strassner;1979;TSG 08 Roth;25.10.; Frankfurt;977
-2015;M;Maenner;Marathon;2:19:20;;Sebastian Reinwand;1987;TSG 08 Roth;25.10.; Frankfurt;968
-2015;M;Maenner;Marathon;2:19:46;;Frank Schauer;1989;Tangermuender Elbdeichmarathon;26.04.; Hamburg;961
-2015;M;Maenner;Marathon;2:20:00;;Benedikt Hoffmann;1985;TSG Heilbronn;25.10.; Frankfurt;957
-2015;M;Maenner;Marathon;2:20:19;;Steffen Uliczka;1984;SG Kronshagen/Kieler TB;26.04.; Hamburg;952
-2015;M;Maenner;Marathon;2:21:11;;Elias Sansar;1980;LG Lage/Detmold/Bad Salzuflen;11.10.; Essen;937
-2015;M;Maenner;Marathon;2:22:18;;Daniel Schmidt;1980;TV Refrath;11.10.; Essen;919
-2015;M;Maenner;Marathon;2:22:48;;Valentin Harwardt;1977;VfL Wolfsburg;25.10.; Frankfurt;911
-2015;M;Maenner;Marathon;2:22:54;;Tobias Groebl;1983;LG Zusam;25.10.; Frankfurt;909
-2015;M;Maenner;Marathon;2:23:04;;Thorben Dietz;1989;LG Dorsten;11.10.; Essen;906
-2015;M;Maenner;Marathon;2:23:22;;Holger Freudenberger;1977;TSG Heilbronn;25.10.; Frankfurt;902
-2015;M;Maenner;Marathon;2:23:35;;Alexander Bock;1992;Post-SV Trier;25.10.; Frankfurt;898
-2015;M;Maenner;Marathon;2:23:51;;Fabian Borggrefe;1972;SG Spergau;25.10.; Frankfurt;894
-2015;M;Maenner;Marathon;2:23:55;;Paul Schmidt;1985;TSV Dresden;27.09.; Berlin;893
-2015;M;Maenner;Marathon;2:23:56;;Stefan Hubert;1986;SV Soemmerda;27.09.; Berlin;892
-2015;M;Maenner;Marathon;2:24:10;;Mario Wernsdoerfer;1987;LG Bamberg;25.10.; Frankfurt;889
-2015;M;Maenner;Marathon;2:25:01;;Oliver Hoffmann;1984;TSV Kirchhain;25.10.; Frankfurt;875
+2015;M;Maenner;Marathon;2:08:33;;Arne Gabius;1981;LT Haspa-Marathon Hamburg;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:12:50;;Philipp Pflieger;1987;LG Telis Finanz Regensburg;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:13:57;;Julian Fluegel;1986;TSG 08 Roth;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:16:45;;Ybekal Berye Daniel (ETH);1988;PSV Gruen-Weiss Kassel;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:17:05;;Marcel Braeutigam;1987;GutsMuths Rennsteiglaufverein;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:17:51;;Simon Stuetzel;1986;TSG 08 Roth;18.01.2015;Houston/USA
+2015;M;Maenner;Marathon;2:18:32;;Tobias Schreindl;1988;LG Passau;19.04.2015;Linz/AUT
+2015;M;Maenner;Marathon;2:18:49;;Andreas Strassner;1979;TSG 08 Roth;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:19:20;;Sebastian Reinwand;1987;TSG 08 Roth;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:19:30;;Dawit Kabede Endshu (KEN);1984;PSV Gruen-Weiss Kassel;17.05.2015;Kassel
+2015;M;Maenner;Marathon;2:19:46;;Frank Schauer;1989;Tangermuender Elbdeichmarathon;26.04.2015;Hamburg
+2015;M;Maenner;Marathon;2:20:00;;Benedikt Hoffmann;1985;TSG Heilbronn;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:20:19;;Steffen Uliczka;1984;SG Kronshagen/Kieler TB;26.04.2015;Hamburg
+2015;M;Maenner;Marathon;2:21:11;;Elias Sansar;1980;LG Lage/Detmold/Bad Salzuflen;11.10.2015;Essen
+2015;M;Maenner;Marathon;2:22:18;;Daniel Schmidt;1980;TV Refrath;11.10.2015;Essen
+2015;M;Maenner;Marathon;2:22:48;;Valentin Harwardt;1977;VfL Wolfsburg;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:22:54;;Tobias Groebl;1983;LG Zusam;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:23:04;;Thorben Dietz;1989;LG Dorsten;11.10.2015;Essen
+2015;M;Maenner;Marathon;2:23:22;;Holger Freudenberger;1977;TSG Heilbronn;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:23:32;;Yohannes Hailu Atey (ERI);1991;TuS Deuz;20.09.2015;Otterndorf
+2015;M;Maenner;Marathon;2:23:35;;Alexander Bock;1992;Post-SV Trier;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:23:51;;Fabian Borggrefe;1972;SG Spergau;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:23:55;;Paul Schmidt;1985;TSV Dresden;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:23:56;;Stefan Hubert;1986;SV Sömmerda;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:24:10;;Mario Wernsdoerfer;1987;LG Bamberg;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:25:01;;Oliver Hoffmann;1984;TSV Kirchhain;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:25:29;;Dr.Nils Schallner;1980;PTSV Jahn Freiburg;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:26:07;;Kai Reissinger;1971;Mannschaft ohne Namen;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:26:13;;Marius Huepel;1991;OTB Osnabrueck;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:26:17;;Michael Pfeil;1984;Post-SV Trier;26.04.2015;Hamburg
+2015;M;Maenner;Marathon;2:26:26;;Michael Schramm;1990;LAV Stadtwerke Tuebingen;19.04.2015;Zuerich/SUI
+2015;M;Maenner;Marathon;2:26:35;;Andre Pollmaecher;1976;rhein-marathon Duesseldorf;01.11.2015;New York/USA
+2015;M;Maenner;Marathon;2:26:49;;Mourad Bekakcha;1978;Hamburger SV;26.04.2015;Hamburg
+2015;M;Maenner;Marathon;2:27:38;;Jens Ziganke;1988;SV Reichenau;19.04.2015;Zuerich/SUI
+2015;M;Maenner;Marathon;2:27:57;;Maik Willbrandt;1987;LG Albatros Kiel;19.04.2015;Leipzig
+2015;M;Maenner;Marathon;2:27:57;;Florian Neuschwander;1981;Spiridon Frankfurt;13.12.2015;Honolulu/USA
+2015;M;Maenner;Marathon;2:28:06;;David Schoenherr;1989;LSF Muenster;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:28:07;;Marc-Andre Ocklenburg;1985;TV Refrath;18.10.2015;Amsterdam/NED
+2015;M;Maenner;Marathon;2:28:14;;Kay-Uwe Mueller;1979;TSV Crailsheim;19.04.2015;Leipzig
+2015;M;Maenner;Marathon;2:28:18;;Maxim Fuchs;1988;TSV Laupheim;12.10.2015;Eindhoven/NED
+2015;M;Maenner;Marathon;2:28:30;;Matthias Mueller;1981;TSG Weinheim;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:28:38;;Lukas Naegele;1989;PTSV Jahn Freiburg;29.03.2015;Freiburg
+2015;M;Maenner;Marathon;2:28:40;;Sebastian Nitsche;1983;SC DHfK Leipzig;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:28:51;;Enrico Dietrich;1984;TuS Lintorf;19.04.2015;Hannover
+2015;M;Maenner;Marathon;2:28:57;;Stefan Egerer;1983;TSV Ansbach;27.09.2015;Berlin
+2015;M;Maenner;Marathon;2:29:10;;Marc Schulze;1984;Citylauf-Verein Dresden;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:29:20;;Alexander Henne;1985;SG Wenden;26.04.2015;Hamburg
+2015;M;Maenner;Marathon;2:29:20;;Dominic Arnold;1987;TV Coburg;25.10.2015;Frankfurt
+2015;M;Maenner;Marathon;2:29:26;;Maciek Miereczko (POL);1979;VfB Erftstadt;11.10.2015;Essen
+2015;M;Maenner;Marathon;2:29:29;;Uli Steidl;1972;SSC Hanau-Rodenbach;04.10.2015;St.Paul/USA
 2015;M;Maenner;100 km;6:49:13;;Florian Neuschwandner;1981;Spiridon Frankfurt;12.09.; Winschoten/NED;1021
 2015;M;Maenner;100 km;7:13:38;;Carsten Stegner;1975;Skivereinigung Amberg;11.04.; St.Leon-Rot;900
 2015;M;Maenner;100 km;7:16:49;;Michael Sommer;1964;EK Schwaikheim;12.09.; Winschoten/NED;885
@@ -29086,7 +29113,7 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2003;W;Frauen;Marathon;2:50:30;;Julia Keck;1974;LG DJK Erbach/SG St.Ingbert;28.09.; Berlin;935
 2003;W;Frauen;Marathon;2:53:02;;Christine Doellinger;1971;LAC Quelle Fuerth/Muench./Wuerzb.;14.09.; Fochheim;913
 2003;W;Frauen;Marathon;2:53:17;;Katja Wolters;1971;LG Hammer Park Hamburg;27.04.; Hamburg;911
-2003;W;Frauen;Marathon;3:53:26;;Andreina Byrd;1978;Schweriner SC;26.10.; Frankfurt;476
+2003;W;Frauen;Marathon;2:53:26;;Andreina Byrd;1978;Schweriner SC;26.10.; Frankfurt;476
 2003;W;Frauen;Marathon;2:53:56;;Katharina Kaufmann;1961;LG Domspitzmilch Regensburg;01.06.; Duisburg;906
 2003;W;Frauen;Marathon;2:54:16;;Gudrun de Pay;1959;TSV Trochtelfingen;12.10.; Braeunlingen;903
 2003;W;Frauen;Marathon;2:54:21;;Annette Wolfrom;1969;OSC Berlin;14.06.; Stockholm/SWE;902
@@ -44523,7 +44550,7 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2009;M;U23;Halbmarathon;1:09:11;;Raphael Viellehner;1988;LG Passau;04.10.; Koeln;846
 2009;M;U23;Halbmarathon;1:09:29;;Dennis Mehlfeld;1987;Luebecker SC;25.10.; Luebeck;836
 2009;M;U23;Halbmarathon;1:09:52;;Torsten Graw;1991;TV Wattenscheid;04.10.; Koeln;823
-2009;M;U23;Halbmarathon;1:19:35;;Michael Schramm;1990;TuS Loerrach-Stetten;29.03.; Freiburg;529
+2009;M;U23;Halbmarathon;1:09:35;;Michael Schramm;1990;TuS Loerrach-Stetten;29.03.; Freiburg;529
 2009;M;U23;Halbmarathon;1:10:46;;Rico Schwarz;1988;ASV Erfurt;25.10.; Glauchau;793
 2009;M;U23;Halbmarathon;1:10:52;;Simon Dahl;1987;TV Refrath;04.10.; Koeln;790
 2009;M;U23;Halbmarathon;1:11:05;;Volker Goineau;1987;SG TSG Kronshagen/Kieler TB;04.04.; Aichach;782
@@ -53656,10 +53683,36 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2004;W;Frauen;Siebenkampf;4927;;Nadine Mathis;1986;LC asics Rehlingen;03./04.09.; Vaterstetten;867
 2004;W;Frauen;Siebenkampf;4870;;Ines Maier;1982;LG Karlstadt;06./07.08.; Markt Schwaben;856
 2004;W;Frauen;Siebenkampf;4852;;Katharina Rupf;1986;TuS Jena;05./06.06.; Filderstadt;852
-2015;M;14;100 m;11,68;+1,9;Maximilian Czoik;2001;TV Okriftel;30.05.; Gelnhausen;697
-2015;M;14;100 m;11,68;+0,6;Theo Buergin;2001;TV Wattenscheid 01;30.08.; Hagen;697
-2015;M;14;100 m;11,77;+0,6;Jakob Funke;2001;SV Soemmerda;11.07.; Gotha;673
-2015;M;14;100 m;11,78;+2,0;Dominik Wache;2001;LC Jueterbog;12.07.; Cottbus;671
+2015;M;14;100 m;11,43;0,0;Malte Stangenberg;2001;LG HNF Hamburg;06.09.2015;Luebeck
+2015;M;14;100 m;11,68;+1,9;Maximilian Czoik;2001;TV Okriftel;30.05.2015;Gelnhausen
+2015;M;14;100 m;11,68;+0,6;Theo Buergin;2001;TV Wattenscheid 01;30.08.2015;Hagen
+2015;M;14;100 m;11,69;0,0;Jonas Premru;2001;SWC Regensburg;19.07.2015;Aichach
+2015;M;14;100 m;11,77;+0,6;Jakob Funke;2001;SV Soemmerda;11.07.2015;Gotha
+2015;M;14;100 m;11,78;+2,0;Dominik Wache;2001;LC Jueterbog;12.07.2015;Cottbus
+2015;M;14;100 m;11,79;-0,6;Paul Staffeldt;2001;SG Chemie Erkner;26.09.2015;Frankfurt/O.
+2015;M;14;100 m;11,81;0,0;Valentin Melzer;2001;TV Odernheim;06.06.2015;Bad Kreuznach
+2015;M;14;100 m;11,81;-0,1;Lukas Drach;2001;WGL Schwaebisch Hall;12.07.2015;Kassel
+2015;M;14;100 m;11,82;-0,7;Jacinto Elias Esono Ada;2001;SCC Berlin;28.06.2015;Berlin
+2015;M;14;100 m;11,83;0,0;Fabian Olbert;2001;Kirchheimer SC;06.09.2015;Luebeck
+2015;M;14;100 m;11,84;+1,7;David Kattermann;2001;LG Radolfzell;12.07.2015;Kassel
+2015;M;14;100 m;11,87;+1,3;Philipp Hennemuth;2001;SSC Bad Sooden-Allendorf;08.07.2015;Gelnhausen
+2015;M;14;100 m;11,89;+1,1;Valentin Beqiri;2002;LAC Berlin;02.05.2015;Berlin
+2015;M;14;100 m;11,89;+1,2;Mike Mesmer;2001;TSG Hassloch;04.07.2015;Neuwied
+2015;M;14;100 m;11,90;+1,6;Laurent Mombaecher;2001;TSV Schott Mainz;13.06.2015;Gau-Algesheim
+2015;M;14;100 m;11,90;-0,2;Maxim Schreier;2001;TuS Feuchtwangen;19.07.2015;Aichach
+2015;M;14;100 m;11,90;0,0;Jean Louis Leussi;2001;ETSV Jahn Offenburg;31.07.2015;Rheinfelden
+2015;M;14;100 m;11,92;+1,2;Marius Reichert;2001;ABC Ludwigshafen;27.06.2015;Mannheim
+2015;M;14;100 m;11,92;+0,6;Jonas Marx;2001;SG Motor Gohlis-Nord Leipzig;11.07.2015;Gotha
+2015;M;14;100 m;11,92;+1,7;Jannis Sorgius;2001;TV Neustadt;12.07.2015;Kassel
+2015;M;14;100 m;11,92;0,0;Samuel Amoah;2001;SCC Berlin;12.07.2015;Cottbus
+2015;M;14;100 m;11,93;+0,9;Oliver Peschk;2001;TSG Luebbenau;15.06.2015;Cottbus
+2015;M;14;100 m;11,93;+0,5;Louis Pardos;2001;SCC Berlin;28.06.2015;Berlin
+2015;M;14;100 m;11,94;+0,4;Jil Maurice Gorzawsky;2001;LG Stadtwerke Muenchen;28.06.2015;Dinkelsbuehl
+2015;M;14;100 m;11,95;0,0;Leon Beyer;2001;SV Vorwaerts Zwickau;11.07.2015;Gotha
+2015;M;14;100 m;11,96;0,0;Niklas Langer;2001;SV Bruckmuehl;19.07.2015;Aichach
+2015;M;14;100 m;11,98;-0,1;Tobias Tritter;2001;TuS 09 Erkenschwick;09.05.2015;Recklinghausen
+2015;M;14;100 m;11,99;0,0;Jannik Berthold;2001;SG Weißig;05.07.2015;Leipzig
+2015;M;14;100 m;12,00;-1,1;Ertunc Temiz;2001;TSV Spandau;01.07.2015;Berlin
 2015;M;14;800 m;2:02,48;;Linus Wiedenbauer;2001;TuS Geretsried;12.07.; Kassel;701
 2015;M;14;800 m;2:03,54;;Sasha Mueller;2001;SSC Hanau-Rodenbach;19.09.; Heuchelheim;677
 2015;M;14;800 m;2:03,56;;Jannik Czudaj;2001;SV Elbland Coswig-Meissen;21.09.; Berlin;676
@@ -93347,15 +93400,56 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2014;M;Maenner;10 km;30:50;;Lukas Becht;1986;LG Stadtwerke Muenchen;07.09.; Duesseldorf;885
 2014;M;Maenner;10 km;30:54;;Mario Wernsdoerfer;1987;LG Bamberg;09.03.; Bamberg;880
 2014;M;Maenner;10 km;30:54;;Valentin Harwardt;1977;VfL Wolfsburg;07.09.; Duesseldorf;880
-2014;M;Maenner;Halbmarathon;1:02:08;;Arne Gabius;1981;LAV Stadtwerke Tuebingen;16.03.; New York/USA;1102
-2014;M;Maenner;Halbmarathon;1:05:02;;Manuel Stoeckert;1988;SC Ostheim/Rhoen;06.04.; Freiburg;993
-2014;M;Maenner;Halbmarathon;1:05:15;;Julian Fluegel;1986;LG Telis Finanz Regensburg;21.09.; Hamburg;985
-2014;M;Maenner;Halbmarathon;1:05:33;;Philipp Pflieger;1987;LG Telis Finanz Regensburg;14.09.; Usti nad Labem/CZE;974
-2014;M;Maenner;Halbmarathon;1:05:49;;Tobias Groebl;1983;LG Zusam;06.04.; Freiburg;964
-2014;M;Maenner;Halbmarathon;1:05:53;;Jens Nerkamp;1989;PSV GW Kassel;06.04.; Freiburg;962
-2014;M;Maenner;Halbmarathon;1:05:53;;Tobias Schreindl;1988;LG Passau;06.04.; Freiburg;962
-2014;M;Maenner;Halbmarathon;1:06:03;;Gutu Abdeta Odde;1995;LG Eintracht Frankfurt;09.03.; Frankfurt;956
-2014;M;Maenner;Halbmarathon;1:06:24;;Ejob Solomun;1993;SG Wenden;14.09.; Koeln;943
+2014;M;Maenner;Halbmarathon;1:02:08;;Arne Gabius;1981;LAV Stadtwerke Tuebingen;16.03.2014;New York/USA
+2014;M;Maenner;Halbmarathon;1:02:47;;André Pollmaecher;1983;rhein-marathon Duesseldorf;30.03.2014;Berlin
+2014;M;Maenner;Halbmarathon;1:05:02;;Manuel Stoeckert;1988;SC Ostheim/Rhoen;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:05:15;;Julian Fluegel;1986;LG Telis Finanz Regensburg;21.09.2014;Hamburg
+2014;M;Maenner;Halbmarathon;1:05:33;;Philipp Pflieger;1987;LG Telis Finanz Regensburg;14.09.2014;Usti nad Labem/CZE
+2014;M;Maenner;Halbmarathon;1:05:49;;Tobias Groebl;1983;LG Zusam;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:05:53;;Jens Nerkamp;1989;PSV GW Kassel;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:05:53;;Tobias Schreindl;1988;LG Passau;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:06:03;;Gutu Abdeta Odde;1995;LG Eintracht Frankfurt;09.03.2014;Frankfurt
+2014;M;Maenner;Halbmarathon;1:06:24;;Ejob Solomun;1993;SG Wenden;14.09.2014;Koeln
+2014;M;Maenner;Halbmarathon;1:06:39;;Mitku Sebora;1988;TS Lichtenfels;13.04.2014;Bad Staffelstein
+2014;M;Maenner;Halbmarathon;1:06:43;;Valentin Unterholzner;1992;LG Telis Finanz Regensburg;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:06:45;;Christian Koenig;1987;GutsMuths-Rennsteiglaufverein;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:06:46;;Christian Seiler;1983;GutsMuths-Rennsteiglaufverein;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:06:47;;Stefan Hubert;1986;SV Soemmerda;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:06:51;;Marcel Braeutigam;1987;GutsMuths-Rennsteiglaufverein;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:07:01;;Hendrik Pfeiffer;1993;TV Wattenscheid;20.09.2014;Hamburg
+2014;M;Maenner;Halbmarathon;1:07:02;;Florian Neuschwander;1981;Trierer Stadtlauf;12.10.2014;Offenbach
+2014;M;Maenner;Halbmarathon;1:07:04;;Marc Schulze;1984;SCC Berlin;30.03.2014;Berlin
+2014;M;Maenner;Halbmarathon;1:07:05;;Fabian Clarkson;1990;SCB Berlin;12.01.2014;Egmond/NED
+2014;M;Maenner;Halbmarathon;1:07:13;;Thorben Dietz;1989;LG Dorsten;14.09.2014;Koeln
+2014;M;Maenner;Halbmarathon;1:07:14;;Yohannes Hailu Atey;1991;TuS Deuz;18.05.2014;Gelsenkirchen
+2014;M;Maenner;Halbmarathon;1:07:19;;Karol Grunenberg;1987;ASV Duisburg;01.06.2014;Duisburg
+2014;M;Maenner;Halbmarathon;1:07:33;;Jonas Koller;1993;LG Telis Finanz Regensburg;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:07:32;;Vitaliy Rybak;1980;LAZ Puma Rhein/Sieg;27.04.2014;Hannover
+2014;M;Maenner;Halbmarathon;1:07:34;;Christian Schmitz;1983;LG Maifeld/Pellenz;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:07:35;;Niels Bubel;1987;Die Laufpartner;09.11.2014;Riva del Garda/ITA
+2014;M;Maenner;Halbmarathon;1:07:39;;Valentin Harwardt;1977;VfL Wolfsburg;29.06.2014;Hamburg
+2014;M;Maenner;Halbmarathon;1:07:40;;Falk Cierpinski;1978;SG Spergau;28.09.2014;Berlin
+2014;M;Maenner;Halbmarathon;1:07:41;;Volker Goineau;1987;ART Duesseldorf;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:07:44;;Frederik Unewisse;1993;LG Region Karlsruhe;21.09.2014;Karlsruhe
+2014;M;Maenner;Halbmarathon;1:08:00;;Johann Hillebrand;1979;LG Stadtwerke Muenchen;21.09.2014;Karlsruhe
+2014;M;Maenner;Halbmarathon;1:08:19;;Jonas Lehmann;1989;TuS Heltersberg;29.06.2014;Trier
+2014;M;Maenner;Halbmarathon;1:08:22;;Geronimo von Wartburg;1988;LG Kreis Verden;06.04.2014;Zuerich/SUI
+2014;M;Maenner;Halbmarathon;1:09:27;;Tobias Sauter;1983;LT Haspa-Marathon Hamburg;21.09.2014;Karlsruhe
+2014;M;Maenner;Halbmarathon;1:08:32;;Mario Wernsdoerfer;1987;LG Bamberg;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:08:33;;Benedikt Hoffmann;1985;TSG Heilbronn;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:08:37;;Marco Sturm;1977;SWC Regensburg;09.03.2014;Kandel
+2014;M;Maenner;Halbmarathon;1:08:50;;Jan Mattis Kuhn;1987;LC Eschenburg;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:08:51;;Maciek Miereczko;1979;Citylauf Erftstadt;14.09.2014;Koeln
+2014;M;Maenner;Halbmarathon;1:08:51;;Johannes Estner;1991;TSV Noerdlingen;28.09.2014;Ulm
+2014;M;Maenner;Halbmarathon;1:09:00;;Paul Schmidt;1985;TSV Dresden;29.06.2014;Hamburg
+2014;M;Maenner;Halbmarathon;1:09:02;;Stefan Groß;1974;SG Wenden;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:09:03;;Dennis Pyka;1972;LG Telis Finanz Regensburg;28.09.2014;Ulm
+2014;M;Maenner;Halbmarathon;1:09:06;;Hagen Brosius;1988;MTV Ingolstadt;26.04.2014;Ingolstadt
+2014;M;Maenner;Halbmarathon;1:09:09;;Lukas Becht;1986;LG Stadtwerke Muenchen;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:09:12;;Jost-Lennart Heese;1994;SCB Berlin;12.01.2014;Egmond/NED
+2014;M;Maenner;Halbmarathon;1:09:18;;Moritz Steininger;1993;LG Telis Finanz Regensburg;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:09:18;;Joerg Heiner;1973;SG Wenden;06.04.2014;Freiburg
+2014;M;Maenner;Halbmarathon;1:09:19;;Thomas Dold;1984;RUN2SKY.com;04.05.2014;Offenburg
 2014;M;Maenner;Marathon;2:09:32;;Arne Gabius;1981;LAV Stadtwerke Tuebingen;26.10.; Frankfurt;1139
 2014;M;Maenner;Marathon;2:14:20;;Julian Fluegel;1986;LG Telis Finanz Regensburg;26.10.; Frankfurt;1053
 2014;M;Maenner;Marathon;2:17:25;;Falk Cierpinski;1978;SG Spergau;28.09.; Berlin;1000
@@ -110111,7 +110205,7 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2004;M;Maenner;Halbmarathon;1:05:52;;Oliver Mintzlaff;1975;LG Bonn/Troisdorf/Niederkassel;14.03.; Siegburg;962
 2004;M;Maenner;Halbmarathon;1:06:03;;Stephan Freigang;1967;SC DHfK Leipzig;03.04.; Lengenfeld;956
 2004;M;Maenner;Halbmarathon;1:06:09;;John Schondelmayer;1971;SpardaTeam Rechberghausen;14.03.; Siegburg;952
-2004;M;Maenner;Halbmarathon;1:16:13;;Embaye Hedrit;1976;LAC Quelle Fuerth/Muenchen/Wuerrzb.;04.04.; Berlin;624
+2004;M;Maenner;Halbmarathon;1:06:13;;Embaye Hedrit;1976;LAC Quelle Fuerth/Muenchen/Wuerrzb.;04.04.; Berlin;624
 2004;M;Maenner;Halbmarathon;1:06:38;;Jirka Arndt;1973;SC Potsdam;14.03.; Siegburg;935
 2004;M;Maenner;Halbmarathon;1:06:48;;Lennart Sponar;1980;Berliner SV 1892;03.10.; Griesheim;929
 2004;M;Maenner;Halbmarathon;1:06:50;;Jan Fitschen;1977;TV Wattenscheid 01;25.04.; Dortmund-Herne;927
@@ -167742,6 +167836,14 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2022;W;Frauen;10 000 m;37:27,27;;Hannah Geisen;2004;DJK Ochtendung;09.09.2022;Trier;869
 2022;W;Frauen;10 000 m;37:32,71;;Julia Fritz;1994;LC Diabue Eschenburg;09.04.2022;Erbach;865
 2022;W;Frauen;10 000 m;37:37,00;;Tania Moser;1990;Spiridon Frankfurt;26.03.2022;Regensburg;861
+2022;W;Frauen;10 000 m;37:37,72;;Sophia Franz;1992;TSV 1860 Staffelstein;26.03.2022;Regensburg
+2022;W;Frauen;10 000 m;37:45,16;;Anja Kobs;1976;TSV Alling;26.03.2022;Regensburg
+2022;W;Frauen;10 000 m;37:51,81;;Emma Waldschmidt;2000;Berliner SV 1892;27.03.2022;Berlin-Zehlendorf
+2022;W;Frauen;10 000 m;37:54,49;;Lara Huelsebusch;1994;Turnerbund Hamburg Eilbeck;13.08.2022;Hamburg-Hamm
+2022;W;Frauen;10 000 m;38:08,57;;Stephanie Breitkreutz;1995;ASV Duisburg;30.04.2022;Rheine
+2022;W;Frauen;10 000 m;38:13,86;;Michelle Bauer;1989;Lauftreff Schweich;09.09.2022;Trier
+2022;W;Frauen;10 000 m;38:17,22;;Ann-Kathrin Balduhn;1995;Turnerbund Hamburg Eilbeck;13.08.2022;Hamburg-Hamm
+2022;W;Frauen;10 000 m;38:20,56;;Gabriele Honscha;2002;SV Automation 61 Leipzig e.V.;07.05.2022;Pliezhausen
 2022;W;Frauen;5 km;14:52;;Konstanze Klosterhalfen;1997;TSV Bayer o4;31.12.2022;Barcelona (ESP);1179
 2022;W;Frauen;5 km;15:31;;Katharina Steinruck;1989;Eintracht Frankfurt e.V.;22.05.2022;Wien (AUT);1104
 2022;W;Frauen;5 km;15:47;;Miriam Dattke;1998;LG TELIS FINANZ;30.04.2022;Herzogenaurach;1074
@@ -172622,11 +172724,36 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2019;M;14;Hammerwurf;32,97;;Nikolaus Beilharz;2005;LAG Obere Murg;14.04;Langenbrand;479
 2019;M;14;Hammerwurf;32,80;;Marius Joern;2005;SVG GW Bad Gandersheim;01.09;Braunschweig;476
 2019;M;14;Hammerwurf;30,56;;Luca Merita;2005;LG Neckar-Enz;05.10;Fuerth/Odenwald;442
-2019;M;14;Speerwurf;54,74;;Samuel Wolter;2005;LG Prignitz;10.08;Lage;744
-2019;M;14;Speerwurf;51,57;;Pascal Kuehne;2005;LAV Elstertal Bad;07.06;Jena;699
-2019;M;14;Speerwurf;48,50;;Amadeus Graeber;2005;SV Leonardo-da-;21.07;Mainz;656
-2019;M;14;Speerwurf;48,30;;Benedikt Mueller;2005;TV 1861 Amberg;29.09;Wasserburg;653
-2019;M;14;Speerwurf;46,97;;Max Huebner;2005;TSV 1860;03.10;Eschenbach;634
+2019;M;14;Speerwurf;54,74;;Samuel Wolter;2005;LG Prignitz;10.08.2019;Lage
+2019;M;14;Speerwurf;51,57;;Pascal Kuehne;2005;LAV Elstertal Bad Koestritz;07.06.2019;Jena
+2019;M;14;Speerwurf;48,50;;Amadeus Graeber;2005;SV Leonardo-da-Vinci Nauen;21.07.2019;Mainz
+2019;M;14;Speerwurf;48,30;;Benedikt Mueller;2005;TV 1861 Amberg;29.09.2019;Wasserburg
+2019;M;14;Speerwurf;46,97;;Max Huebner;2005;TSV 1860 Staffelstein;03.10.2019;Eschenbach
+2019;M;14;Speerwurf;46,84;;Jan Spieker;2005;DJK Arminia Ibbenbueren;30.06.2019;Ibbenbueren
+2019;M;14;Speerwurf;46,51;;Jannes Galin;2005;LAV Bayer Uerdingen/Dormagen;08.09.2019;Berlin
+2019;M;14;Speerwurf;46,41;;Moritz Zigawe;2005;Ohrdrufer LV;02.05.2019;Jena
+2019;M;14;Speerwurf;45,88;;Friedrich Schulze;2005;SG Johannesberg 1926;18.08.2019;Egelsbach
+2019;M;14;Speerwurf;45,02;;Taylor Kepplinger;2005;LG Altmark;06.04.2019;Stendal
+2019;M;14;Speerwurf;44,44;;Felix Richter;2005;LC Cottbus;05.06.2019;Cottbus
+2019;M;14;Speerwurf;44,00;;Domenik Ackermann;2005;MSV Zossen 07;21.09.2019;Ludwigsfelde
+2019;M;14;Speerwurf;43,71;;Mirko Skotzke;2005;VfB Fichte Bielefeld;22.06.2019;Duisburg
+2019;M;14;Speerwurf;43,49;;Tom Recke;2005;KSSV Victoria Weimar/Schoendorf;14.09.2019;Ohrdurf
+2019;M;14;Speerwurf;42,96;;Maik Nold;2005;SpVgg Holzgerlingen;26.05.2019;Winterbach
+2019;M;14;Speerwurf;42,80;;Jason Werner;2005;SC Potsdam;26.01.2019;Potsdam
+2019;M;14;Speerwurf;42,78;;Jack Odysseus Foss;2005;LG Lueneburg;10.08.2019;Luechow
+2019;M;14;Speerwurf;42,40;;Ben Gerlach;2006;TSV Friedberg-Fauerbach;01.06.2019;Gelnhausen
+2019;M;14;Speerwurf;42,12;;Ricardo Pepelnik;2005;USC Mainz;24.08.2019;Mainz
+2019;M;14;Speerwurf;42,03;;Otto Mertens;2005;LG Altmark;16.06.2019;Haldensleben
+2019;M;14;Speerwurf;42,01;;Lukas Tsoleridis;2005;TB Stoecken;31.08.2019;Braunschweig
+2019;M;14;Speerwurf;42,00;;Sebastian Knorn;2005;Werdener Turnerbund;02.06.2019;Moenchengladbach
+2019;M;14;Speerwurf;41,86;;Leonard Sichelstiel;2005;ESV Amberg;15.09.2019;Regensburg
+2019;M;14;Speerwurf;41,84;;Florian Schmid;2005;LG Sempt;19.10.2019;Oberschleissheim
+2019;M;14;Speerwurf;41,63;;Jan-Luis Huemmert;2005;LAZ Kreis Wuerzburg;15.09.2019;Regensburg
+2019;M;14;Speerwurf;41,54;;Calvin-Nicholas Hoelzel;2006;ASC Darmstadt;10.07.2019;Trebur
+2019;M;14;Speerwurf;41,39;;Bastian Lanitz;2005;SV Werder Bremen;12.05.2019;Stade
+2019;M;14;Speerwurf;41,30;;Loke Elias Sommer;2005;LG Flensburg;14.09.2019;Bremen
+2019;M;14;Speerwurf;41,22;;Matteo Redinger;2005;TG Nuertingen;06.09.2019;Ehingen
+2019;M;14;Speerwurf;40,85;;Thilo Schueler;2005;Fortuna Wirdum;27.09.2019;Papenburg
 2019;M;14;3000 m Gehen;15:56,60;;Marvin Broeckel;2005;LG Vogtland;25.05;Erfurt;554
 2019;M;14;3000 m Gehen;16:26,81;;Arvid Kockel;2005;SV Halle;29.06;Mittweida;504
 2019;M;14;3000 m Gehen;17:10,98;;Nick Joel Richardt;2006;SV Halle;11.05;Falkensee;434
@@ -185771,17 +185898,106 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2022;M;14;100 m;12,35;+1,5;Jonas Jeromin;2008;LG Stadtwerke Hilden;06.06.2022;Moenchengladbach;532
 2022;M;14;100 m;11,59;+0,5;Guibert Djouaka;2008;SC Frankfurt (Oder);07.05.2022;Frankfurt (Oder);720
 2022;M;14;100 m;12,12;+0,3;Mattia Francesco;2008;TSG Rohrbach;28.05.2022;Langensteinbach;586
-2022;M;14;800 m;2:03,81;;Jerome English;2008;Sportclub Magdeburg;02.07.2022;Berlin-Zehlendorf;670
-2022;M;14;800 m;2:04,61;;Lennox Gyulai;2008;SG Lok. Hainsberg;11.06.2022;Mittweida;652
-2022;M;14;800 m;2:04,92;;Valentin Oblupin;2008;TV Bad Saeckingen;24.09.2022;Konstanz;645
-2022;M;14;3000 m;9:28,32;;Tim Alt;2008;LG Stadtwerke Muenchen;29.05.2022;Muenchen;602
-2022;M;14;3000 m;9:32,35;;Jerome English;2008;Sportclub Magdeburg;10.09.2022;Schoenebeck;584
-2022;M;14;3000 m;9:35,99;;Lennox Gyulai;2008;SG Lok. Hainsberg;17.09.2022;Zittau;568
-2022;M;14;3000 m;9:37,45;;Paul Rammelt;2008;LG Stadtwerke Muenchen;25.05.2022;Karlsfeld;562
-2022;M;14;3000 m;9:44,39;;Nico Debus;2008;SSC Hanau-Rodenbach;06.07.2022;Pfungstadt;532
-2022;M;14;3000 m;9:45,52;;Maximilian Rath;2009;LG Oberland;30.07.2022;Kitzingen;528
-2022;M;14;3000 m;9:50,76;;Noah Becker;2008;LAV Kassel;06.09.2022;Goettingen;506
-2022;M;14;5 km;16:34;;Paul Rammelt;2008;LG Stadtwerke Muenchen;20.03.2022;Augsburg;552
+2022;M;14;800 m;2:03,81;;Jerome English;2008;Sportclub Magdeburg;02.07.2022;Berlin-Zehlendorf
+2022;M;14;800 m;2:04,61;;Lennox Gyulai;2008;SG Lok. Hainsberg;11.06.2022;Mittweida
+2022;M;14;800 m;2:04,92;;Valentin Oblupin;2008;TV Bad Saeckingen;24.09.2022;Konstanz
+2022;M;14;800 m;2:05,96;;Noah Moeller;2008;TSV 1860 Staffelstein;05.08.2022;Neustadt an der Waldnaab
+2022;M;14;800 m;2:06,97;;Tim Alt;2008;LG Stadtwerke Muenchen;06.07.2022;Karlsfeld
+2022;M;14;800 m;2:07,10;;Ben Emilio Reif;2008;SSV Planeta Radebeul e.V.;24.09.2022;Mittweida
+2022;M;14;800 m;2:07,53;;Anton Eser;2008;LG Zusam;03.08.2022;Horgau
+2022;M;14;800 m;2:08,69;;Lennox Giesen;2008;TSV Senftenberg;11.09.2022;Loewenberg
+2022;M;14;800 m;2:09,62;;Noah Fischer;2008;MTG Mannheim;03.10.2022;Mannheim
+2022;M;14;800 m;2:09,65;;Erik Brandecker;2008;Harz-Gebirgslauf Wernigerode;26.06.2022;Gotha
+2022;M;14;800 m;2:10,01;;Cajus Caesar;2008;TSV Baltmannsweiler;25.05.2022;Kernen
+2022;M;14;800 m;2:10,36;;Moritz Mueller;2008;Leichtathletik in Beeskow e.V.;24.09.2022;Frankfurt (Oder)
+2022;M;14;800 m;2:10,66;;Jannis Matheo Grunwald;2008;Berliner SV 1892;06.07.2022;Berlin-Wilmersdorf
+2022;M;14;800 m;2:10,91;;Felix Nicklisch;2008;HNT Hamburg;14.09.2022;Berlin
+2022;M;14;800 m;2:11,15;;Simon Kuerzinger;2008;SWC Regensburg;18.06.2022;Frankfurt am Main
+2022;M;14;800 m;2:11,44;;Adrian Primus;2008;SCC Berlin;08.05.2022;Berlin-Charlottenburg
+2022;M;14;800 m;2:11,44;;Santiago Kalkes;2008;LAC Saarlouis;22.05.2022;Rehlingen
+2022;M;14;800 m;2:11,74;;Jonas Knueppel;2008;SC Neubrandenburg;26.06.2022;Luebeck
+2022;M;14;800 m;2:11,91;;Aaron Kerling;2008;ASV Piding;25.06.2022;Ingolstadt
+2022;M;14;800 m;2:11,98;;Nils Deppe;2008;LF Luechtringen 1983;12.08.2022;Borgholzhausen
+2022;M;14;800 m;2:12,26;;Daniel Fischer;2008;OSC 04 Rheinhausen;12.06.2022;Oberhausen
+2022;M;14;800 m;2:12,31;;Elias Loleit;2008;LC Solbad Ravensberg;21.05.2022;Melle
+2022;M;14;800 m;2:12,58;;Liam Ingendahl;2008;SV Sonsbeck;24.08.2022;Grefrath
+2022;M;14;800 m;2:12,80;;Lukas Lichner;2008;Halstenbeker Turnerschaft;19.06.2022;Hamburg
+2022;M;14;800 m;2:12,94;;Dennis Beyer;2008;TSG Wehrheim;25.06.2022;Gelnhausen
+2022;M;14;800 m;2:12,96;;Jonas Kliegel;2008;Berliner SV 1892;06.07.2022;Berlin-Wilmersdorf
+2022;M;14;800 m;2:13,07;;Ian Constantine Kehder;2008;SC Frankfurt (Oder);21.05.2022;Ludwigsfelde
+2022;M;14;800 m;2:13,58;;Simon Nueß;2009;LC Chiemgau-Steigenberger;25.06.2022;Ingolstadt
+2022;M;14;800 m;2:13,59;;Max Litzkow;2008;TSV Bayer 04 Leverkusen;25.06.2022;Troisdorf
+2022;M;14;800 m;2:13,66;;David Bohr;2008;SG Egelsbach 1874 e.V.;07.09.2022;Pfungstadt
+2022;M;14;800 m;2:13,81;;Noah Becker;2008;LAV Kassel;28.05.2022;Bielefeld
+2022;M;14;800 m;2:13,81;;Samuel Lehnart;2008;LG Rhein-Wied;24.09.2022;Dierdorf
+2022;M;14;800 m;2:13,91;;Niklas Buckwitz;2008;SV IGL Schoeneiche;24.09.2022;Frankfurt (Oder)
+2022;M;14;800 m;2:13,97;;Jonas Jeromin;2008;LG Stadtwerke Hilden;17.06.2022;Krefeld
+2022;M;14;800 m;2:14,14;;Theo Tietze;2008;Moerser TV;12.06.2022;Oberhausen
+2022;M;14;800 m;2:14,41;;Friedrich Michel;2008;TC Fiko Rostock;11.06.2022;Rostock
+2022;M;14;800 m;2:14,78;;Laurenz Becker;2009;TV Sportfreunde Elten;25.09.2022;Troisdorf
+2022;M;14;800 m;2:14,82;;Nico Eberle;2009;SG Schramberg;04.06.2022;Regensburg
+2022;M;14;800 m;2:14,87;;Dominik Doellinger;2008;LAC Quelle Fuerth;05.08.2022;Neustadt an der Waldnaab
+2022;M;14;800 m;2:15,41;;Jan Langenkamp;2008;Laufteam Kassel;18.06.2022;Frankfurt am Main
+2022;M;14;800 m;2:15,49;;Philipp Veit;2009;LG Rhein-Wied;24.09.2022;Dierdorf
+2022;M;14;800 m;2:15,70;;Nico Debus;2008;SSC Hanau-Rodenbach;25.06.2022;Gelnhausen
+2022;M;14;800 m;2:15,73;;Oke Bastians;2008;Ahrensburger TSV;19.06.2022;Hamburg
+2022;M;14;800 m;2:15,75;;Carlo Ziesche;2008;Dresdner SC 1898;26.06.2022;Gotha
+2022;M;14;800 m;2:15,77;;Louis Tilche;2009;Sportclub Magdeburg;02.07.2022;Berlin-Zehlendorf
+2022;M;14;800 m;2:15,88;;Lucian-Elija Unverzagt;2008;PSV Wuppertal;25.06.2022;Troisdorf
+2022;M;14;800 m;2:16,01;;Dominik Wiedenmann;2009;VfL Sindelfingen;22.05.2022;Weissach im Tal
+2022;M;14;800 m;2:16,01;;Julian Mauer;2008;TSV Bayer 04 Leverkusen;17.06.2022;Krefeld
+2022;M;14;800 m;2:16,02;;Julian Becker;2008;SC Eintracht Hamm;27.08.2022;Ahlen
+2022;M;14;800 m;2:16,03;;Theo Knopp;2008;Post-Sportverein Trier;03.09.2022;Konz
+2022;M;14;3000 m;9:28,32;;Tim Alt;2008;LG Stadtwerke Muenchen;29.05.2022;Muenchen
+2022;M;14;3000 m;9:32,35;;Jerome English;2008;Sportclub Magdeburg;10.09.2022;Schoenebeck
+2022;M;14;3000 m;9:35,99;;Lennox Gyulai;2008;SG Lok. Hainsberg;17.09.2022;Zittau
+2022;M;14;3000 m;9:37,45;;Paul Rammelt;2008;LG Stadtwerke Muenchen;25.05.2022;Karlsfeld
+2022;M;14;3000 m;9:44,39;;Nico Debus;2008;SSC Hanau-Rodenbach;06.07.2022;Pfungstadt
+2022;M;14;3000 m;9:45,52;;Maximilian Rath;2009;LG Oberland;30.07.2022;Kitzingen
+2022;M;14;3000 m;9:50,76;;Noah Becker;2008;LAV Kassel;06.09.2022;Goettingen
+2022;M;14;3000 m;9:54,58;;Noah Moeller;2008;TSV 1860 Staffelstein;23.04.2022;Regensburg
+2022;M;14;3000 m;9:55,47;;Lorenz Hundertmark;2008;Einbecker SV;25.06.2022;Luebeck
+2022;M;14;3000 m;9:55,48;;Jannis Matheo Grunwald;2008;Berliner SV 1892;15.03.2022;Berlin-Zehlendorf
+2022;M;14;3000 m;9:58,44;;Linus Klinge;2009;MTV Vernawahlshausen;06.09.2022;Goettingen
+2022;M;14;3000 m;9:58,85;;Max Luis Lindner;2008;LV 90 Erzgebirge;11.06.2022;Mittweida
+2022;M;14;3000 m;9:59,44;;Lasse Koerner;2008;TV Bretten;06.07.2022;Pfungstadt
+2022;M;14;3000 m;10:00,20;;Juri Flohrs;2008;Dresdner SC 1898;26.06.2022;Gotha
+2022;M;14;3000 m;10:00,32;;Ivan Schaarwaechter;2008;Berliner TSC;25.06.2022;Luebeck
+2022;M;14;3000 m;10:01,36;;Friedrich Michel;2008;TC Fiko Rostock;25.05.2022;Berlin-Lichterfelde
+2022;M;14;3000 m;10:03,81;;Jan Langenkamp;2008;Laufteam Kassel;19.06.2022;Frankfurt am Main
+2022;M;14;3000 m;10:10,57;;Tim Mueller;2008;LG Ruelzheim;19.06.2022;Frankfurt am Main
+2022;M;14;3000 m;10:11,02;;Janno Riedel;2008;Dresdner SC 1898;11.06.2022;Mittweida
+2022;M;14;3000 m;10:15,21;;Jonas Kliegel;2008;Berliner SV 1892;25.06.2022;Luebeck
+2022;M;14;3000 m;10:17,28;;Pitt Wanninger;2008;TSV Holzelfingen;10.04.2022;Gerlingen
+2022;M;14;3000 m;10:18,15;;Julian Mauer;2008;TSV Bayer 04 Leverkusen;11.09.2022;Hamburg
+2022;M;14;3000 m;10:20,55;;Arne Bausewein;2008;TV Fuerth;09.04.2022;Erbach
+2022;M;14;3000 m;10:20,75;;Dominik Doellinger;2008;LAC Quelle Fuerth;11.05.2022;Veitsbronn
+2022;M;14;3000 m;10:21,10;;Emil Bos;2008;Sportclub Magdeburg;26.06.2022;Gotha
+2022;M;14;3000 m;10:25,70;;Theo Knopp;2008;Post-Sportverein Trier;30.06.2022;Saarbruecken
+2022;M;14;3000 m;10:27,0;;Anton Eser;2008;LG Zusam;02.06.2022;Augsburg
+2022;M;14;3000 m;10:27,27;;Levi Schaefer;2008;KSG Gerlingen;10.04.2022;Gerlingen
+2022;M;14;3000 m;10:27,80;;Sebastian Henne;2009;LG Rhein-Wied;11.09.2022;Hamburg
+2022;M;14;3000 m;10:28,71;;Pepe Schindler;2008;TV Bad Saeckingen;19.06.2022;Frankfurt am Main
+2022;M;14;3000 m;10:29,02;;Louis Tilche;2009;Sportclub Magdeburg;11.06.2022;Haldensleben
+2022;M;14;3000 m;10:31,58;;Simon Kuerzinger;2008;SWC Regensburg;10.04.2022;Regensburg
+2022;M;14;3000 m;10:33,40;;David Bohr;2008;SG Egelsbach 1874 e.V.;19.06.2022;Frankfurt am Main
+2022;M;14;3000 m;10:33,70;;Jonas Teusch;2009;LG Bernkastel/Wittlich;27.08.2022;Urmitz
+2022;M;14;3000 m;10:34,77;;Theo Steinbrueck;2008;LC Eilenburger Land e.V.;26.06.2022;Gotha
+2022;M;14;3000 m;10:35,19;;Tom Stephan;2008;TV Lilienthal;13.07.2022;Oldenburg
+2022;M;14;3000 m;10:36,12;;Niklas Mengler;2008;LC Bingen;29.05.2022;Konz
+2022;M;14;3000 m;10:36,21;;Luca Mausolf;2008;SSV Erfurt Nord;11.06.2022;Gotha
+2022;M;14;3000 m;10:37,36;;Nelio Schwarz;2008;LG Nord Berlin;04.06.2022;Berlin-Lichterfelde
+2022;M;14;3000 m;10:39,06;;Maximilian Lang;2009;TV Jahn Plaidt;27.08.2022;Urmitz
+2022;M;14;3000 m;10:40,28;;Leo Kleesiek;2009;LAV Kassel;03.08.2022;Pfungstadt
+2022;M;14;3000 m;10:41,11;;Leandro-Alessio Baumann;2008;LAV Gau-Algesheim;16.07.2022;Bad Kreuznach
+2022;M;14;3000 m;10:42,91;;Fabian Brust;2008;SC Roennau 74;22.05.2022;Kiel
+2022;M;14;3000 m;10:45,78;;Mitja Kahle;2008;Post SV Dresden e.V.;11.06.2022;Mittweida
+2022;M;14;3000 m;10:46,58;;Moritz Kuntze;2008;Erfurter LAC;11.06.2022;Gotha
+2022;M;14;3000 m;10:47,29;;Jan Giemza;2008;Braunschweiger Laufclub;28.05.2022;Rueningen
+2022;M;14;3000 m;10:47,90;;Tim Klein;2009;Zehlendorfer TSV v 1888;27.03.2022;Berlin-Zehlendorf
+2022;M;14;3000 m;10:50,01;;Julian Schreiner;2008;TSG Gruenstadt;04.09.2022;Neustadt
+2022;M;14;3000 m;10:50,14;;Julius Hehn;2008;LG Sieg;29.05.2022;Konz
+2022;M;14;3000 m;10:50,14;;Sean Arnold;2008;LAC Freiburg;30.07.2022;Rheinfelden2022;M;14;5 km;16:34;;Paul Rammelt;2008;LG Stadtwerke Muenchen;20.03.2022;Augsburg;552
 2022;M;14;5 km;16:44;;Tim Alt;2008;LG Stadtwerke Muenchen;04.12.2022;Regensburg;528
 2022;M;14;5 km;16:54;;Maximilian Rath;2009;LG Oberland;04.12.2022;Regensburg;504
 2022;M;14;5 km;17:13;;Max Birk;2008;LG Region Karlsruhe;01.11.2022;Hockenheim;460
@@ -206853,25 +207069,56 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2024;M;Maenner;Halbmarathon;1:07:11;;Theodor Schucht;2003;SCC Berlin;07.04.2024;Berlin;915
 2024;M;Maenner;Halbmarathon;1:07:25;;Simon Bong;1997;LT Haspa Marathon Hamburg;15.09.2024;Hamburg;907
 2024;M;Maenner;Halbmarathon;1:07:28;;Lars Franken;2004;LG Olympia Dortmund;15.09.2024;Hamburg;905
-2024;M;Maenner;Marathon;2:04:55;;Samuel Fitwi Sibhatu;1996;Silvesterlauf Trier;01.12.2024;Valencia (ESP);1224
-2024;M;Maenner;Marathon;2:05:46;;Richard Ringer;1989;LC Rehlingen;01.12.2024;Valencia (ESP);1208
-2024;M;Maenner;Marathon;2:06:05;;Amanal Petros;1995;SCC Berlin;14.04.2024;Hannover;1202
-2024;M;Maenner;Marathon;2:07:14;;Hendrik Pfeiffer;1993;TK zu Hannover;14.01.2024;Houston TX (USA);1181
-2024;M;Maenner;Marathon;2:07:33;;Sebastian Hendel;1995;LG Braunschweig;29.09.2024;Berlin;1175
-2024;M;Maenner;Marathon;2:08:27;;Haftom Welday;1990;Turnerbund Hamburg Eilbeck;18.02.2024;Sevilla (ESP);1159
-2024;M;Maenner;Marathon;2:08:52;;Filimon Abraham;1992;LG TELIS FINANZ Regensburg;29.09.2024;Berlin;1151
-2024;M;Maenner;Marathon;2:09:45;;Simon Boch;1994;LG TELIS FINANZ Regensburg;01.12.2024;Valencia (ESP);1135
-2024;M;Maenner;Marathon;2:10:32;;Nils Voigt;1997;TV Wattenscheid 01;01.12.2024;Valencia (ESP);1121
-2024;M;Maenner;Marathon;2:10:39;;Johannes Motschmann;1994;SCC Berlin;21.04.2024;London (GBR);1119
-2024;M;Maenner;Marathon;2:12:59;;Tom Groeschel;1991;TC Fiko Rostock;29.09.2024;Berlin;1077
-2024;M;Maenner;Marathon;2:13:03;;Erik Hille;1988;TV Burglengenfeld;29.09.2024;Berlin;1076
-2024;M;Maenner;Marathon;2:14:52;;Tom Thurley;1993;Potsdamer Laufclub;14.04.2024;Hannover;1044
-2024;M;Maenner;Marathon;2:15:20;;Jan Lukas Becker;1993;LSG Sbr.-Sulzbachtal;27.10.2024;Frankfurt;1036
-2024;M;Maenner;Marathon;2:15:42;;Jonathan Dahlke;1995;TSV Bayer 04 Leverkusen;21.04.2024;London (GBR);1030
-2024;M;Maenner;Marathon;2:16:34;;Gabriel Lautenschlager;1995;LG Bamberg;29.09.2024;Berlin;1015
-2024;M;Maenner;Marathon;2:18:45;;Sascha van Staa;1992;LC Rapid Dortmund;29.09.2024;Berlin;978
-2024;M;Maenner;Marathon;2:18:47;;Marcus Schoefisch;1987;LAUFTRAINING.com Lauffreunde;27.10.2024;Frankfurt;977
-2024;M;Maenner;Marathon;2:19:26;;Lorenz Baum;1990;LAV Stadtwerke Tuebingen;01.12.2024;Valencia (ESP);966
+2024;M;Maenner;Marathon;2:04:55;;Samuel Fitwi Sibhatu;1996;Silvesterlauf Trier;01.12.2024;Valencia (ESP)
+2024;M;Maenner;Marathon;2:05:46;;Richard Ringer;1989;LC Rehlingen;01.12.2024;Valencia (ESP)
+2024;M;Maenner;Marathon;2:06:05;;Amanal Petros;1995;SCC Berlin;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:07:14;;Hendrik Pfeiffer;1993;TK zu Hannover;14.01.2024;Houston TX (USA)
+2024;M;Maenner;Marathon;2:07:33;;Sebastian Hendel;1995;LG Braunschweig;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:08:27;;Haftom Welday;1990;Turnerbund Hamburg Eilbeck;18.02.2024;Sevilla (ESP)
+2024;M;Maenner;Marathon;2:08:52;;Filimon Abraham;1992;LG TELIS FINANZ Regensburg;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:09:45;;Simon Boch;1994;LG TELIS FINANZ Regensburg;01.12.2024;Valencia (ESP)
+2024;M;Maenner;Marathon;2:10:32;;Nils Voigt;1997;TV Wattenscheid 01;01.12.2024;Valencia (ESP)
+2024;M;Maenner;Marathon;2:10:39;;Johannes Motschmann;1994;SCC Berlin;21.04.2024;London (GBR)
+2024;M;Maenner;Marathon;2:12:59;;Tom Groeschel;1991;TC Fiko Rostock;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:13:03;;Erik Hille;1988;TV Burglengenfeld;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:14:52;;Tom Thurley;1993;Potsdamer Laufclub;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:15:20;;Jan Lukas Becker;1993;LSG Sbr.-Sulzbachtal;27.10.2024;Frankfurt
+2024;M;Maenner;Marathon;2:15:42;;Jonathan Dahlke;1995;TSV Bayer 04 Leverkusen;21.04.2024;London (GBR)
+2024;M;Maenner;Marathon;2:16:34;;Gabriel Lautenschlager;1995;LG Bamberg;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:18:45;;Sascha van Staa;1992;LC Rapid Dortmund;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:18:47;;Marcus Schoefisch;1987;LAUFTRAINING.com Lauffreunde;27.10.2024;Frankfurt
+2024;M;Maenner;Marathon;2:19:26;;Lorenz Baum;1990;LAV Stadtwerke Tuebingen;01.12.2024;Valencia (ESP)
+2024;M;Maenner;Marathon;2:19:51;;David Gaertlein;1992;TSV 1860 Staffelstein;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:19:55;;Ralf Ulmer;1990;Lauf-Club Euskirchen;10.03.2024;Barcelona (ESP)
+2024;M;Maenner;Marathon;2:19:58;;Jakob Lange;1995;PTSV Rosenheim;27.10.2024;Frankfurt
+2024;M;Maenner;Marathon;2:20:37;;Markus Schweikert;1994;Silvesterlauf Trier;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:20:56;;Manuel Kruse;1990;LSF Muenster;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:21:18;;Patrick Koenig;1987;LG Neiße;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:21:29;;Tobias Groebl;1983;LG Zusam;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:21:48;;Devin Meyrer;1997;LG Kreis Ahrweiler;18.02.2024;Austin TX (USA)
+2024;M;Maenner;Marathon;2:22:15;;Florian Bochert;2000;TSVE 1890 Bielefeld;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:22:24;;Niels Michalk;1987;LG Nord Berlin;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:22:50;;Jochen Uhrig;1983;TSG 1862 Weinheim;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:23:07;;Manuel Schraeder;1992;SG Wenden;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:23:11;;Jan Kaumanns;1994;LSF Muenster;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:23:20;;Simon Stuetzel;1986;LG Region Karlsruhe;15.09.2024;Karlsruhe
+2024;M;Maenner;Marathon;2:23:25;;Simon Mueller;1996;Tri-Sport Luebeck;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:23:37;;Julius Ott;1997;TSG 1862 Weinheim;27.10.2024;Frankfurt
+2024;M;Maenner;Marathon;2:23:44;;Stelzner Jan;1986;SC Potsdam;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:23:48;;Christoph Uphues;1993;Braunschweiger Laufclub;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:23:57;;Nic Ihlow;1995;SC DHfK Leipzig;14.04.2024;Hannover
+2024;M;Maenner;Marathon;2:24:09;;Benjamin Franke;1989;LT Haspa Marathon Hamburg;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:24:17;;Matthias Ewender;1981;LG Region Landshut;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:24:33;;Thomas Kotissek;1976;LG Allgaeu;27.10.2024;Frankfurt
+2024;M;Maenner;Marathon;2:24:35;;Anthony Tomsich;1987;LAV Stadtwerke Tuebingen;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:24:39;;Hagen Bierlich;1994;Milers Colonia 2020;14.04.2024;Bonn
+2024;M;Maenner;Marathon;2:24:54;;Jona Bodirsky;2001;TSV 05 Rot;14.01.2024;Houston TX (USA)
+2024;M;Maenner;Marathon;2:24:54;;Lennart Nies;1986;TV Maikammer;03.03.2024;Tokyo (JPN)
+2024;M;Maenner;Marathon;2:25:14;;Michael Potthoff;2000;LG Aachen;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:25:25;;Maciek Miereczko;1979;LG Donatus Erftstadt;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:25:26;;Timo Goehler;1990;SCC Berlin;14.04.2024;Rotterdam (NED)
+2024;M;Maenner;Marathon;2:25:31;;Christian Hiller;1988;LT Haspa Marathon Hamburg;29.09.2024;Berlin
+2024;M;Maenner;Marathon;2:26:18;;Marius Stang;1985;LAV Stadtwerke Tuebingen;17.11.2024;Verona (ITA)
 2024;M;Maenner;100 km;6:55:07;;Max Kirschbaum;1986;LG Ohmbachsee;21.09.2024;Kandel;991
 2024;M;Maenner;100 km;7:05:24;;Johannes Arens;1990;TG Kitzingen;21.09.2024;Kandel;940
 2024;M;Maenner;100 km;7:09:22;;Martin Mueller;1991;Hamburg Running;21.09.2024;Kandel;921
@@ -212063,12 +212310,56 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2024;M;18;400 m Huerden;60,09;;Vincent Simon;2007;LAC Freiburg;28.04.2024;Ettlingen;684
 2024;M;18;400 m Huerden;60,18;;Johannes Rasshofer;2007;Kirchheimer SC;16.06.2024;Walldorf;681
 2024;M;18;400 m Huerden;60,28;;Nick Meyer;2008;TSV Fortschritt Mittweida 1949;08.06.2024;Rochlitz;677
-2024;M;18;2000 m Hindernis;5:54,03;;Moritz Gutowski;2007;LG Stadtwerke Muenchen;05.07.2024;Moenchengladbach;958
-2024;M;18;2000 m Hindernis;5:55,08;;Marco Voggenreiter;2007;LAC Passau;05.07.2024;Moenchengladbach;951
-2024;M;18;2000 m Hindernis;5:55,53;;Robin Boersken;2007;TGV Holzhausen;05.05.2024;Pliezhausen;948
-2024;M;18;2000 m Hindernis;5:56,29;;Til Stephan;2007;Hallesche Leichtathl.-Freunde;08.06.2024;Haldensleben;944
-2024;M;18;2000 m Hindernis;5:59,20;;Levin Saveur;2007;LG Stadtwerke Muenchen;05.05.2024;Pliezhausen;926
-2024;M;18;2000 m Hindernis;6:08,40;;Jonas Kliegel;2008;Berliner SV 1892;05.07.2024;Moenchengladbach;870
+2024;M;18;2000 m Hindernis;5:47,77;;Jakob Roedel;2007;SC DHfK Leipzig;21.07.2024;Banská Bystrica (SVK)
+2024;M;18;2000 m Hindernis;5:54,03;;Moritz Gutowski;2007;LG Stadtwerke Muenchen;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;5:55,08;;Marco Voggenreiter;2007;LAC Passau;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;5:55,53;;Robin Boersken;2007;TGV Holzhausen;05.05.2024;Pliezhausen
+2024;M;18;2000 m Hindernis;5:56,29;;Til Stephan;2007;Hallesche Leichtathl.-Freunde;08.06.2024;Haldensleben
+2024;M;18;2000 m Hindernis;5:59,20;;Levin Saveur;2007;LG Stadtwerke Muenchen;05.05.2024;Pliezhausen
+2024;M;18;2000 m Hindernis;6:08,40;;Jonas Kliegel;2008;Berliner SV 1892;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:09,85;;Noah Moeller;2008;TSV 1860 Staffelstein;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:10,27;;Diego Wald;2007;SC Neubrandenburg;19.05.2024;Zeven
+2024;M;18;2000 m Hindernis;6:10,84;;Aaron Lautenschlaeger;2007;LV Einheit Greiz;09.06.2024;Gotha
+2024;M;18;2000 m Hindernis;6:11,55;;Jerome English;2008;Sportclub Magdeburg;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:11,70;;Tim Alt;2008;LG Stadtwerke Muenchen;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:11,89;;Till Boden;2007;SC DHfK Leipzig;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:12,67;;Vincent Sempruch;2007;LC Rehlingen;28.06.2024;Luxemburg (LUX)
+2024;M;18;2000 m Hindernis;6:16,67;;Jannis Matheo Grunwald;2008;Berliner SV 1892;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:17,31;;Matthias Apel;2008;LG Osnabrueck;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:17,63;;Julian Weißenborn;2008;WSSV Suhl 1990;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:17,77;;Lukas Ulbrich;2007;Braunschweiger Laufclub;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:19,86;;Severin Niklas Benischke;2007;Erfurter LAC;05.05.2024;Pliezhausen
+2024;M;18;2000 m Hindernis;6:20,09;;Tom Stephan;2008;TV Lilienthal;19.05.2024;Zeven
+2024;M;18;2000 m Hindernis;6:20,15;;Julian Mauer;2008;TSV Bayer 04 Leverkusen;25.05.2024;Siegburg
+2024;M;18;2000 m Hindernis;6:21,34;;Janosch Kresse;2008;SC DHfK Leipzig;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:22,62;;Luis Butterwegge;2007;LC Paderborn;04.05.2024;Kamen
+2024;M;18;2000 m Hindernis;6:22,69;;Yann-Hendrik Hopp;2007;Eintracht Frankfurt;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:23,41;;Jakob Rauh;2007;ASC Duesseldorf;05.07.2024;Moenchengladbach
+2024;M;18;2000 m Hindernis;6:23,66;;Malte Kunze;2007;Turngemeinde in Berlin;16.06.2024;Rostock
+2024;M;18;2000 m Hindernis;6:25,43;;Elias Morgenstern;2008;Dresdner SC 1898;11.05.2024;Dresden
+2024;M;18;2000 m Hindernis;6:26,73;;Konrad Wienold;2007;DJK Novesia Neuss;25.05.2024;Siegburg
+2024;M;18;2000 m Hindernis;6:27,67;;Dominik Doellinger;2008;LAC Quelle Fuerth;25.05.2024;Siegburg
+2024;M;18;2000 m Hindernis;6:31,21;;Pablo Martin;2007;Erfurter LAC;13.06.2024;Erfurt
+2024;M;18;2000 m Hindernis;6:32,95;;Finn Lasse Schroeder;2008;TuS Jahn Hilfarth 1920;22.06.2024;Wassenberg
+2024;M;18;2000 m Hindernis;6:36,92;;Valentin Oblupin;2008;TV Bad Saeckingen;31.05.2024;Weinstadt
+2024;M;18;2000 m Hindernis;6:38,35;;Christoph Roessler;2008;TSV Fortschritt Mittweida 1949;08.06.2024;Rochlitz
+2024;M;18;2000 m Hindernis;6:39,87;;Tobias Wacke;2007;TSV Handschuhsheim;05.05.2024;Pliezhausen
+2024;M;18;2000 m Hindernis;6:40,35;;Janno Riedel;2008;Dresdner SC 1898;11.05.2024;Dresden
+2024;M;18;2000 m Hindernis;6:41,54;;Kilian Jueris;2007;LG Kreis Ahrweiler;09.06.2024;Koblenz
+2024;M;18;2000 m Hindernis;6:42,72;;Pepe Schindler;2008;TV Bad Saeckingen;31.05.2024;Weinstadt
+2024;M;18;2000 m Hindernis;6:42,80;;Pascal Neumann;2008;LAC Erdgas Chemnitz;11.05.2024;Dresden
+2024;M;18;2000 m Hindernis;6:43,01;;Mika Fender;2008;TGV Holzhausen;09.06.2024;Koblenz
+2024;M;18;2000 m Hindernis;6:43,69;;Lorenz Hundertmark;2008;Einbecker SV;19.05.2024;Zeven
+2024;M;18;2000 m Hindernis;6:43,96;;Julius Hehn;2008;LG Sieg;09.06.2024;Koblenz
+2024;M;18;2000 m Hindernis;6:46,44;;Jonas Fahrig;2008;SV GO! Saar 05;09.06.2024;Koblenz
+2024;M;18;2000 m Hindernis;6:48,53;;Felix Kuhn;2008;TV Wattenscheid 01;04.05.2024;Kamen
+2024;M;18;2000 m Hindernis;6:49,02;;Marius Lampert;2007;Dresdner SC 1898;11.05.2024;Dresden
+2024;M;18;2000 m Hindernis;6:54,39;;Fabian Mikolaiczyk;2007;Buxtehuder SV;19.05.2024;Zeven
+2024;M;18;2000 m Hindernis;6:55,65;;Friedrich von Gyldenfeldt;2008;LG Flensburg;21.04.2024;Winsen
+2024;M;18;2000 m Hindernis;7:06,69;;Max Puerschel;2008;LG Neiße;08.06.2024;Rochlitz
+2024;M;18;2000 m Hindernis;7:06,78;;Thorge Sundermann;2008;Buxtehuder SV;21.04.2024;Winsen
+2024;M;18;2000 m Hindernis;7:08,10;;Nils Meier;2008;LAC Quelle Fuerth;07.06.2024;Ingolstadt
+2024;M;18;2000 m Hindernis;7:10,67;;Magnus Wiedemann;2008;SC DHfK Leipzig;11.05.2024;Dresden
 2024;M;18;Hochsprung;2,08;;Johannes Boecher;2007;USC Mainz;13.07.2024;Heilbronn;984
 2024;M;18;Hochsprung;2,06;;Theo Hellwig;2007;Schweriner SC;06.07.2024;Moenchengladbach;967
 2024;M;18;Hochsprung;2,06;;Keon Schmidt-Gothan;2007;LG Stadtwerke Muenchen;06.07.2024;Moenchengladbach;967
@@ -216279,6 +216570,34 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2023;W;18;10 km;40:49;;Elisabeth Schneider;2007;ASC 1990 Breidenbach;04.03.2023;Marburg;720
 2023;W;18;10 km;41:05;;Chiara-Josephine Heydenreich;2006;SC DHfK Leipzig;10.09.2023;Bad Liebenzell;709
 2023;W;18;10 km;41:05;;Chiara Asfour;2007;LG Region Karlsruhe;23.09.2023;Bad Wildbad;709
+2023;W;18;10 km;41:20;;Helene Krome;2007;SC Kemmern;31.12.2023;Bad Staffelstein
+2023;W;18;10 km;41:32;;Emely Krieger;2007;LC Rehlingen;10.09.2023;Bad Liebenzell
+2023;W;18;10 km;41:57;;Aenne Rothe;2007;LAC Passau;03.12.2023;Regensburg
+2023;W;18;10 km;41:58;;Charlotte Weigand;2006;ASC 1990 Breidenbach;15.10.2023;Offenbach
+2023;W;18;10 km;42:04;;Pauline Althoff;2006;LSF Muenster;18.11.2023;Essen
+2023;W;18;10 km;42:13;;Tia-Jolie Lueder;2008;SC Neubrandenburg;17.06.2023;Neubrandenburg
+2023;W;18;10 km;42:16;;Leonie Reichel;2006;RSG Montabaur;11.03.2023;Urmitz
+2023;W;18;10 km;42:49;;Jana Zett;2006;LG Region Landshut;07.10.2023;Geiselhoering
+2023;W;18;10 km;42:54;;Lia Smolka;2008;LG Rhein-Wied;14.06.2023;Kastellaun
+2023;W;18;10 km;43:01;;Ella Repplinger;2008;Post-Sportverein Trier;11.11.2023;Langsur
+2023;W;18;10 km;43:22;;Victoria Skrzos;2007;LG farbtex Nordschwarzwald;23.09.2023;Bad Wildbad
+2023;W;18;10 km;43:22;;Johanna Acs;2007;TV Lahr;25.11.2023;Lahr
+2023;W;18;10 km;43:44;;Emma Sofie Eisele;2007;TV Bad Saeckingen;26.03.2023;Freiburg
+2023;W;18;10 km;43:45;;Pauline Ihme;2008;LAC Freiburg;23.06.2023;Seelbach
+2023;W;18;10 km;44:04;;Anabell Poida;2007;Sportclub Magdeburg;01.04.2023;Pretzsch (Elbe)
+2023;W;18;10 km;44:14;;Luise Hitzbleck;2006;Eintracht Frankfurt;10.09.2023;Bad Liebenzell
+2023;W;18;10 km;44:17;;Lucilla Osthus;2006;TSV 1860 Ansbach;10.09.2023;Bad Liebenzell
+2023;W;18;10 km;44:22;;Zoe Zimmer;2008;SC Neubrandenburg;17.06.2023;Neubrandenburg
+2023;W;18;10 km;44:28;;Lillian Gorman;2008;Spiridon Haltern;21.01.2023;Haltern am See
+2023;W;18;10 km;44:37;;Laura Schattenberg;2006;Braunschweiger Laufclub;16.04.2023;Uelzen
+2023;W;18;10 km;44:46;;Lotta Emilia Kokemohr;2007;Haaner Turnverein;20.08.2023;Dortmund-Hoerde
+2023;W;18;10 km;45:03;;Nele Schaber;2007;LG farbtex Nordschwarzwald;23.09.2023;Bad Wildbad
+2023;W;18;10 km;45:16;;Juliane Goellnitz;2008;Sportclub Laage;22.04.2023;Warnemuende
+2023;W;18;10 km;45:33;;Hannah Schoelzke;2008;Laufteam Ruegen;17.06.2023;Neubrandenburg
+2023;W;18;10 km;45:50;;Anne Schneider;2006;SSC Hanau-Rodenbach;03.09.2023;Darmstadt
+2023;W;18;10 km;45:52;;Klara Merrem;2007;Athletic-Team Wittlich;11.03.2023;Urmitz
+2023;W;18;10 km;45:57;;Lina Kramarczyk;2006;TSV Niederelsungen;25.03.2023;Eschwege
+2023;W;18;10 km;46:14;;Nele Wippich;2007;LV Oelde;01.12.2023;Rheda-Wiedenbrueck
 2023;W;18;100 m Huerden;13,61;+1,0;Samita Schatz;2006;Pulheimer SC;10.06.2023;Kassel;1069
 2023;W;18;100 m Huerden;13,71;+1,0;Lea Mehringer;2006;LG Oberland;10.06.2023;Kassel;1056
 2023;W;18;100 m Huerden;13,74;+0,1;Sandy Sakyi;2006;SV Werder Bremen;23.07.2023;Rostock;1052
@@ -217290,6 +217609,30 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2023;W;20;10 km;38:47;;Selina Planken;2006;LV Limbach 2000;10.09.2023;Bad Liebenzell;808
 2023;W;20;10 km;38:49;;Lara Kernich;2006;LG Olympia Dortmund;01.12.2023;Rheda-Wiedenbrueck;807
 2023;W;20;10 km;38:50;;Linda Grundmann;2005;SC DHfK Leipzig;10.09.2023;Bad Liebenzell;806
+2023;W;20;10 km;38:56;;Tina Klement;2004;LG TELIS FINANZ Regensburg;31.12.2023;Bad Staffelstein
+2023;W;20;10 km;39:00;;Inga Schulz;2004;TSG Bergedorf;03.09.2023;Hamburg
+2023;W;20;10 km;39:10;;Nina Bergerfurth;2006;LSF Muenster;18.11.2023;Essen
+2023;W;20;10 km;39:14;;Sophie Lucia Brinkschroeder;2008;DJK Guetersloh 1923;01.12.2023;Rheda-Wiedenbrueck
+2023;W;20;10 km;39:17;;Laura Robel;2004;OSLV Bautzen;15.10.2023;Berlin
+2023;W;20;10 km;39:20;;Maja Schmidt;2006;Laeuferbund Schwarzenberg 90;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;39:38;;Hannah Loesel;2007;Eintracht Frankfurt;31.12.2023;Frankfurt
+2023;W;20;10 km;39:39;;Gesa Schumacher;2004;LG Kreis Verden;19.08.2023;Schortens
+2023;W;20;10 km;39:45;;Maxime Fabienne Dammeyer;2007;Eintracht Frankfurt;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;39:49;;Charlotte Skrzos;2005;LG farbtex Nordschwarzwald;23.09.2023;Bad Wildbad
+2023;W;20;10 km;39:53;;Isabel Altendorfer;2004;LG Donau-Ries;31.12.2023;Abenserg
+2023;W;20;10 km;39:54;;Marie Sylvie Meyer-Piton;2005;LG Olympia Dortmund;20.08.2023;Dortmund-Hoerde
+2023;W;20;10 km;39:54;;Finnja Loetzsch;2005;SC DHfK Leipzig;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;39:58;;Frida Giersdorff;2004;TSV Jahn Freising;23.07.2023;Garching
+2023;W;20;10 km;39:58;;Annika Klezath;2006;OTB Osnabrueck;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;40:05;;Karla Hiss;2005;LG TELIS FINANZ Regensburg;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;40:17;;Gerda Wenghoefer;2006;Turbine Neubrandenburg;08.10.2023;Lubmin
+2023;W;20;10 km;40:27;;Lea Baus;2004;LG Region Karlsruhe;21.10.2023;Karlsruhe
+2023;W;20;10 km;40:31;;Joelle Bernhardt;2005;LG farbtex Nordschwarzwald;23.09.2023;Bad Wildbad
+2023;W;20;10 km;40:41;;Maray Benner;2007;TSG Oehringen;23.09.2023;Bad Wildbad
+2023;W;20;10 km;40:49;;Elisabeth Schneider;2007;ASC 1990 Breidenbach;04.03.2023;Marburg
+2023;W;20;10 km;41:05;;Chiara-Josephine Heydenreich;2006;SC DHfK Leipzig;10.09.2023;Bad Liebenzell
+2023;W;20;10 km;41:05;;Chiara Asfour;2007;LG Region Karlsruhe;23.09.2023;Bad Wildbad
+2023;W;20;10 km;41:20;;Helene Krome;2007;SC Kemmern;31.12.2023;Bad Staffelstein
 2023;W;20;100 m Huerden;13,06;+0,5;Rosina Schneider;2004;TV Sulz;08.08.2023;Jerusalem (ISR);1142
 2023;W;20;100 m Huerden;13,32;+1,3;Lia Flotow;2004;1. LAV Rostock;25.06.2023;Mannheim;1107
 2023;W;20;100 m Huerden;13,70;+0,2;Line Schroeder;2004;Hamburger SV;25.06.2023;Mannheim;1057
@@ -218027,6 +218370,51 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2023;M;16;3000 m;9:10,78;;Tom Stephan;2008;TV Lilienthal;29.07.2023;Stuttgart;682
 2023;M;16;3000 m;9:11,01;;Jerome English;2008;Sportclub Magdeburg;29.07.2023;Stuttgart;681
 2023;M;16;3000 m;9:11,23;;Maximilian Rath;2009;LG Stadtwerke Muenchen;16.07.2023;Ingolstadt;680
+2023;M;16;3000 m;9:13,91;;Noah Moeller;2008;TSV 1860 Staffelstein;16.07.2023;Ingolstadt
+2023;M;16;3000 m;9:14,26;;Lennox Gyulai;2008;SG Lok. Hainsberg;25.06.2023;Dresden
+2023;M;16;3000 m;9:23,42;;Elias Loleit;2008;LC Paderborn;11.06.2023;Lage
+2023;M;16;3000 m;9:26,34;;Jannis Matheo Grunwald;2008;Berliner SV 1892;17.06.2023;Hamburg
+2023;M;16;3000 m;9:27,07;;Jan Langenkamp;2008;Laufteam Kassel;29.07.2023;Stuttgart
+2023;M;16;3000 m;9:28,50;;Jaron Kollmeier;2008;MTV Luebeck;05.03.2023;Luebeck
+2023;M;16;3000 m;9:30,31;;Jonas Kliegel;2008;Berliner SV 1892;17.06.2023;Hamburg
+2023;M;16;3000 m;9:31,02;;Janne Dankwerth;2008;ASV Koeln;29.07.2023;Stuttgart
+2023;M;16;3000 m;9:31,97;;Lorenz Hundertmark;2008;Einbecker SV;17.06.2023;Hamburg
+2023;M;16;3000 m;9:32,54;;Friedrich Michel;2008;TC Fiko Rostock;30.08.2023;Berlin-Lichterfelde
+2023;M;16;3000 m;9:33,14;;Max Birk;2008;LG Region Karlsruhe;18.06.2023;Aichach
+2023;M;16;3000 m;9:34,63;;Jakob Fichtner;2009;SV Preußen Berlin;30.08.2023;Berlin-Lichterfelde
+2023;M;16;3000 m;9:34,85;;Juri Flohrs;2008;Dresdner SC 1898;01.07.2023;Erfurt
+2023;M;16;3000 m;9:35,00;;Theo Knopp;2008;Post-Sportverein Trier;29.07.2023;Stuttgart
+2023;M;16;3000 m;9:36,76;;Joseph Hof;2009;LG Erlangen;16.07.2023;Ingolstadt
+2023;M;16;3000 m;9:38,06;;Julian Hins;2009;SC Hagen-Wildewiese;24.08.2023;Bergisch Gladbach
+2023;M;16;3000 m;9:39,55;;Emil Oppelt;2009;LG Sempt;16.07.2023;Ingolstadt
+2023;M;16;3000 m;9:39,65;;Julian Mauer;2008;TSV Bayer 04 Leverkusen;16.09.2023;Berlin
+2023;M;16;3000 m;9:39,69;;Christof Kittner;2008;ASC Darmstadt;10.05.2023;Wiesbaden
+2023;M;16;3000 m;9:41,68;;Yannis Wagner;2009;LG Region Karlsruhe;29.07.2023;Koenigsbach-Stein
+2023;M;16;3000 m;9:43,20;;Jaron Diehr;2010;MTV Vorsfelde;29.08.2023;Goettingen
+2023;M;16;3000 m;9:45,27;;Pitt Wanninger;2008;TSV Holzelfingen;18.06.2023;Aichach
+2023;M;16;3000 m;9:45,49;;Max Luis Lindner;2008;LV 90 Erzgebirge;26.05.2023;Leipzig
+2023;M;16;3000 m;9:45,97;;Christian Stengl;2008;LC Hassloch;15.07.2023;Zweibruecken
+2023;M;16;3000 m;9:46,47;;Dominik Doellinger;2008;LAC Quelle Fuerth;16.07.2023;Ingolstadt
+2023;M;16;3000 m;9:46,56;;Sebastian Henne;2009;LG Rhein-Wied;16.09.2023;Berlin
+2023;M;16;3000 m;9:46,64;;Mats Wellensiek;2010;LAC Quelle Fuerth;16.07.2023;Ingolstadt
+2023;M;16;3000 m;9:46,83;;Linus Klinge;2009;LG Reinhardswald;29.08.2023;Goettingen
+2023;M;16;3000 m;9:47,95;;Ivan Schaarwaechter;2008;Berliner TSC;17.06.2023;Hamburg
+2023;M;16;3000 m;9:48,06;;Tim Mueller;2008;LG Ruelzheim;18.06.2023;Aichach
+2023;M;16;3000 m;9:48,40;;Maximilian Leon Huber;2009;ETSV Lauda;24.09.2023;Stuttgart
+2023;M;16;3000 m;9:48,73;;Levi Schaefer;2008;KSG Gerlingen;29.07.2023;Stuttgart
+2023;M;16;3000 m;9:48,86;;Moritz Jancke;2009;Eintracht Hildesheim;10.06.2023;Verden
+2023;M;16;3000 m;9:49,01;;Benjamin Wilmes;2008;TV Moersch;18.06.2023;Aichach
+2023;M;16;3000 m;9:50,67;;Tim Klein;2009;Zehlendorfer TSV v 1888;17.05.2023;Berlin-Zehlendorf
+2023;M;16;3000 m;9:51,10;;David Bohr;2008;SG Egelsbach 1874;18.06.2023;Aichach
+2023;M;16;3000 m;9:51,39;;Max-Lennart Rekate;2009;LG Weserbergland;10.06.2023;Verden
+2023;M;16;3000 m;9:52,35;;Noah Becker;2008;LAV Kassel;19.05.2023;Melle
+2023;M;16;3000 m;9:53,00;;Elias Poelzing;2009;KSG Gerlingen;30.06.2023;Erbach
+2023;M;16;3000 m;9:54,74;;Karl Luis Eickmeyer;2008;LG Lage-Detmold-Bad Salzuflen;20.05.2023;Bielefeld
+2023;M;16;3000 m;9:55,66;;Janno Riedel;2008;Dresdner SC 1898;25.06.2023;Dresden
+2023;M;16;3000 m;9:55,73;;Lasse Koerner;2008;TV Bretten;03.05.2023;Pfungstadt
+2023;M;16;3000 m;9:56,10;;Luca Ruepke;2008;HNT Hamburg;16.09.2023;Berlin
+2023;M;16;3000 m;9:56,51;;Maxim Gassmann;2009;LV 90 Erzgebirge;25.06.2023;Dresden
+2023;M;16;3000 m;9:57,24;;Sean Arnold;2008;LAC Freiburg;23.04.2023;Mosbach
 2023;M;16;5 km;16:17;;Maximilian Rath;2009;LG Stadtwerke Muenchen;07.10.2023;Geiselhoering;595
 2023;M;16;5 km;16:39;;Jan Vernikov;2008;LAZ Rhein-Sieg;05.03.2023;Leverkusen;540
 2023;M;16;5 km;16:52;;Yannis Wagner;2009;LG Region Karlsruhe;01.11.2023;Hockenheim;508
@@ -218076,6 +218464,56 @@ jahr;geschlecht;altersklasse;disziplin;leistung;wind;name;geburtsjahr;verein;dat
 2023;M;16;5 km;18:36;;Linus Klinge;2009;LG Reinhardswald;03.09.2023;Darmstadt;291
 2023;M;16;5 km;18:42;;Tom Nikel;2009;LG Odenwald;03.09.2023;Darmstadt;281
 2023;M;16;5 km;18:42;;Milan Widder;2008;SFD 75 Duesseldorf-Sued;15.10.2023;Bergisch Gladbach-Refrath;281
+2023;M;16;1500 m Hindernis;4:26,20;;Noah Moeller;2008;TSV 1860 Staffelstein;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:28,66;;Lennox Gyulai;2008;SG Lok. Hainsberg;27.05.2023;Leuna
+2023;M;16;1500 m Hindernis;4:30,49;;Tim Alt;2008;LG Stadtwerke Muenchen;16.06.2023;Ingolstadt
+2023;M;16;1500 m Hindernis;4:34,66;;Jonas Kliegel;2008;Berliner SV 1892;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:35,89;;Julian Mauer;2008;TSV Bayer o4 Leverkusen;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:38,19;;Jannis Matheo Grunwald;2008;Berliner SV 1892;28.05.2023;Zeven
+2023;M;16;1500 m Hindernis;4:38,23;;Ben Emilio Reif;2008;SSV Planeta Radebeul;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:39,03;;Emil Keppler;2008;Buxtehuder SV;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:39,54;;Noah Becker;2008;LAV Kassel;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:39,77;;Julian Weißenborn;2008;WSSV Suhl 1990;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:41,95;;Ivan Schaarwaechter;2008;Berliner TSC;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:45,90;;Dominik Doellinger;2008;LAC Quelle Fuerth;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:46,67;;Lorenz Hundertmark;2008;Einbecker SV;28.05.2023;Zeven
+2023;M;16;1500 m Hindernis;4:47,19;;Elias Morgenstern;2008;Dresdner SC 1898;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:48,69;;Valentin Oblupin;2008;TV Bad Saeckingen;14.05.2023;Pliezhausen
+2023;M;16;1500 m Hindernis;4:50,64;;Malte Duncker;2008;LC Cottbus;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:52,64;;Pascal Neumann;2008;LAC Erdgas Chemnitz;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:52,73;;Pepe Schindler;2008;TV Bad Saeckingen;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:53,17;;Emil Oppelt;2009;LG Sempt;16.06.2023;Ingolstadt
+2023;M;16;1500 m Hindernis;4:53,53;;Janno Riedel;2008;Dresdner SC 1898;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;4:54,08;;Christoph Roessler;2008;TSV Fortschritt Mittweida 1949;27.05.2023;Leuna
+2023;M;16;1500 m Hindernis;4:55,64;;Nelio Schwarz;2008;LG Nord Berlin;20.05.2023;Berlin-Charlottenburg
+2023;M;16;1500 m Hindernis;4:56,18;;Theo Tietze;2008;Moerser TV;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:57,31;;Nils Meier;2008;LAC Quelle Fuerth;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:57,70;;Julius Hehn;2008;LG Sieg;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:58,14;;Jarne Beckmann;2008;SG Wenden;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:58,18;;Jonas Fahrig;2008;SV GO! Saar 05;10.06.2023;Koblenz
+2023;M;16;1500 m Hindernis;4:58,52;;Janosch Kresse;2008;SC DHfK Leipzig;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;4:59,84;;Oskar Niegisch;2008;O-SEE Sports e. V.;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;5:00,42;;Max Puerschel;2008;LG Neiße;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;5:00,52;;Benjamin Lukas Bosch;2008;SSV Ulm 1846;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;5:01,24;;Maxim Gassmann;2009;LV 90 Erzgebirge;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;5:01,33;;Sean Arnold;2008;LAC Freiburg;14.05.2023;Pliezhausen
+2023;M;16;1500 m Hindernis;5:01,79;;Elias Poelzing;2009;KSG Gerlingen;14.05.2023;Pliezhausen
+2023;M;16;1500 m Hindernis;5:01,92;;Felix Kuhn;2008;TV Wattenscheid 01;27.05.2023;Siegburg
+2023;M;16;1500 m Hindernis;5:02,85;;Lasse Koerner;2008;TV Bretten;14.05.2023;Pliezhausen
+2023;M;16;1500 m Hindernis;5:03,11;;Friedrich von Gyldenfeldt;2008;LG Flensburg;29.07.2023;Stuttgart
+2023;M;16;1500 m Hindernis;5:03,11;;Maximilian Evert;2009;TV Petersberg;01.09.2023;Baunatal
+2023;M;16;1500 m Hindernis;5:03,25;;Noé Filippo Gueli;2008;LC Rehlingen;10.06.2023;Koblenz
+2023;M;16;1500 m Hindernis;5:03,30;;Thorge Sundermann;2008;Buxtehuder SV;11.06.2023;Arnstadt
+2023;M;16;1500 m Hindernis;5:04,77;;Magnus Wiedemann;2008;SC DHfK Leipzig;08.07.2023;Leipzig
+2023;M;16;1500 m Hindernis;5:04,87;;Julius Feuerfeil;2009;KSG Gerlingen;14.05.2023;Pliezhausen
+2023;M;16;1500 m Hindernis;5:06,20;;Julian Elsholz;2009;Turngemeinde in Berlin;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;5:06,58;;Leo Baraniskin;2008;LG Olympia Dortmund;27.05.2023;Siegburg
+2023;M;16;1500 m Hindernis;5:08,08;;Ole Steinbach;2009;Dresdner SC 1898;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;5:10,31;;Franz Renger;2009;O-SEE Sports e. V.;09.06.2023;Rochlitz
+2023;M;16;1500 m Hindernis;5:10,61;;Janik Luis Albinana Martens;2009;Berliner TSC;20.05.2023;Berlin-Charlottenburg
+2023;M;16;1500 m Hindernis;5:11,22;;Theo Groever;2009;LG Olympia Dortmund;27.05.2023;Siegburg
+2023;M;16;1500 m Hindernis;5:11,48;;Hisko Weber;2009;SV Blau-Weiß Emden-Borssum;28.05.2023;Zeven
+2023;M;16;1500 m Hindernis;5:13,36;;Simon Tobias Murmann;2008;SFD 75 Duesseldorf-Sued;29.04.2023;Neuss
 2023;M;16;3000 m Gehen;16:27,11;;Felix Assmus;2010;Erfurter LAC;27.06.2023;Erfurt;503
 2023;M;16;3000 m Gehen;16:46,36;;Jakob Kellen;2009;Diezer TSK Oranien;24.09.2023;Neuss;472
 2023;M;16;3000 m Gehen;17:52,32;;Felix Jonathan Bauer;2011;VfL 1860 Marburg;24.09.2023;Neuss;374
