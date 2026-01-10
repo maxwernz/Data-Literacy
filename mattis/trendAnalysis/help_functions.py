@@ -59,6 +59,34 @@ def func_norm_per_group(data, func=np.mean):
     
     return mean_norm
 
+def func_norm_per_group(data, func=np.mean):
+    """
+    Calculate for every subgroup diszipline x gender x age group
+
+    1. A given function or population parameter
+    2. Normalize results to the first year
+    
+    :param data: Description
+    :param func: Description
+    """
+    subgroup_norm = []
+    # For every group e.g. diszipline x gender x age group calculate the given function (mean, std ...) per year
+    for (disc, gender, age), subdata in data.groupby(["disziplin", "geschlecht", "altersklasse"]):
+        group = subdata.groupby("jahr")["iaaf_score"].agg(func)
+
+        if 2001 not in group.index:
+            continue
+        for year in group.index:
+            subgroup_norm.append({
+                            "func_value": group.loc[year],
+                            "event": disc,
+                            "gender": gender,
+                            "age": age,
+                            "year": year,
+                        })
+    
+    return subgroup_norm
+
 
 
 def linear_regression(data):
