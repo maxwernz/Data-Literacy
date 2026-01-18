@@ -63,7 +63,7 @@ def get_iaaf_coeffs():
 
 
 
-def score_from_mark(gender, event, mark, coeffs, func=None):
+def score_from_mark(gender, event, mark, coeffs, cutoff='larger', func=None):
     if mark is None:
         return None
 
@@ -71,6 +71,12 @@ def score_from_mark(gender, event, mark, coeffs, func=None):
         a, b, c = coeffs[gender][event]
     else:
         a, b, c = coeffs.loc[event, gender]
+
+    xs = -b / (2*a)
+    if cutoff == 'larger' and mark > xs:
+        return 0
+    elif cutoff == 'smaller' and mark < xs:
+        return 0
     points = a * mark * mark + b * mark + c
     if func is None:
         return round(points)
@@ -88,6 +94,6 @@ if __name__ == "__main__":
     with open("max/iaaf_points/IAAF_Coefficients_2025.json") as f:
         coeffs = json.load(f)
 
-    example_mark = 10.50
-    pts = score_from_mark("men", "110mH", example_mark, coeffs)
-    print(f"100mH {example_mark} → {pts} Punkte")
+    example_mark = 40
+    pts = score_from_mark("women", "TJ", example_mark, coeffs, cutoff='smaller')
+    print(f"5km {example_mark} → {pts} Punkte")
