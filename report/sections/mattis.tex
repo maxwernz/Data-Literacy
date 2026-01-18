@@ -1,0 +1,104 @@
+\begin{abstract}
+7777Put your abstract here. Abstracts typically start with a sentence motivating why the subject is interesting. Then mention the data, methodology or methods you are working with, and describe results. 
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+deutsche Medaillenkrise bei den Olympischen Sommerspielen 2024 
+
+7777Motivate the problem, situation or topic you decided to work on. Describe why it matters (is it of societal, economic, scientific value?). Outline the rest of the paper (use references, e.g.~to \Cref{sec:methods}: What kind of data you are working with, how you analyse it, and what kind of conclusion you reached. The point of the introduction is to make the reader want to read the rest of the paper.
+
+\section{Data and Methods}\label{sec:methods}
+
+- Using 4 year periods for analysis - having more data and less one-year variances and having 3 years left if one discipline not enough data
+
+- Using the top 35 - having enough data, even if some disciplines (for example Womens Adults 3000m Steeplechase 2001)
+
+- Age groups; U18, U20, Adults - most relevant and with consistent data (U23 is a "transition" age group, also mostly only top 30 collected or less data available)
+- for every group:
+    - Data Start period (always 2001-2004)
+    - End period (for plot x 2021-2024)
+    - One data pool of all data points of the periods for the specified group: f.e. all data: all disciplines, gender and age groups
+
+- Mean and Std os calculated over all data points per period
+- Percentage diff (maybe with math) of mean and percentage diff (maybe with math) of std
+- to test if the means of the two populations are equal -> Welch's t test
+- to test if population variances are equal -> Levene's Test
+- Cohen's d for effect size
+
+FOR RANK Analysis:
+
+- Calculation of the mean per rank per group per period
+- calculation of the difference of the two periods per rank per group
+
+% This is the template for a figure from the original ICML submission pack. In lecture 10 we will discuss plotting in detail.
+% Refer to this lecture on how to include figures in this text.
+% 
+% \begin{figure}[ht]
+% \vskip 0.2in
+% \begin{center}
+% \centerline{\includegraphics[width=\columnwidth]{icml_numpapers}}
+% \caption{Historical locations and number of accepted papers for International
+% Machine Learning Conferences (ICML 1993 -- ICML 2008) and International
+% Workshops on Machine Learning (ML 1988 -- ML 1992). At the time this figure was
+% produced, the number of accepted papers for ICML 2008 was unknown and instead
+% estimated.}
+% \label{icml-historical}
+% \end{center}
+% \vskip -0.2in
+% \end{figure}
+
+\section{Results}\label{sec:results}
+
+PLOT: MEAN vs STD Difference START vs END Period (with gender color)
+
+- Overall we analysed x different groups; discipline x age group x gender
+- Global analysis: n datapoints: 
+    - Mean: no significant improvement:(\%, p-val)
+    - Std significant increase (\%, p-val)
+- Gender: Seen in the plot - slightly better women than men in general
+    - Mean increase women (\%, p-val), but decrease men (\%, p-val)
+    - In line std increase Men strong (\%, p-val), women midly (\%, p-val) but significant
+- Age group per gender:
+    - All Age group in Women improvement in mean, significant for Adults and U18
+    - U18 also decrease in Std
+    - Men all age groups decreased mean , signif for U18 and U20,
+    - Men all strong increase in std
+- Discipline groups:
+    - Increase Mean in Run and Sprint, technical disciplines decrease sign.
+    - But also std higher in run and sprint, strongest in combined events
+    - Largest improvment: Marathon Adults, and Kugelstoss U18 
+    - largest decrease: Hammerwurf (all age groups)
+    - Largest std higher: Kugelstoss U20 Men
+    - LArgest std lower: Stabhochsprung women
+
+PLOT: RANK Evolution
+
+    - PLOT shows the rising discrepance: first places are getting better, lower places worse
+    - In general, but especially the M U18 and U20, while women -> better over all places
+
+PLOT: YEAR EVOLUTION/ PERIOD EVOLUTION
+
+    - Men: Decrease in Mean over time -> sign. drop of 1.4 \% from 2013-16 to 2017-2020
+    - Std decrease step by step around 5\% per period, 2005-08 dirst improvment, 
+    - Women: step by step increase in mean
+    - STD deviation just in the last period 2021-24 sign. higher
+
+
+\section{Discussion \& Conclusion}\label{sec:conclusion}
+
+- As the results show, in general there is a problem with a rising discrepance of top performers to "second row"
+- More seen in Men than in women, and more in younger age groups, in line with the "Nachwuchs problem?"
+- More problems in technical disciplines -> Corona, less people in the sport -> less trainer, techn. needs more attention
+- Running marathon strong improvments -> shoes etc
+- Men Step by step decrease MEan and std -> also a reason of support?
+- Women getting better: later start in the sport, gender discrepancy, improvment, evolution still possible
+
+\newpage
+
+\section*{Contribution Statement}
+Explain here, in one sentence per person, what each group member contributed. For example, you could write: Max Mustermann collected and prepared data. Gabi Musterfrau and John Doe performed the data analysis. Jane Doe produced visualizations. All authors will jointly wrote the text of the report. Note that you, as a group, a collectively responsible for the report. Your contributions should be roughly equal in amount and difficulty.
+
+\section*{Notes} 
+
+Your entire report has a \textbf{hard page limit of 4 pages} excluding references and the contribution statement. (I.e. any pages beyond page 4 must only contain the contribution statement and references). Appendices are \emph{not} possible. But you can put additional material, like interactive visualizations or videos, on a githunb repo (use \href{https://github.com/pnkraemer/tueplots}{links} in your pdf to refer to them). Each report has to contain \textbf{at least three plots or visualizations}, and \textbf{cite at least two references}. More details about how to prepare the report, inclucing how to produce plots, cite correctly, and how to ideally structure your github repo, will be discussed in the lecture, where a rubric for the evaluation will also be provided.
