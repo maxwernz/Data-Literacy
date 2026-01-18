@@ -100,8 +100,29 @@ def convert_meters_to_float(value):
     except ValueError:
         return None
     
+def set_wind(value):
+    """Wandelt Windangabe in float um"""
+    if pd.isna(value):
+        return None
+    
+    wind_str = str(value)
+    if wind_str.startswith('+'):
+        positive = True
+    else:
+        positive = False
 
-def load_data(path_file="C:\\Users\\Mattis\\OneDrive\\Kogni\\DataLiteracyProject\\Data-Literacy\\data_csv\\Data.csv"):
+    
+    value = float(str(value).replace(',', '.').replace('+', '').replace('-', ''))
+    if not positive:
+        value *= -1
+
+    try:
+        return value
+    except ValueError:
+        return None
+    
+
+def load_data(path_file="data_csv/final_Data_iaaf_scores_neu.csv"):
     df = pd.read_csv(path_file, sep=";")
 
     # Funktion, die je nach Disziplin den passenden Converter wählt
@@ -120,5 +141,6 @@ def load_data(path_file="C:\\Users\\Mattis\\OneDrive\\Kogni\\DataLiteracyProject
 
     # Spalte 'leistung' entsprechend anpassen
     df['leistung'] = df.apply(convert_leistung, axis=1)
+    df['wind'] = df['wind'].apply(set_wind)
 
     return df
