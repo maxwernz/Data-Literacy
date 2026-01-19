@@ -49,14 +49,12 @@ BASE_DISCIPLINES = {
     'M': [
         '100 m', '200 m', '400 m', '110 m Huerden', '400 m Huerden',
         'Kugelstoss', 'Diskuswurf', 'Hammerwurf', 'Speerwurf',
-        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung',
-        'Zehnkampf'
+        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung'
     ],
     'W': [
         '100 m', '200 m', '400 m', '100 m Huerden', '400 m Huerden',
         'Kugelstoss', 'Diskuswurf', 'Hammerwurf', 'Speerwurf',
-        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung',
-        'Siebenkampf'
+        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung'
     ]
 }
 
