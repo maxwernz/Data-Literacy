@@ -33,10 +33,24 @@ def plt_settings():
     _plt.rcParams.update({"grid.linestyle": "-", "grid.alpha": 0.7})
     _plt.rcParams.update(cycler.cycler(color=palettes.tue_plot))
 
-def increase_figsze(factor: float):
+def increase_figsize(factor: float):
     width = _plt.rcParams["figure.figsize"][0] * factor
     height = _plt.rcParams["figure.figsize"][1] * factor
     return {"figure.figsize": (width, height)}
+
+# Project root is one level up from the 'plotting' directory
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_PLOTS_DIR = os.path.join(_PROJECT_ROOT, "Plots")
+
+def savefig(fname: str, category=None, **kwargs):
+    if category is not None:
+        target_dir = os.path.join(_PLOTS_DIR, category)
+    else:
+        target_dir = _PLOTS_DIR
+    
+    os.makedirs(target_dir, exist_ok=True)
+    full_path = os.path.join(target_dir, fname)
+    _plt.savefig(full_path, **kwargs)
 
 
 
