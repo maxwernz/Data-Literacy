@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 MEASUREMENT_TYPE = {
     "time": [
@@ -193,9 +194,12 @@ def set_wind(value):
         return value
     except ValueError:
         return None
-    
 
-def load_data(path_file="data_csv/final_Data_iaaf_scores_neu.csv", filter=True, youth=False):
+
+_PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+_DATA_DIR = os.path.join(_PROJECT_ROOT, "data_csv")
+
+def load_data(path_file=os.path.join(_DATA_DIR, "final_Data_iaaf_scores_neu.csv"), filter=True, youth=False):
     df = pd.read_csv(path_file, sep=";")
 
     # Funktion, die je nach Disziplin den passenden Converter wählt
