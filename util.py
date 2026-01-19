@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 MEASUREMENT_TYPE = {
     "time": [
@@ -28,6 +29,77 @@ PERFORMANCE_PATTERNS = {
     "meter": [_patterns["AA,BB"]],
     "points": [_patterns["Numeric"]]
 }
+
+# --- Configuration for Filtering ---
+
+# Allowed ages and their mapping to text file categories
+ALLOWED_AGES = ['18', '20', 'U23', 'Frauen', 'Maenner']
+
+# Mapping CSV age strings to 'rules' categories
+AGE_CATEGORY_MAP = {
+    '18': 'U18',
+    '20': 'U20',
+    'U23': 'U23',
+    'Frauen': 'Adult',
+    'Maenner': 'Adult'
+}
+
+# Base disciplines (Sprint, Wurf, Sprung, Mehrkampf) - available for ALL allowed ages
+BASE_DISCIPLINES = {
+    'M': [
+        '100 m', '200 m', '400 m', '110 m Huerden', '400 m Huerden',
+        'Kugelstoss', 'Diskuswurf', 'Hammerwurf', 'Speerwurf',
+        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung'
+    ],
+    'W': [
+        '100 m', '200 m', '400 m', '100 m Huerden', '400 m Huerden',
+        'Kugelstoss', 'Diskuswurf', 'Hammerwurf', 'Speerwurf',
+        'Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung'
+    ]
+}
+
+# Lauf disciplines - Specific by Age Category
+LAUF_DISCIPLINES = {
+    'U18': ['800 m', '1500 m', '3000 m', '2000 m Hindernis'],
+    'U20': ['800 m', '1500 m', '3000 m', '5000 m', '3000 m Hindernis'],
+    'U23': ['800 m', '1500 m', '5000 m', '10 000 m', '10 km', '3000 m Hindernis'],
+    'Adult': ['800 m', '1500 m', '5000 m', '10 000 m', '10 km', '3000 m Hindernis', 'Marathon']
+}
+
+def filter_relevant_data(df, youth):
+    """
+    Filters the DataFrame based on the funded disciplines and age groups.
+    """
+
+    if youth:
+        allowed_ages = ALLOWED_AGES + ['16', '14']
+    else:
+        allowed_ages = ALLOWED_AGES
+    # 1. Filter allowed ages
+    df = df[df['altersklasse'].isin(allowed_ages)].copy()
+    
+    # 2. Apply discipline filter based on Age and Gender
+    mask = pd.Series(False, index=df.index)
+    
+    for gender in ['M', 'W']:
+        for age_csv in allowed_ages:
+            age_cat = AGE_CATEGORY_MAP.get(age_csv)
+            
+            # Get allowed base disciplines for this gender
+            allowed = set(BASE_DISCIPLINES.get(gender, []))
+            
+            # Add Lauf disciplines for this age category
+            if age_cat in LAUF_DISCIPLINES:
+                allowed.update(LAUF_DISCIPLINES[age_cat])
+                
+            # Create sub-mask
+            sub_mask = (df['geschlecht'] == gender) & \
+                       (df['altersklasse'] == age_csv) & \
+                       (df['disziplin'].isin(allowed))
+            
+            mask = mask | sub_mask
+            
+    return df[mask]
 
 def get_measurement_key(discipline):
     for key, values in MEASUREMENT_TYPE.items():
@@ -100,8 +172,32 @@ def convert_meters_to_float(value):
     except ValueError:
         return None
     
+def set_wind(value):
+    """Wandelt Windangabe in float um"""
+    if pd.isna(value):
+        return None
+    
+    wind_str = str(value)
+    if wind_str.startswith('+'):
+        positive = True
+    else:
+        positive = False
 
-def load_data(path_file="C:\\Users\\Mattis\\OneDrive\\Kogni\\DataLiteracyProject\\Data-Literacy\\data_csv\\Data.csv"):
+    
+    value = float(str(value).replace(',', '.').replace('+', '').replace('-', ''))
+    if not positive:
+        value *= -1
+
+    try:
+        return value
+    except ValueError:
+        return None
+
+
+_PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+_DATA_DIR = os.path.join(_PROJECT_ROOT, "data_csv")
+
+def load_data(path_file=os.path.join(_DATA_DIR, "final_Data_iaaf_scores_neu.csv"), filter=True, youth=False):
     df = pd.read_csv(path_file, sep=";")
 
     # Funktion, die je nach Disziplin den passenden Converter wählt
@@ -120,5 +216,9 @@ def load_data(path_file="C:\\Users\\Mattis\\OneDrive\\Kogni\\DataLiteracyProject
 
     # Spalte 'leistung' entsprechend anpassen
     df['leistung'] = df.apply(convert_leistung, axis=1)
+    df['wind'] = df['wind'].apply(set_wind)
+
+    if filter:
+        df = filter_relevant_data(df, youth=youth)
 
     return df
