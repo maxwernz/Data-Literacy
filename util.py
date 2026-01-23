@@ -66,6 +66,14 @@ LAUF_DISCIPLINES = {
     'Adult': ['800 m', '1500 m', '5000 m', '10 000 m', '10 km', '3000 m Hindernis', 'Marathon']
 }
 
+GROUP_MAPPING = {
+    **{d: 'Run' for d in ['800 m', '1500 m', '3000 m', '5000 m', '10 km', 'Marathon', '2000 m Hindernis', '3000 m Hindernis']},
+    **{d: 'Sprint' for d in ['100 m', '200 m', '400 m', '100 m Huerden', '110 m Huerden', '400 m Huerden']},
+    **{d: 'Throw' for d in ['Kugelstoss', 'Diskuswurf', 'Speerwurf', 'Hammerwurf']}, 
+    **{d: 'Jump' for d in ['Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung']},
+    **{d: 'Combined' for d in ['Zehnkampf', 'Siebenkampf']}
+}
+
 def filter_relevant_data(df, youth):
     """
     Filters the DataFrame based on the funded disciplines and age groups.
@@ -213,6 +221,8 @@ def load_data(path_file=os.path.join(_DATA_DIR, "final_Data_iaaf_scores_neu.csv"
             return convert_points_to_int(leistung)
         else:
             return leistung  # falls Disziplin unbekannt, originalwert zurückgeben
+        
+    df['group'] = df['disziplin'].map(GROUP_MAPPING)
 
     # Spalte 'leistung' entsprechend anpassen
     df['leistung'] = df.apply(convert_leistung, axis=1)
