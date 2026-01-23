@@ -67,7 +67,7 @@ LAUF_DISCIPLINES = {
 }
 
 GROUP_MAPPING = {
-    **{d: 'Run' for d in ['800 m', '1500 m', '3000 m', '5000 m', '10 km', 'Marathon', '2000 m Hindernis', '3000 m Hindernis']},
+    **{d: 'Run' for d in ['800 m', '1500 m', '3000 m', '5000 m', '10 km', 'Marathon', '2000 m Hindernis', '3000 m Hindernis', '10 000 m']},
     **{d: 'Sprint' for d in ['100 m', '200 m', '400 m', '100 m Huerden', '110 m Huerden', '400 m Huerden']},
     **{d: 'Throw' for d in ['Kugelstoss', 'Diskuswurf', 'Speerwurf', 'Hammerwurf']}, 
     **{d: 'Jump' for d in ['Hochsprung', 'Stabhochsprung', 'Weitsprung', 'Dreisprung']},
