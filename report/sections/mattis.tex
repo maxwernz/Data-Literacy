@@ -10,14 +10,17 @@ deutsche Medaillenkrise bei den Olympischen Sommerspielen 2024
 
 \section{Data and Methods}\label{sec:methods}
 
+NOTE: This is also Data Cleaning
 For the analysis of performance evolution and performance density evolution we made some restrictions to the dataset to have comparable and sufficient data.
-We Analysed for the U18, U20 and Adult age groups, representing the most relevant age groups witth consistent data. U23 didn't had enough data, also for younger age groups.
+We analysed for the U18, U20 and Adult age groups, representing the most relevant age groups with consistent data. U23 didn't had enough data, also for younger age groups.
 Also always used the top 35 Ranks for analysis to have enough data for all disciplines and age groups.
 A Group is defined as a combinaion of Gender x Age group x Discipline to ensure consistency with the original leaderboards.
+
+
 We compared two time periods: Data Start period (2001-2004) and End data period(2021-2024)
 We used four year periods to exlude one-year variances.
 
-To measure the overall performance improvement of a group, we use the Median Difference ($\Delta \tilde{x}_{\%}$).
+To measure the overall performance improvement of a group, we use the Median Difference ($\Delta \tilde{x}_{\%}$) to quantify general group performance shifts and represent the typical performance at the elite level and prevent distortion through extreme outlier performances.
 The median of each period ($p$) is calculated from the respective performance pools ($S_p$) of the four year periods.
 The relative change between the start ($\tilde{x}_s$) and the end period ($\tilde{x}_e$) is defined as:
 
@@ -26,10 +29,9 @@ The relative change between the start ($\tilde{x}_s$) and the end period ($\tild
 \end{equation}
 
 A positive $\Delta \tilde{x}_{\%}$ indicates an overall improvement in performance, while a negative $\Delta \tilde{x}_{\%}$ shows a decrease in performance scores.
-Statistical significance for the comparison of the medians is measured using the Mann-Witney U test.
-Without assuming a normal distribution, this test allows to evaluate whether the distributions of the two periods differ significantly.
+Statistical significance for the comparison of the medians is measured using the Mann-Witney U test. Without assuming a normal distribution, this test allows to evaluate whether the distributions of the two periods differ significantly.
 
-To measure \textbf{Performance Density (PD)}, we used the performance spread ($G_p$) from annual top 3 performances to the bottom 3 performances (e.g. Rank 33-35) of our dataset for the two time periods.
+To measure Performance Density (PD), we used the performance spread ($G_p$) from annual top 3 performances to the bottom 3 performances (e.g. Rank 33-35) of our dataset for the two time periods. Averaging for 3 athletes prevent single-athlete outlier problems. Averaging for top 3 reflects the international standard of success (Podium), while bottom 3 provide a stable and comparable baseline. we used the Spread to measure the width of the elite level performances and we use all possible informations (e.g. Ranks) of our dataset and have a measurement of polarization without assuming a normal distribution.
 Mathematically, the gap ($G_p$) for a period ($p$) is defined as the difference between the collective mean of the top 3 and bottom 3 performances recorded across all years ($n$) within that period.
 
 \begin{equation}
@@ -42,13 +44,14 @@ Furthermore, the evolution of the performance gap ($\Delta G_{\%}$) between the 
 \Delta G_{\%} = \left( \frac{G_e - G_s}{G_s} \right) \times 100
 \end{equation}
 
-A positive $\Delta G_{\%}$ suggests a decrease in \textbf{PD}, while a negative $\Delta G_{\%}$ suggests a increase in \textbf{PD}.
+A positive $\Delta G_{\%}$ suggests a decrease in PD, while a negative $\Delta G_{\%}$ suggests a increase in PD.
 
-To assess the statistical significance of the change in \textbf{PD}, we use a bootstrap resampling method with $B=10,000$. 
+To assess the statistical significance of the change in PD, we use a bootstrap resampling method with $B=10,000$. Bootstrap is non-parametric and can handle the low sample size (N=12) well suiting our data distribution.
 We draw with replacement from the performance pools, we generated a distribution of the difference in gaps ($\Delta G_{obs}$). 
 We then calculate the $95\%$ confidence interval (CI) for the difference in gaps. 
-If the CI includes zero, the null hypothesis of no significance change in \textbf{PD} cannot be rejected.
+If the CI includes zero, the null hypothesis of no significance change in PD cannot be rejected.
 
+ \citep{mackay2003information}.
 
 FOR RANK Analysis:
 
@@ -90,7 +93,7 @@ In all discipline groups around the same amount of decrease in PD is observed.
 A Compression was not often seen and mostly non-significant across all groups.
 
 PLOT: RANK Evolution
-
+#
     - PLOT shows the rising discrepance: first places are getting better, lower places worse
     - In general, but especially the M U18 and U20, while women -> better over all places
 
@@ -103,6 +106,8 @@ PLOT: YEAR EVOLUTION/ PERIOD EVOLUTION
 
 
 \section{Discussion \& Conclusion}\label{sec:conclusion}
+
+- LIMITATION: TOP 35!
 
 - As the results show, in general there is a problem with a rising discrepance of top performers to "second row"
 - More seen in Men than in women, and more in younger age groups, in line with the "Nachwuchs problem?"
