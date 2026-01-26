@@ -109,7 +109,7 @@ def linear_regression(data):
 def calculate_enhanced_stats(df, group_cols, start_period=(2001, 2004), end_period=(2021, 2024)):
     """
     Calculate Welch's t-Test, Levene-Test und Cohen's d for two time periods.
-    Vergleicht 2001-2004 vs. 2021-2024.
+    2001-2004 vs. 2021-2024.
     """
     results_enhanced = []
     
@@ -202,3 +202,53 @@ def calculate_rank_diff(df, group_cols, num_entries):
     
     final["mean_diff_perc"] = (final["m_end"] - final["m_start"]) / final["m_start"] * 100
     return final
+
+
+def calculate_enhanced_stats_robust(df, group_cols, start_period=(2001, 2004), end_period=(2021, 2024)):
+    results_enhanced = []
+    
+    grouped = df.groupby(group_cols) if group_cols else [("Global", df)]
+
+    for names, subgroup in grouped:
+        s_pool = subgroup[subgroup["jahr"].between(*start_period)]["iaaf_score"].dropna().values
+        e_pool = subgroup[subgroup["jahr"].between(*end_period)]["iaaf_score"].dropna().values
+
+        if len(s_pool) > 1 and len(e_pool) > 1:
+            # Mann-Whitney-U-Test statt t-Test (Robust gegen Ausreißer)
+            u_stat, p_median = stats.mannwhitneyu(e_pool, s_pool, alternative='two-sided')
+
+            # Mediane und IQR berechnen
+            med_e, med_s = np.median(e_pool), np.median(s_pool)
+            
+            q75_e, q25_e = np.percentile(e_pool, [75 ,25])
+            iqr_e = q75_e - q25_e
+            
+            q75_s, q25_s = np.percentile(s_pool, [75 ,25])
+            iqr_s = q75_s - q25_s
+
+            # Effektstärke r für Mann-Whitney-U: r = z / sqrt(N)
+            # Eine Näherung für die Interpretation analog zu Cohen's d
+            n_total = len(e_pool) + len(s_pool)
+            z_score = stats.norm.ppf(p_median / 2) # Approximation
+            r_effect = abs(z_score) / np.sqrt(n_total)
+
+            m_diff_perc = (med_e - med_s) / med_s * 100
+            iqr_diff_perc = ((iqr_e - iqr_s) / iqr_s * 100) if iqr_s > 0 else 0
+
+            # Interpretation von r (nach Cohen: .1=Small, .3=Med, .5=Large)
+            if r_effect > 0.5: interp = "Large"
+            elif r_effect > 0.3: interp = "Med"
+            elif r_effect > 0.1: interp = "Small"
+            else: interp = "Negligible"
+
+            res = {col: val for col, val in zip(group_cols, names)} if group_cols else {"Group": "Global"}
+            res.update({
+                "Median_Diff_%": round(m_diff_perc, 2),
+                "P_Val_Median": round(p_median, 4),
+                "Effect_r": round(r_effect, 3),
+                "IQR_Diff_%": round(iqr_diff_perc, 2),
+                "Interpretation": interp
+            })
+            results_enhanced.append(res)
+
+    return pd.DataFrame(results_enhanced)
