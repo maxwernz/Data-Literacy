@@ -10,21 +10,45 @@ deutsche Medaillenkrise bei den Olympischen Sommerspielen 2024
 
 \section{Data and Methods}\label{sec:methods}
 
-- Using 4 year periods for analysis - having more data and less one-year variances and having 3 years left if one discipline not enough data
+For the analysis of performance evolution and performance density evolution we made some restrictions to the dataset to have comparable and sufficient data.
+We Analysed for the U18, U20 and Adult age groups, representing the most relevant age groups witth consistent data. U23 didn't had enough data, also for younger age groups.
+Also always used the top 35 Ranks for analysis to have enough data for all disciplines and age groups.
+A Group is defined as a combinaion of Gender x Age group x Discipline to ensure consistency with the original leaderboards.
+We compared two time periods: Data Start period (2001-2004) and End data period(2021-2024)
+We used four year periods to exlude one-year variances.
 
-- Using the top 35 - having enough data, even if some disciplines (for example Womens Adults 3000m Steeplechase 2001)
+To measure the overall performance improvement of a group, we use the Median Difference ($\Delta \tilde{x}_{\%}$).
+The median of each period ($p$) is calculated from the respective performance pools ($S_p$) of the four year periods.
+The relative change between the start ($\tilde{x}_s$) and the end period ($\tilde{x}_e$) is defined as:
 
-- Age groups; U18, U20, Adults - most relevant and with consistent data (U23 is a "transition" age group, also mostly only top 30 collected or less data available)
-- for every group:
-    - Data Start period (always 2001-2004)
-    - End period (for plot x 2021-2024)
-    - One data pool of all data points of the periods for the specified group: f.e. all data: all disciplines, gender and age groups
+\begin{equation}
+\Delta \tilde{x}_{\%} = \left( \frac{\tilde{x}_e - \tilde{x}_s}{\tilde{x}_s} \right) \times 100
+\end{equation}
 
-- Mean and Std os calculated over all data points per period
-- Percentage diff (maybe with math) of mean and percentage diff (maybe with math) of std
-- to test if the means of the two populations are equal -> Welch's t test
-- to test if population variances are equal -> Levene's Test
-- Cohen's d for effect size
+A positive $\Delta \tilde{x}_{\%}$ indicates an overall improvement in performance, while a negative $\Delta \tilde{x}_{\%}$ shows a decrease in performance scores.
+Statistical significance for the comparison of the medians is measured using the Mann-Witney U test.
+Without assuming a normal distribution, this test allows to evaluate whether the distributions of the two periods differ significantly.
+
+To measure \textbf{Performance Density (PD)}, we used the performance spread ($G_p$) from annual top 3 performances to the bottom 3 performances (e.g. Rank 33-35) of our dataset for the two time periods.
+Mathematically, the gap ($G_p$) for a period ($p$) is defined as the difference between the collective mean of the top 3 and bottom 3 performances recorded across all years ($n$) within that period.
+
+\begin{equation}
+G_p = \frac{1}{n}\sum_{t=1}^{n} \bar{x}_{t, \text{top3}} - \frac{1}{n}\sum_{t=1}^{n} \bar{x}_{t, \text{low3}}
+\end{equation}
+
+Furthermore, the evolution of the performance gap ($\Delta G_{\%}$) between the start period ($G_s$) and end period ($G_e$) is calculated as
+
+\begin{equation}
+\Delta G_{\%} = \left( \frac{G_e - G_s}{G_s} \right) \times 100
+\end{equation}
+
+A positive $\Delta G_{\%}$ suggests a decrease in \textbf{PD}, while a negative $\Delta G_{\%}$ suggests a increase in \textbf{PD}.
+
+To assess the statistical significance of the change in \textbf{PD}, we use a bootstrap resampling method with $B=10,000$. 
+We draw with replacement from the performance pools, we generated a distribution of the difference in gaps ($\Delta G_{obs}$). 
+We then calculate the $95\%$ confidence interval (CI) for the difference in gaps. 
+If the CI includes zero, the null hypothesis of no significance change in \textbf{PD} cannot be rejected.
+
 
 FOR RANK Analysis:
 
@@ -50,27 +74,20 @@ FOR RANK Analysis:
 
 \section{Results}\label{sec:results}
 
-PLOT: MEAN vs STD Difference START vs END Period (with gender color)
+PLOT: MEDIAN vs GAP Difference START vs END Period (with gender color and age group markers), Significance for different 
 
-- Overall we analysed x different groups; discipline x age group x gender
-- Global analysis: n datapoints: 
-    - Mean: no significant improvement:(\%, p-val)
-    - Std significant increase (\%, p-val)
-- Gender: Seen in the plot - slightly better women than men in general
-    - Mean increase women (\%, p-val), but decrease men (\%, p-val)
-    - In line std increase Men strong (\%, p-val), women midly (\%, p-val) but significant
-- Age group per gender:
-    - All Age group in Women improvement in mean, significant for Adults and U18
-    - U18 also decrease in Std
-    - Men all age groups decreased mean , signif for U18 and U20,
-    - Men all strong increase in std
-- Discipline groups:
-    - Increase Mean in Run and Sprint, technical disciplines decrease sign.
-    - But also std higher in run and sprint, strongest in combined events
-    - Largest improvment: Marathon Adults, and Kugelstoss U18 
-    - largest decrease: Hammerwurf (all age groups)
-    - Largest std higher: Kugelstoss U20 Men
-    - LArgest std lower: Stabhochsprung women
+Generally a trend that there are more groups with a significant higher PD (n=) to n=x lower PD. 
+For the median this is more a little more balanced (sig. higher med n= to lower med n=)
+
+For the general median trend, we see that in the women's adults 100\% of their median increases are statistically significant.
+For the men its 81.8\%.
+In U18 and U20 Men's there are more decreases in median performances, for womens its more or less half improvment and decreasement.
+
+The clearest trend is seen in the U20 Men's category, where X\% of the groups showed a significant Polarization of performance.
+This is followed by the U18 Men's category, where X of the groups showed a significant Polarization of performance.
+Adult Men and Women both displayed significant decrease in PD on over X\% of the groups (X and X respectively)
+In all discipline groups around the same amount of decrease in PD is observed.
+A Compression was not often seen and mostly non-significant across all groups.
 
 PLOT: RANK Evolution
 
