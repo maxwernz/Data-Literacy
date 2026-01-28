@@ -163,44 +163,49 @@ def calculate_enhanced_stats(df, group_cols, start_period=(2001, 2004), end_peri
 
     return pd.DataFrame(results_enhanced)
 
-def calculate_rank_diff(df, group_cols, num_entries):
+def calculate_rank_diff(df, group_cols=None, num_entries=35):
     """
-    Berechnet die prozentuale Differenz der IAAF-Scores zwischen 
-    2001-2004 und 2021-2024 pro Rang innerhalb definierter Gruppen.
+    Berechnet erst die %-Differenz für jede kleinste Einheit 
+    (Disziplin + Geschlecht + Altersklasse) und aggregiert dann.
     """
-    results = []
+    results_per_unit = []
     
-    full_group_cols = group_cols + ["disziplin"]
+    # Die kleinste Einheit ist immer Disziplin + Geschlecht + Altersklasse
+    unit_cols = ["disziplin", "geschlecht", "altersklasse"]
     
-    for names, subgroup in df.groupby(full_group_cols):
-        S_gr = subgroup.pivot_table(index="jahr", columns="rank", values="iaaf_score")
+    for names, subgroup in df.groupby(unit_cols):
+        # Zeiträume filtern
+        s_sub = subgroup[subgroup["jahr"].between(2001, 2004)]
+        e_sub = subgroup[subgroup["jahr"].between(2021, 2024)]
         
-        available_ranks = [r for r in range(1, num_entries + 1) if r in S_gr.columns]
-        
-        for r in available_ranks:
-            start_vals = S_gr.loc[2001:2004, r]
-            end_vals = S_gr.loc[2021:2024, r]
+        for r in range(1, num_entries + 1):
+            # Mittelwert der 4 Jahre für diesen Rang in dieser Einheit
+            m_s = s_sub[s_sub["rank"] == r]["iaaf_score"].mean()
+            m_e = e_sub[e_sub["rank"] == r]["iaaf_score"].mean()
             
-            if not start_vals.dropna().empty and not end_vals.dropna().empty:
-                m_start = start_vals.mean()
-                m_end = end_vals.mean()
+            if pd.notnull(m_s) and pd.notnull(m_e) and m_s > 0:
+                diff_perc = (m_e - m_s) / m_s * 100
                 
-                res = {col: val for col, val in zip(full_group_cols, names)}
-                res.update({
-                    "rank": r,
-                    "m_start": m_start,
-                    "m_end": m_end
-                })
-                results.append(res)
+                res = {col: val for col, val in zip(unit_cols, names)}
+                res.update({"rank": r, "diff_perc": diff_perc})
+                results_per_unit.append(res)
     
-    res_df = pd.DataFrame(results)
+    df_units = pd.DataFrame(results_per_unit)
     
-    final = res_df.groupby(group_cols + ["rank"]).agg({
-        "m_start": "mean",
-        "m_end": "mean"
-    }).reset_index()
-    
-    final["mean_diff_perc"] = (final["m_end"] - final["m_start"]) / final["m_start"] * 100
+    # JETZT die Aggregation
+    if group_cols:
+        # Für spezifische Linien (z.B. Adult W)
+        final = df_units.groupby(group_cols + ["rank"]).agg(
+            mean_diff_perc=('diff_perc', 'mean'),
+            std_diff_perc=('diff_perc', 'std')
+        ).reset_index()
+    else:
+        # Für den GLOBAL TREND (wirft alle Units in einen Topf pro Rang)
+        final = df_units.groupby("rank").agg(
+            mean_diff_perc=('diff_perc', 'mean'),
+            std_diff_perc=('diff_perc', 'std')
+        ).reset_index()
+        
     return final
 
 
