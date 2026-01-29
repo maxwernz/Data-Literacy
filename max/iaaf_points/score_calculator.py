@@ -73,10 +73,10 @@ def score_from_mark(gender, event, mark, coeffs, cutoff='larger', func=None):
         a, b, c = coeffs.loc[event, gender]
 
     xs = -b / (2*a)
-    if cutoff == 'larger' and mark > xs:
-        return 0
-    elif cutoff == 'smaller' and mark < xs:
-        return 0
+    # if cutoff == 'larger' and mark > xs:
+    #     return 0
+    # elif cutoff == 'smaller' and mark < xs:
+    #     return 0
     points = a * mark * mark + b * mark + c
     if func is None:
         return round(points)

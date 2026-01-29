@@ -106,10 +106,10 @@ def linear_regression(data):
 
     return X, model, slope, r2_global, p_global
 
-def calculate_enhanced_stats(df, group_cols, start_period=(2001, 2004), end_period=(2021, 2024)):
+def calculate_enhanced_stats(df, group_cols, start_period=(2001, 2005), end_period=(2021, 2025)):
     """
     Calculate Welch's t-Test, Levene-Test und Cohen's d for two time periods.
-    2001-2004 vs. 2021-2024.
+    2001-2005 vs. 2021-2025.
     """
     results_enhanced = []
     
@@ -165,8 +165,8 @@ def calculate_enhanced_stats(df, group_cols, start_period=(2001, 2004), end_peri
 
 def calculate_rank_diff(df, group_cols=None, num_entries=35):
     """
-    Berechnet erst die %-Differenz für jede kleinste Einheit 
-    (Disziplin + Geschlecht + Altersklasse) und aggregiert dann.
+    Berechnet die prozentuale Differenz der IAAF-Scores zwischen 
+    2001-2005 und 2021-2025 pro Rang innerhalb definierter Gruppen.
     """
     results_per_unit = []
     
@@ -178,10 +178,11 @@ def calculate_rank_diff(df, group_cols=None, num_entries=35):
         s_sub = subgroup[subgroup["jahr"].between(2001, 2004)]
         e_sub = subgroup[subgroup["jahr"].between(2021, 2024)]
         
-        for r in range(1, num_entries + 1):
-            # Mittelwert der 4 Jahre für diesen Rang in dieser Einheit
-            m_s = s_sub[s_sub["rank"] == r]["iaaf_score"].mean()
-            m_e = e_sub[e_sub["rank"] == r]["iaaf_score"].mean()
+        available_ranks = [r for r in range(1, num_entries + 1) if r in S_gr.columns]
+        
+        for r in available_ranks:
+            start_vals = S_gr.loc[2001:2005, r]
+            end_vals = S_gr.loc[2021:2025, r]
             
             if pd.notnull(m_s) and pd.notnull(m_e) and m_s > 0:
                 diff_perc = (m_e - m_s) / m_s * 100
@@ -209,7 +210,7 @@ def calculate_rank_diff(df, group_cols=None, num_entries=35):
     return final
 
 
-def calculate_enhanced_stats_robust(df, group_cols, start_period=(2001, 2004), end_period=(2021, 2024)):
+def calculate_enhanced_stats_robust(df, group_cols, start_period=(2001, 2005), end_period=(2021, 2025)):
     results_enhanced = []
     
     grouped = df.groupby(group_cols) if group_cols else [("Global", df)]
