@@ -16,9 +16,10 @@ We analysed for the U18, U20 and Adult age groups, representing the most relevan
 Also always used the top 35 Ranks for analysis to have enough data for all disciplines and age groups.
 A Group is defined as a combinaion of Gender x Age group x Discipline to ensure consistency with the original leaderboards.
 
-
 We compared two time periods: Data Start period (2001-2004) and End data period(2021-2024)
 We used four year periods to exlude one-year variances.
+
+MAYBE: Since we found no common analysis procedure for this kind of sports data, we defined the performance measurments ourselfs.
 
 To measure the overall performance improvement of a group, we use the Median Difference ($\Delta \tilde{x}_{\%}$) to quantify general group performance shifts and represent the typical performance at the elite level and prevent distortion through extreme outlier performances.
 The median of each period ($p$) is calculated from the respective performance pools ($S_p$) of the four year periods.
@@ -31,7 +32,7 @@ The relative change between the start ($\tilde{x}_s$) and the end period ($\tild
 A positive $\Delta \tilde{x}_{\%}$ indicates an overall improvement in performance, while a negative $\Delta \tilde{x}_{\%}$ shows a decrease in performance scores.
 Statistical significance for the comparison of the medians is measured using the Mann-Witney U test. Without assuming a normal distribution, this test allows to evaluate whether the distributions of the two periods differ significantly.
 
-To measure Performance Density (PD), we used the performance spread ($G_p$) from annual top 3 performances to the bottom 3 performances (e.g. Rank 33-35) of our dataset for the two time periods. Averaging for 3 athletes prevent single-athlete outlier problems. Averaging for top 3 reflects the international standard of success (Podium), while bottom 3 provide a stable and comparable baseline. we used the Spread to measure the width of the elite level performances and we use all possible informations (e.g. Ranks) of our dataset and have a measurement of polarization without assuming a normal distribution.
+To measure Performance Density, we used the performance spread ($G_p$) from annual top 3 performances to the bottom 3 performances (e.g. Rank 33-35) (PSG) of our dataset for the two time periods. Averaging for 3 athletes prevent single-athlete outlier problems. Averaging for top 3 reflects the international standard of success (Podium), while bottom 3 provide a stable and comparable baseline. we used the Spread to measure the width of the elite level performances and we use all possible informations (e.g. Ranks) of our dataset and have a measurement of polarization without assuming a normal distribution.
 Mathematically, the gap ($G_p$) for a period ($p$) is defined as the difference between the collective mean of the top 3 and bottom 3 performances recorded across all years ($n$) within that period.
 
 \begin{equation}
@@ -44,12 +45,12 @@ Furthermore, the evolution of the performance gap ($\Delta G_{\%}$) between the 
 \Delta G_{\%} = \left( \frac{G_e - G_s}{G_s} \right) \times 100
 \end{equation}
 
-A positive $\Delta G_{\%}$ suggests a decrease in PD, while a negative $\Delta G_{\%}$ suggests a increase in PD.
+A positive $\Delta G_{\%}$ suggests a decrease in PSG, while a negative $\Delta G_{\%}$ suggests a increase in PD.
 
-To assess the statistical significance of the change in PD, we use a bootstrap resampling method with $B=10,000$. Bootstrap is non-parametric and can handle the low sample size (N=12) well suiting our data distribution.
+To assess the statistical significance of the change in PSG, we use a bootstrap resampling method with $B=10,000$. Bootstrap is non-parametric and can handle the low sample size (N=12) well suiting our data distribution.
 We draw with replacement from the performance pools, we generated a distribution of the difference in gaps ($\Delta G_{obs}$). 
 We then calculate the $95\%$ confidence interval (CI) for the difference in gaps. 
-If the CI includes zero, the null hypothesis of no significance change in PD cannot be rejected.
+If the CI includes zero, the null hypothesis of no significance change in PSG cannot be rejected.
 
  \citep{mackay2003information}.
 
@@ -77,44 +78,53 @@ FOR RANK Analysis:
 
 \section{Results}\label{sec:results}
 
-PLOT: MEDIAN vs GAP Difference START vs END Period (with gender color and age group markers), Significance for different 
 
-Generally a trend that there are more groups with a significant higher PD (n=) to n=x lower PD. 
-For the median this is more a little more balanced (sig. higher med n= to lower med n=)
+Figure X shows a change in performance spread and development from 2021-2024 compared to 2001-2004 in many groups.
+A significant change in the median or PSG was found in 90 groups (84.90\%).
+While the median significantly increases in about half (39 Groups) and worsens in the other half (38 Groups), this balance is not seen in PSG.
+A significant increase in the performance spread was observed in 49 groups (42.06\%). 
+However, a significant decrease was only observed in 7 groups (6.60\%), all of which were women's groups.
+In contrast, a significant increase in PSG can be found in the male age groups: 
+In the U20 70.58\% (12 of 17 groups), in the U18 64.71\% (11 of 17) and in the adults 40.00\%.
+A gender difference is also evident when considering the median.
+Across all age groups, 51.00\% (27 out of 52 groups) of the women's groups showed improvement. 
+This improvement was observed in only 10.03\% (11 out of 56 groups) of the men's groups.
+When considering the different discipline groups, a difference can be found between track and field disciplines.
+In running and sprinting disciplines, a significant improvement across all groups was 3.5 (14 to 4 Groups) times more frequent and 1.625 (13 to 8 Groups) times more frequent, respectively.
+In comparison, the throwing and jumping disciplines both deteriorated in 2.6 (13 to 5, both) times as many groups.
 
-For the general median trend, we see that in the women's adults 100\% of their median increases are statistically significant.
-For the men its 81.8\%.
-In U18 and U20 Men's there are more decreases in median performances, for womens its more or less half improvment and decreasement.
-
-The clearest trend is seen in the U20 Men's category, where X\% of the groups showed a significant Polarization of performance.
-This is followed by the U18 Men's category, where X of the groups showed a significant Polarization of performance.
-Adult Men and Women both displayed significant decrease in PD on over X\% of the groups (X and X respectively)
-In all discipline groups around the same amount of decrease in PD is observed.
-A Compression was not often seen and mostly non-significant across all groups.
 
 PLOT: RANK Evolution
-#
+
     - PLOT shows the rising discrepance: first places are getting better, lower places worse
     - In general, but especially the M U18 and U20, while women -> better over all places
 
-PLOT: YEAR EVOLUTION/ PERIOD EVOLUTION
-
-    - Men: Decrease in Mean over time -> sign. drop of 1.4 \% from 2013-16 to 2017-2020
-    - Std decrease step by step around 5\% per period, 2005-08 dirst improvment, 
-    - Women: step by step increase in mean
-    - STD deviation just in the last period 2021-24 sign. higher
-
-
 \section{Discussion \& Conclusion}\label{sec:conclusion}
+
+The results clearly demonstrate a generally increased performance spread between elite performance levels.
+While the absolute top group (ranks 1–5) has seen steady improvements over the last two decades, the performance of the lower elite group (ranks 25–35) has stagnated or even deteriorated, confirming the suspected polarization of performance.
+The effect is more pronounced in younger age groups than in adults.
+Possible explanations could lie in the general trend in membership numbers within the German Athletics Association (DLV). 
+DLV membership figures \citep{LeichtathletikPortalDownloads} show a decline of 11.86\% from 2005 to 2024, and even 26.60\% in the 27-60 age group.
+This latter age group, in particular, often includes coaches who are leaving, thus impacting performance development. 
+There is a particular shortage of coaches among young athletes (CITE Artikel oder so), which could explain the more pronounced performance decline.
+Since technical disciplines (Field events) in particular require closer coaching support, the more significant declines could also be explained by the departure of the coach.
+
+However, this overall development is not as pronounced among women; in fact, some groups are even experiencing a reduction in performance spreads.
+Historically, the professionalization of women's athletics began significantly later than that of men. 
+Particularly in recent years, there have been better structural opportunities to pursue the sport at a high level, as X et al. describe in their article.
+This is promising, especially with regard to the future performance of German women's athletics, as general performance improvements seem possible.
+
+At least in the running disciplines, the general increase in the median can also be attributed to the development of carbon shoes, as \citep{willwacherDoesAdvancedFootwear2023} also demonstrate.
+
+- Zusammenhang mit Corona Daten
 
 - LIMITATION: TOP 35!
 
-- As the results show, in general there is a problem with a rising discrepance of top performers to "second row"
-- More seen in Men than in women, and more in younger age groups, in line with the "Nachwuchs problem?"
-- More problems in technical disciplines -> Corona, less people in the sport -> less trainer, techn. needs more attention
-- Running marathon strong improvments -> shoes etc
-- Men Step by step decrease MEan and std -> also a reason of support?
-- Women getting better: later start in the sport, gender discrepancy, improvment, evolution still possible
+...
+The increase in the performance spread indicates a structural change in organized athletics. 
+A future focus should be placed on strengthening the grassroots level. 
+Following the principle of "the grassroots supporting the elite," this will allow for more top performances and could bring German athletics closer to the world's elite.
 
 \newpage
 
