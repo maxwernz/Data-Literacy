@@ -36,7 +36,29 @@ def plt_settings():
 def increase_figsize(factor: float):
     width = _plt.rcParams["figure.figsize"][0] * factor
     height = _plt.rcParams["figure.figsize"][1] * factor
-    return {"figure.figsize": (width, height)}
+    fontsize = _plt.rcParams['font.size'] * factor
+    axes_labelsize = _plt.rcParams['axes.labelsize'] * factor
+    legend_fontsize = _plt.rcParams['legend.fontsize'] * factor
+    xtick_labelsize = _plt.rcParams['xtick.labelsize'] * factor
+    ytick_labelsize = _plt.rcParams['ytick.labelsize'] * factor
+    axes_titlesize = _plt.rcParams['axes.titlesize'] * factor
+
+    return {"figure.figsize": (width, height),
+            "font.size": fontsize,
+            "axes.labelsize": axes_labelsize,
+            "legend.fontsize": legend_fontsize,
+            "xtick.labelsize": xtick_labelsize,
+            "ytick.labelsize": ytick_labelsize,
+            "axes.titlesize": axes_titlesize
+            }
+
+def set_column(column="half"):
+    if column == "half":
+        _plt.rcParams.update(bundles.icml2024(column="half"))
+    elif column == "full":
+        _plt.rcParams.update(bundles.icml2024(column="full"))
+    else:
+        raise ValueError("Column must be 'half' or 'full'")
 
 # Project root is one level up from the 'plotting' directory
 _PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -54,7 +76,7 @@ def savefig(fname: str, category=None, **kwargs):
 
 
 
-_plt.rcParams.update(bundles.icml2024())
+_plt.rcParams.update(bundles.icml2024(column="full"))
 plt_settings()
 ensure_latex_on_path()
 
