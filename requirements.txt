@@ -1,8 +1,10 @@
-matplotlib==3.10.6
-numpy==2.3.4
-scipy==1.16.3
+streamlit==1.53.0
 pandas==2.3.3
-ipython==9.6.0
-ipykernel==7.1.0
-streamlit
-plotly
+numpy==2.3.4
+plotly==6.5.2
+matplotlib==3.10.6
+scipy==1.16.3
+scikit-learn==1.8.0
+tueplots==0.2.1
+# Optional but good to have for robustness
+watchdog
