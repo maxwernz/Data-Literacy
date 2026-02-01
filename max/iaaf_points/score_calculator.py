@@ -54,13 +54,17 @@ DISCIPLINE_TO_EVENT = {
     'Marathon': 'Road Marathon'
 }
 
+# Events where a higher value (distance/points) is better
+HIGHER_IS_BETTER = {
+    'TJ', 'HJ', 'PV', 'LJ', 'SP', 'DT', 'HT', 'JT', 'Hept.', 'Dec.'
+}
+
 def get_iaaf_coeffs():
     base_path = Path(__file__).resolve().parent
 
     json_path = base_path / "IAAF_Coefficients_2025.json"
     coeffs = pd.read_json(json_path)
     return coeffs
-
 
 
 def score_from_mark(gender, event, mark, coeffs, cutoff='larger', func=None):
@@ -72,19 +76,40 @@ def score_from_mark(gender, event, mark, coeffs, cutoff='larger', func=None):
     else:
         a, b, c = coeffs.loc[event, gender]
 
+    # Calculate vertex of the parabola (turning point)
+    # The scoring formulas are valid only on one side of this vertex
     xs = -b / (2*a)
-    # if cutoff == 'larger' and mark > xs:
-    #     return 0
-    # elif cutoff == 'smaller' and mark < xs:
-    #     return 0
+
+    is_higher_better = event in HIGHER_IS_BETTER
+
+    # Check for invalid range (worse than zero-points performance)
+    if is_higher_better:
+        # Field/Multi: Higher is better. 
+        # If mark is smaller than vertex (where score drops to min/0), score should be 0.
+        if mark < xs:
+            return 0
+    else:
+        # Track: Lower is better (Time).
+        # If mark is larger than vertex (where score drops to min/0), score should be 0.
+        if mark > xs:
+            return 0
+
     points = a * mark * mark + b * mark + c
-    if func is None:
-        return round(points)
-    elif func == 'ceil':
-        return int(math.ceil(points))
-    elif func == 'floor':
-        return int(math.floor(points))
     
+    # Process rounding
+    result = 0
+    if func is None:
+        result = round(points)
+    elif func == 'ceil':
+        result = int(math.ceil(points))
+    elif func == 'floor':
+        result = int(math.floor(points))
+    else:
+        result = round(points)
+        
+    # Clamp result between 0 and 1400
+    return max(0, min(1400, result))
+
 
 if __name__ == "__main__":
 
@@ -96,4 +121,4 @@ if __name__ == "__main__":
 
     example_mark = 40
     pts = score_from_mark("women", "TJ", example_mark, coeffs, cutoff='smaller')
-    print(f"5km {example_mark} → {pts} Punkte")
+    print(f"TJ {example_mark} -> {pts} Punkte")
