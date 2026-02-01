@@ -83,7 +83,7 @@ available_disciplines = sorted(temp_filtered['disziplin'].unique())
 selected_disciplines = st.sidebar.multiselect(
     "Select Disciplines",
     options=available_disciplines,
-    default=available_disciplines[:1] if available_disciplines else None
+    default="100 m" if "100 m" in available_disciplines else (available_disciplines[0] if available_disciplines else None)
 )
 
 # --- 3. Main Data Filtering ---
@@ -158,17 +158,37 @@ with tab_trends:
     with agg_col:
         aggregation = st.selectbox(
             "Aggregation",
-            ["Mean", "Median", "Max (Best)", "None (Scatter)"],
-            help="Choose how to summarize data per year."
+            ["Mean", "Median", "Max (Best)", "Gap (Top 3 - Low 3)", "None (Scatter)"],
+            help="Choose how to summarize data per year. 'Gap' is the difference between the average of the Top 3 and Bottom 3 performers."
         )
 
     with chart_col:
         if aggregation != "None (Scatter)":
             # Aggregated Plot
-            agg_func = aggregation.split()[0].lower() # mean, median, max
             
-            # Group by Year, Discipline, Gender
-            groups = filtered_df.groupby(['jahr', 'disziplin', 'geschlecht'])[metric_col].agg(agg_func).reset_index()
+            if aggregation == "Gap (Top 3 - Low 3)":
+                # Custom Gap Calculation
+                def gap_func(x):
+                    # Ensure numeric
+                    vals = pd.to_numeric(x, errors='coerce').dropna()
+                    if len(vals) < 6: 
+                        return np.nan
+                    return vals.nlargest(3).mean() - vals.nsmallest(3).mean()
+
+                # Group and Apply
+                # We need to apply to metric_col
+                # For apply to work nicely with multiple grouping keys, we group and then apply to the series
+                groups = filtered_df.groupby(['jahr', 'disziplin', 'geschlecht'])[metric_col].apply(gap_func).reset_index(name=metric_col)
+                
+                title_text = f"Performance Gap (Top 3 - Low 3) per Year"
+                y_label = f"Gap {unit_info}"
+            
+            else:
+                # Standard Aggregations
+                agg_func = aggregation.split()[0].lower() # mean, median, max
+                groups = filtered_df.groupby(['jahr', 'disziplin', 'geschlecht'])[metric_col].agg(agg_func).reset_index()
+                title_text = f"{aggregation} {y_axis_option} per Year"
+                y_label = f"{y_axis_option}{unit_info}"
             
             fig = px.line(
                 groups, 
@@ -177,8 +197,8 @@ with tab_trends:
                 color='disziplin', 
                 line_dash='geschlecht',
                 markers=True,
-                title=f"{aggregation} {y_axis_option} per Year",
-                labels={metric_col: f"{y_axis_option}{unit_info}", "jahr": "Year"}
+                title=title_text,
+                labels={metric_col: y_label, "jahr": "Year"}
             )
             st.plotly_chart(fig, use_container_width=True)
 
@@ -248,158 +268,179 @@ with tab_radar:
         st.markdown("#### Period 2 (Comparison)")
         p2_start, p2_end = st.slider("Select Range", 2001, 2024, (2021, 2024), key="p2")
 
-    # Data Filter for Radar (Elite focus by default as requested)
-    st.markdown("#### Analysis Scope")
-    # Default to Elite (Adults)
-    radar_ages = st.multiselect("Age Groups for Radar", options=all_ages, default=['Maenner', 'Frauen'])
-    radar_genders = st.multiselect("Genders for Radar", options=all_genders, default=all_genders)
-    
-    # We use the sidebar selected disciplines/groups
-    
-    if st.button("Generate Radar Comparison"):
-        # Helper to calculate metrics
-        def get_radar_metrics(data_slice):
-            if len(data_slice) < 10:
-                return None
-            
-            # Ensure int for ranking
-            data_slice = data_slice.copy()
-            data_slice['iaaf_score'] = pd.to_numeric(data_slice['iaaf_score'], errors='coerce')
-            data_slice = data_slice.dropna(subset=['iaaf_score'])
-            
-            if data_slice.empty: return None
+    # Toggle for Split/Aggregate
+    radar_mode = st.radio(
+        "Comparison Mode", 
+        ["Aggregate Selected", "Separate by Discipline"], 
+        horizontal=True,
+        help="Choose 'Separate' to see one trace per discipline. Choose 'Aggregate' to combine all selected disciplines into one trace."
+    )
 
-            # Calculate Ranks (Descending score = Better)
-            data_slice['rank'] = data_slice['iaaf_score'].rank(ascending=False, method='first')
-            
-            # Metrics
-            mean_score = data_slice['iaaf_score'].mean()
-            median_score = data_slice['iaaf_score'].median()
-            std_dev = data_slice['iaaf_score'].std()
-            if pd.isna(std_dev): std_dev = 0
-            
-            top1_score = data_slice['iaaf_score'].max()
-            
-            top10_avg = data_slice[data_slice['rank'] <= 10]['iaaf_score'].mean()
-            
-            # Gap 1 vs 10
-            # Find score of rank 1 and rank 10
-            score_1 = data_slice[data_slice['rank'] == 1]['iaaf_score'].max()
-            score_10 = data_slice[data_slice['rank'] == 10]['iaaf_score'].min()
-            
-            if pd.isna(score_10):
-                # If less than 10 athletes, take the last one
-                score_10 = data_slice['iaaf_score'].min()
-            
-            gap_1_10 = score_1 - score_10
-            
-            return {
-                'Mean': mean_score,
-                'Median': median_score,
-                'Std Dev': std_dev,
-                'Top 1 (Max)': top1_score,
-                'Gap 1-10': gap_1_10
-            }
+    # Helper to calculate metrics
+    def get_radar_metrics(data_slice):
+        if len(data_slice) < 10:
+            return None
+        
+        # Ensure int for ranking
+        data_slice = data_slice.copy()
+        data_slice['iaaf_score'] = pd.to_numeric(data_slice['iaaf_score'], errors='coerce')
+        data_slice = data_slice.dropna(subset=['iaaf_score'])
+        
+        if data_slice.empty: return None
 
-        # Filter Data for Radar
-        radar_df = df[
-            (df['altersklasse'].isin(radar_ages)) &
-            (df['geschlecht'].isin(radar_genders)) &
-            (df['disziplin'].isin(selected_disciplines))
-        ]
+        # Metrics over the whole slice
+        mean_score = data_slice['iaaf_score'].mean()
+        median_score = data_slice['iaaf_score'].median()
+        std_dev = data_slice['iaaf_score'].std()
+        if pd.isna(std_dev): std_dev = 0
         
-        # Split into Periods
-        df_p1 = radar_df[(radar_df['jahr'] >= p1_start) & (radar_df['jahr'] <= p1_end)]
-        df_p2 = radar_df[(radar_df['jahr'] >= p2_start) & (radar_df['jahr'] <= p2_end)]
+        top1_score = data_slice['iaaf_score'].max()
         
-        metrics_p1 = get_radar_metrics(df_p1)
-        metrics_p2 = get_radar_metrics(df_p2)
+        # Gap Top 3 - Low 3 (Averaged per Year for robustness)
+        yearly_gaps = []
+        for y in data_slice['jahr'].unique():
+            y_data = data_slice[data_slice['jahr'] == y]
+            if len(y_data) >= 6:
+                gap = y_data['iaaf_score'].nlargest(3).mean() - y_data['iaaf_score'].nsmallest(3).mean()
+                yearly_gaps.append(gap)
         
-        if metrics_p1 and metrics_p2:
-            # Normalize: P2 / P1
-            # Special case for Std Dev & Gap: Lower is usually "tighter" competition, but user logic might differ.
-            # User request: "Veränderung...". 
-            # In radar plots, "more is better" (outward) is standard.
-            # Performance metrics (Mean, Median, Max): Higher = Better (P2/P1)
-            # Dispersion metrics (Std Dev, Gap): Lower = Higher Density. 
-            # To map "Higher Density" to "Outward", we should invert: P1/P2.
+        gap_top3_low3 = np.mean(yearly_gaps) if yearly_gaps else 0
+        
+        return {
+            'Mean': mean_score,
+            'Median': median_score,
+            'Std Dev': std_dev,
+            'Top 1 (Max)': top1_score,
+            'Gap Top3-Low3': gap_top3_low3
+        }
+
+    # Filter Data for Radar (using global filters)
+    radar_df = df[
+        (df['altersklasse'].isin(selected_ages)) &
+        (df['geschlecht'].isin(selected_genders)) &
+        (df['disziplin'].isin(selected_disciplines))
+    ]
+    
+    # Prepare data for plotting
+    # Structure: List of dicts {'label': str, 'p1_df': df, 'p2_df': df}
+    plot_items = []
+    
+    if radar_mode == "Aggregate Selected":
+        plot_items.append({
+            'label': "Aggregate",
+            'p1_df': radar_df[(radar_df['jahr'] >= p1_start) & (radar_df['jahr'] <= p1_end)],
+            'p2_df': radar_df[(radar_df['jahr'] >= p2_start) & (radar_df['jahr'] <= p2_end)]
+        })
+    else:
+        # Separate by discipline
+        active_disciplines = sorted(radar_df['disziplin'].unique())
+        for d in active_disciplines:
+            d_df = radar_df[radar_df['disziplin'] == d]
+            plot_items.append({
+                'label': d,
+                'p1_df': d_df[(d_df['jahr'] >= p1_start) & (d_df['jahr'] <= p1_end)],
+                'p2_df': d_df[(d_df['jahr'] >= p2_start) & (d_df['jahr'] <= p2_end)]
+            })
+    
+    # Process Metrics
+    final_traces = []
+    abs_metrics_rows = []
+    categories = ['Mean', 'Median', 'Top 1 (Max)', 'Std Dev', 'Gap Top3-Low3']
+    
+    for item in plot_items:
+        m_p1 = get_radar_metrics(item['p1_df'])
+        m_p2 = get_radar_metrics(item['p2_df'])
+        
+        if m_p1 and m_p2:
+            # Add to Absolute Metrics Table
+            abs_metrics_rows.append({'Context': f"{item['label']} (P1)", **m_p1})
+            abs_metrics_rows.append({'Context': f"{item['label']} (P2)", **m_p2})
             
-            categories = ['Mean', 'Median', 'Top 1 (Max)', 'Std Dev', 'Gap 1-10']
-            
-            # Baseline is always 1.0
-            values_p1 = [1.0] * 5
-            
-            # Comparison
-            values_p2 = []
+            # Calculate Ratios (P2 / P1)
+            values = []
             
             # 1. Mean (Higher is better)
-            values_p2.append(metrics_p2['Mean'] / metrics_p1['Mean'] if metrics_p1['Mean'] != 0 else 0)
+            values.append(m_p2['Mean'] / m_p1['Mean'] if m_p1['Mean'] != 0 else 0)
             # 2. Median (Higher is better)
-            values_p2.append(metrics_p2['Median'] / metrics_p1['Median'] if metrics_p1['Median'] != 0 else 0)
+            values.append(m_p2['Median'] / m_p1['Median'] if m_p1['Median'] != 0 else 0)
             # 3. Top 1 (Higher is better)
-            values_p2.append(metrics_p2['Top 1 (Max)'] / metrics_p1['Top 1 (Max)'] if metrics_p1['Top 1 (Max)'] != 0 else 0)
+            values.append(m_p2['Top 1 (Max)'] / m_p1['Top 1 (Max)'] if m_p1['Top 1 (Max)'] != 0 else 0)
             
             # 4. Std Dev (Lower is better/tighter -> Invert: Old/New)
-            # If P2 has lower StdDev, P1/P2 > 1 (Outward = Improved Density)
-            if metrics_p2['Std Dev'] == 0:
-                val_std = 1.0 # No variance, assume neutral
+            if m_p2['Std Dev'] == 0:
+                val_std = 1.0 
             else:
-                val_std = metrics_p1['Std Dev'] / metrics_p2['Std Dev']
-            values_p2.append(val_std)
+                val_std = m_p1['Std Dev'] / m_p2['Std Dev']
+            values.append(val_std)
             
-            # 5. Gap 1-10 (Lower is better/tighter -> Invert: Old/New)
-            if metrics_p2['Gap 1-10'] == 0:
+            # 5. Gap Top3-Low3 (Lower is better/tighter -> Invert: Old/New)
+            if m_p2['Gap Top3-Low3'] == 0:
                 val_gap = 1.0
             else:
-                val_gap = metrics_p1['Gap 1-10'] / metrics_p2['Gap 1-10']
-            values_p2.append(val_gap)
+                val_gap = m_p1['Gap Top3-Low3'] / m_p2['Gap Top3-Low3']
+            values.append(val_gap)
             
-            # --- PLOTTING ---
-            fig_radar = go.Figure()
+            final_traces.append({
+                'label': item['label'],
+                'values': values
+            })
 
-            # Baseline Trace
-            fig_radar.add_trace(go.Scatterpolar(
-                r=values_p1 + [values_p1[0]], # Close loop
-                theta=categories + [categories[0]],
-                fill='toself',
-                name=f'Baseline ({p1_start}-{p1_end})',
-                line_color='gray',
-                opacity=0.5
-            ))
+    if final_traces:
+        fig_radar = go.Figure()
+
+        # Add Baseline Trace (Reference circle at 1.0)
+        fig_radar.add_trace(go.Scatterpolar(
+            r=[1.0] * 6, # Close loop
+            theta=categories + [categories[0]],
+            mode='lines',
+            name='Baseline (No Change)',
+            line_color='gray',
+            line_dash='dot',
+            opacity=0.5,
+            hoverinfo='none'
+        ))
+        
+        # Add Comparison Traces
+        for trace in final_traces:
+            # Determine styling
+            # If Aggregate: Filled area. If Separate: Lines only (to avoid occlusion)
+            fill_mode = 'toself' if radar_mode == "Aggregate Selected" else 'none'
             
-            # Comparison Trace
             fig_radar.add_trace(go.Scatterpolar(
-                r=values_p2 + [values_p2[0]], # Close loop
+                r=trace['values'] + [trace['values'][0]], # Close loop
                 theta=categories + [categories[0]],
-                fill='toself',
-                name=f'Comparison ({p2_start}-{p2_end})',
-                line_color='red'
+                fill=fill_mode,
+                name=f"{trace['label']} Change"
             ))
 
-            fig_radar.update_layout(
-                polar=dict(
-                    radialaxis=dict(
-                        visible=True,
-                        range=[0, max(max(values_p2) * 1.1, 1.2)]
-                    )
-                ),
-                title="Relative Change ( > 1.0 = Improvement / Higher Density)",
-                showlegend=True
-            )
-            
-            st.plotly_chart(fig_radar, use_container_width=True)
-            
-            # Metrics Table
-            st.markdown("### Absolute Metrics")
-            comp_df = pd.DataFrame([metrics_p1, metrics_p2], index=[f"{p1_start}-{p1_end}", f"{p2_start}-{p2_end}"])
-            st.dataframe(comp_df.style.format("{:.2f}"))
-            
-            st.info("ℹ️ **Interpretation:** \n" 
-                    "- **Mean/Median/Top 1**: Values > 1.0 mean performance has increased.\n" 
-                    "- **Std Dev/Gap**: Values > 1.0 mean the field has become *tighter* (lower variance/gap).")
-            
-        else:
-            st.error("Insufficient data in one of the selected periods to calculate metrics.")
+        # Dynamic Range
+        # Find max value to scale axis nicely
+        all_vals = [v for t in final_traces for v in t['values']]
+        max_val = max(all_vals) if all_vals else 1.2
+        
+        fig_radar.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, max(max_val * 1.1, 1.2)]
+                )
+            ),
+            title=f"Relative Change ({radar_mode})",
+            showlegend=True
+        )
+        
+        st.plotly_chart(fig_radar, use_container_width=True)
+        
+        # Metrics Table
+        st.markdown("### Absolute Metrics")
+        st.dataframe(pd.DataFrame(abs_metrics_rows).set_index('Context').style.format("{:.2f}"))
+        
+        st.info("ℹ️ **Interpretation:** \n" 
+                "- **Values > 1.0**: Improvement (Higher Score) or Higher Density (Lower StdDev/Gap).\n" 
+                "- **Values < 1.0**: Decline or Lower Density.\n"
+                "- **Gap (Top 3 - Low 3)**: The average score difference between the top 3 and bottom 3 athletes. Smaller gap = Higher Density.")        
+    else:
+        st.warning("Insufficient data in the selected periods/disciplines to calculate metrics.")
 
 
 # === TAB 4: Athlete Search ===
