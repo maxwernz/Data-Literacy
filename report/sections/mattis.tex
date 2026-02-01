@@ -1,76 +1,76 @@
-%%%%%%%% DATA LITERACY 2025 LATEX PROJECT TEMPLATE FILE %%%%%%%%%%%%%%%%%
-%%% Based on the 2025 ICML template, available at https://icml.cc/Conferences/2025/AuthorInstructions %%%
+% %%%%%%%% DATA LITERACY 2025 LATEX PROJECT TEMPLATE FILE %%%%%%%%%%%%%%%%%
+% %%% Based on the 2025 ICML template, available at https://icml.cc/Conferences/2025/AuthorInstructions %%%
 
-\documentclass{article}
+% \documentclass{article}
 
-% Recommended, but optional, packages for figures and better typesetting:
-\usepackage{microtype}
-\usepackage{graphicx}
-\usepackage{subfigure}
-\usepackage{booktabs} % for professional tables
+% % Recommended, but optional, packages for figures and better typesetting:
+% \usepackage{microtype}
+% \usepackage{graphicx}
+% \usepackage{subfigure}
+% \usepackage{booktabs} % for professional tables
 
-\usepackage{tikz}
-% Corporate Design of the University of Tübingen
-% Primary Colors
-\definecolor{TUred}{RGB}{165,30,55}
-\definecolor{TUgold}{RGB}{180,160,105}
-\definecolor{TUdark}{RGB}{50,65,75}
-\definecolor{TUgray}{RGB}{175,179,183}
+% \usepackage{tikz}
+% % Corporate Design of the University of Tübingen
+% % Primary Colors
+% \definecolor{TUred}{RGB}{165,30,55}
+% \definecolor{TUgold}{RGB}{180,160,105}
+% \definecolor{TUdark}{RGB}{50,65,75}
+% \definecolor{TUgray}{RGB}{175,179,183}
 
-% Secondary Colors
-\definecolor{TUdarkblue}{RGB}{65,90,140}
-\definecolor{TUblue}{RGB}{0,105,170}
-\definecolor{TUlightblue}{RGB}{80,170,200}
-\definecolor{TUlightgreen}{RGB}{130,185,160}
-\definecolor{TUgreen}{RGB}{125,165,75}
-\definecolor{TUdarkgreen}{RGB}{50,110,30}
-\definecolor{TUocre}{RGB}{200,80,60}
-\definecolor{TUviolet}{RGB}{175,110,150}
-\definecolor{TUmauve}{RGB}{180,160,150}
-\definecolor{TUbeige}{RGB}{215,180,105}
-\definecolor{TUorange}{RGB}{210,150,0}
-\definecolor{TUbrown}{RGB}{145,105,70}
+% % Secondary Colors
+% \definecolor{TUdarkblue}{RGB}{65,90,140}
+% \definecolor{TUblue}{RGB}{0,105,170}
+% \definecolor{TUlightblue}{RGB}{80,170,200}
+% \definecolor{TUlightgreen}{RGB}{130,185,160}
+% \definecolor{TUgreen}{RGB}{125,165,75}
+% \definecolor{TUdarkgreen}{RGB}{50,110,30}
+% \definecolor{TUocre}{RGB}{200,80,60}
+% \definecolor{TUviolet}{RGB}{175,110,150}
+% \definecolor{TUmauve}{RGB}{180,160,150}
+% \definecolor{TUbeige}{RGB}{215,180,105}
+% \definecolor{TUorange}{RGB}{210,150,0}
+% \definecolor{TUbrown}{RGB}{145,105,70}
 
-% hyperref makes hyperlinks in the resulting PDF.
-% If your build breaks (sometimes temporarily if a hyperlink spans a page)
-% please comment out the following usepackage line and replace
-% \usepackage{icml2023} with \usepackage[nohyperref]{icml2023} above.
-\usepackage{hyperref}
-
-
-% Attempt to make hyperref and algorithmic work together better:
-\newcommand{\theHalgorithm}{\arabic{algorithm}}
-
-\usepackage[accepted]{icml2025}
-
-% For theorems and such
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{amsthm}
-
-% if you use cleveref..
-\usepackage[capitalize,noabbrev]{cleveref}
-
-% Todonotes is useful during development; simply uncomment the next line
-%    and comment out the line below the next line to turn off comments
-%\usepackage[disable,textsize=tiny]{todonotes}
-\usepackage[textsize=tiny]{todonotes}
+% % hyperref makes hyperlinks in the resulting PDF.
+% % If your build breaks (sometimes temporarily if a hyperlink spans a page)
+% % please comment out the following usepackage line and replace
+% % \usepackage{icml2023} with \usepackage[nohyperref]{icml2023} above.
+% \usepackage{hyperref}
 
 
-% The \icmltitle you define below is probably too long as a header.
-% Therefore, a short form for the running title is supplied here:
-\icmltitlerunning{Project Report Template for Data Literacy 2025}
+% % Attempt to make hyperref and algorithmic work together better:
+% \newcommand{\theHalgorithm}{\arabic{algorithm}}
 
-\begin{document}
+% \usepackage[accepted]{icml2025}
 
-\twocolumn[
-\icmltitle{My Data Literacy Project\\ (Replace this with your Project Title)}
+% % For theorems and such
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{mathtools}
+% \usepackage{amsthm}
 
-\icmlkeywords{Athletics, Data Analysis}
+% % if you use cleveref..
+% \usepackage[capitalize,noabbrev]{cleveref}
 
-\vskip 0.3in
-]
+% % Todonotes is useful during development; simply uncomment the next line
+% %    and comment out the line below the next line to turn off comments
+% %\usepackage[disable,textsize=tiny]{todonotes}
+% \usepackage[textsize=tiny]{todonotes}
+
+
+% % The \icmltitle you define below is probably too long as a header.
+% % Therefore, a short form for the running title is supplied here:
+% \icmltitlerunning{Project Report Template for Data Literacy 2025}
+
+% \begin{document}
+
+% \twocolumn[
+% \icmltitle{My Data Literacy Project\\ (Replace this with your Project Title)}
+
+% \icmlkeywords{Athletics, Data Analysis}
+
+% \vskip 0.3in
+% ]
 
 
 \section{Data and Methods}\label{sec:methods}
@@ -105,7 +105,7 @@ To analyze the development of the different rankings, we calculate the arithmeti
 \begin{figure*}[ht]
 \vskip 0.2in
 \begin{center}
-\centerline{\includegraphics[width=\textwidth]{plots/gap_performance_change.pdf}}
+\centerline{\includegraphics[width=\textwidth]{figures/gap_performance_change.pdf}}
 \caption{Relationship between median performance and change in performance gap (2001–2005 to 2021–2025). The scatter plot shows the percentage change in median performance (x-axis) and the change in performance gap (y-axis) for male (left) and female (right) groups, categorized by age group. The transparency of the markers indicates the statistical significance of the change in performance gap (via bootstrap method). Disciplines affected by regulatory changes are centered at 0 for the median, as only performance gap remains comparable across the time periods.
 }
 \label{gap_perf}
@@ -116,7 +116,7 @@ To analyze the development of the different rankings, we calculate the arithmeti
 \begin{figure}[ht]
 \vskip 0.2in
 \begin{center}
-\centerline{\includegraphics[width=\columnwidth]{plots/rank_performance_change.pdf}}
+\centerline{\includegraphics[width=\columnwidth]{figures/rank_performance_change.pdf}}
 \caption{Performance development across ranks 1–35 (2001–05 to 2021–25). Shown is the percentage change in the average performance values of all groups overall, as well as broken down by age group and gender.}
 \label{rank_perf}
 \end{center}
@@ -152,12 +152,12 @@ The increase in the performance spread indicates a structural change in organize
 A future focus should be placed on strengthening the grassroots level. 
 Following the principle of "the grassroots supporting the elite," this will allow for more top performances and could bring German athletics closer to the world's elite.
 
-\newpage
+% \newpage
 
-\bibliography{bibliography}
-\bibliographystyle{icml2025}
+% \bibliography{bibliography}
+% \bibliographystyle{icml2025}
 
-\end{document}
+% \end{document}
 
 % This document was modified from the files available at https://icml.cc/Conferences/2025/AuthorInstructions
 % the full copyright notice is available within the file icml2025.sty
