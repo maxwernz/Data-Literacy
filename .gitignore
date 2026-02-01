@@ -4,3 +4,14 @@ __pycache__/
 GEMINI.md
 DL_Vorlesung
 .ipynb_checkpoints/
+
+.vscode/
+
+# LaTeX build artifacts
+**/build/
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+!report/report_dataliteracy.pdf
