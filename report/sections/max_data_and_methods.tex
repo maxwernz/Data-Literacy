@@ -1,0 +1,7 @@
+To facilitate comparisons across events (e.g., 100m sprint vs. javelin throw), performances were transformed using World Athletics scoring tables (IAAF scores).
+The IAAF scores are a standardization metric maps performance marks onto a common point scale.
+They are released annually by World Athletics as tables in PDF files, but unfortunately there is no public formula to calculate the scores directly from performance marks.
+However, some people have tried to reverse engineer the formulas for the scoring tables. The one that we use, originates from a blog post by Jeff Chen~\citep{chen_iaaf}.
+He parsed the PDF files of the scoring tables and fitted a quadratic function to the data points to get an approximate formula with coefficients for each discipline.
+We implemented his formulas in our data processing pipeline to convert all performance marks into World Athletics points for comparability across disciplines.
+In the following, all our calculations and analyses are based on these IAAF scores.
