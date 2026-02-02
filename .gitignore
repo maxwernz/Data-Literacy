@@ -6,6 +6,8 @@ DL_Vorlesung
 .ipynb_checkpoints/
 
 .vscode/
+.venv/
+*.egg-info/
 
 # LaTeX build artifacts
 .report_dataliteracy.pdf
@@ -16,3 +18,4 @@ DL_Vorlesung
 *.fdb_latexmk
 *.synctex.gz
 !report/report_dataliteracy.pdf
+.

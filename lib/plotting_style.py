@@ -27,7 +27,7 @@ def ensure_latex_on_path():
 
 def plt_settings():
     _plt.rcParams.update(axes.lines())
-    _plt.rcParams.update({"figure.dpi": 300})
+    _plt.rcParams.update({"figure.dpi": 200})
     _plt.rcParams.update({"savefig.format": "pdf"})
     _plt.rcParams.update({"savefig.bbox": "tight"})
     _plt.rcParams.update({"grid.linestyle": "-", "grid.alpha": 0.7})
@@ -60,7 +60,7 @@ def set_column(column="half"):
     else:
         raise ValueError("Column must be 'half' or 'full'")
 
-# Project root is one level up from the 'plotting' directory
+# Project root is one level up from the 'lib' directory
 _PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 _PLOTS_DIR = os.path.join(_PROJECT_ROOT, "Plots")
 
@@ -72,7 +72,7 @@ def savefig(fname: str, category=None, **kwargs):
     
     os.makedirs(target_dir, exist_ok=True)
     full_path = os.path.join(target_dir, fname)
-    _plt.savefig(full_path, **kwargs)
+    _plt.savefig(full_path, dpi=300, **kwargs)
 
 
 

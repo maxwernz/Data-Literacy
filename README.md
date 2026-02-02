@@ -1,94 +1,123 @@
-# Data Literacy Project - Analyse von Leichtathletik-Daten
+# Data Literacy Project - Athletics Data Analysis
 
-## Projektübersicht
+## Project Overview
+This project analyzes German athletics performance data (DLV Bestenlisten) to investigate trends, performance gaps, and the impact of events like the COVID-19 pandemic. The analysis involves extracting data from PDF reports, cleaning and standardizing it, calculating IAAF/WA scores, and visualizing the results.
 
-Dieses Projekt beschäftigt sich mit der Analyse von Leistungsdaten der deutschen Leichtathletik (DLV Bestenlisten). Ziel ist es, Trends, Leistungslücken und den Einfluss von Ereignissen wie der COVID-19-Pandemie auf die sportliche Leistung zu untersuchen. Die Analyse umfasst die Datenextraktion aus PDF-Berichten, die Bereinigung und Standardisierung der Daten, die Berechnung von IAAF/WA-Punkten sowie die Visualisierung der Ergebnisse.
+## Quick Start (Installation)
 
-## Verzeichnisstruktur
+We recommend using **`uv`** for the easiest setup. It handles Python versions and dependencies automatically.
 
-Die Codebasis ist wie folgt strukturiert:
+### Option 1: The Fast Way (Recommended)
+1.  **Install `uv`** (if you don't have it):
+    *   **Mac / Linux:**
+        ```bash
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        ```
+    *   **Windows:**
+        ```powershell
+        powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+        ```
 
-- **`data_csv/`**: Enthält die verarbeiteten Daten im CSV-Format.
-  - `final_Data_iaaf_scores_neu.csv`: Der bereinigte Hauptdatensatz mit IAAF-Punkten.
-  - `getCSV.ipynb`: Jupyter Notebook zur Extraktion der Daten aus den Roh-PDFs.
-- **`Data_pdf/`**: Rohdaten. Enthält Unterordner (z.B. `data01-17/`) mit den ursprünglichen PDF-Dateien der DLV Bestenlisten.
-- **`plotting/`**: Modul für das Plotting-Setup.
-  - `plotting_style.py`: Konfiguriert `matplotlib` mit dem Corporate Design der Universität Tübingen (`tueplots`) und stellt Hilfsfunktionen bereit.
-- **`report/`**: LaTeX-Quellcode für den finalen Projektbericht.
-- **`util.py`**: Zentrales Utility-Modul zum Laden und Verarbeiten der Daten.
-- **`Plots/`**: Automatisch generierter Ordner, in dem alle mit dem Plotting-Modul erstellten Grafiken gespeichert werden.
-- **User-Ordner (`erik/`, `Luca/`, `mattis/`, `max/`)**: Persönliche Arbeitsbereiche für explorative Analysen und Notebooks.
+2.  **Setup the Project:**
+    Open your terminal in the project folder and run:
+    ```bash
+    uv sync
+    ```
+    *This creates a virtual environment and installs all necessary packages (pandas, matplotlib, etc.) exactly as defined in the lockfile.*
 
-## Daten laden (`util.py`)
+3.  **Run Jupyter:**
+    ```bash
+    uv run jupyter notebook
+    ```
 
-Das Modul `util.py` stellt die zentrale Funktion `load_data` bereit, um die Daten konsistent zu laden. Dabei werden automatisch:
+### Option 2: The Standard Way (pip)
+If you prefer standard Python tools:
+1.  Create a virtual environment:
+    ```bash
+    python -m venv .venv
+    ```
+2.  Activate it:
+    *   **Mac/Linux:** `source .venv/bin/activate`
+    *   **Windows:** `.venv\Scripts\activate`
+3.  Install the project in editable mode:
+    ```bash
+    pip install -e .
+    ```
+4.  Start Jupyter:
+    ```bash
+    jupyter notebook
+    ```
 
-1.  Leistungen in ein einheitliches numerisches Format konvertiert (Zeitangaben in Sekunden, Weiten in Meter, Punkte als Integer).
-2.  Winddaten in numerische Werte umgewandelt.
-3.  **Filterung:** Standardmäßig werden nur relevante Altersklassen und Disziplinen geladen, die den Förderrichtlinien entsprechen.
+---
 
-### Verwendung
+## Directory Structure
 
-Um die Daten in einem Jupyter Notebook oder Skript zu laden, muss zunächst der Pfad zum Projektverzeichnis bekannt gemacht werden:
+*   **`lib/`**: The core Python library for this project.
+    *   `util.py`: Helper functions for loading and cleaning data.
+    *   `plotting_style.py`: Central plotting configuration (Tübingen Corporate Design).
+    *   `iaaf_points/`: Logic and data for calculating IAAF performance scores.
+*   **`data_csv/`**: Processed data files (e.g., `final_Data_iaaf_scores_neu.csv`).
+*   **`Data_pdf/`**: Raw source PDF files (DLV Bestenlisten).
+*   **`Plots/`**: Destination folder where `plt.savefig()` saves figures.
+*   **`report/`**: LaTeX source for the final report.
+
+---
+
+## Usage Guide (Coding Standards)
+
+This project is configured as a Python package. This means you can import `lib` from **any notebook** in any folder without messing with system paths (`sys.path.append` is no longer needed!).
+
+### 1. Imports
+Always use this standard import block:
 
 ```python
-import sys
-import os
-# Füge das Root-Verzeichnis zum Pfad hinzu (je nach Tiefe der Ordnerstruktur anpassen, z.B. "../../")
-sys.path.append(os.path.abspath("../.."))
+import pandas as pd
+import numpy as np
 
-import util
+# Project-specific imports
+from lib import util
+from lib import plotting_style as plt
+from lib.iaaf_points import score_calculator
+```
 
-# Laden der gefilterten Daten (Standard)
-# Enthält nur geförderte Disziplinen und Altersklassen (U18, U20, U23, Erwachsene)
+### 2. Loading Data
+Use `util.load_data()` to get the cleaned dataframe. It handles type conversions (time strings to seconds) automatically.
+
+```python
+# Load standard dataset (filtered for relevant age groups/disciplines)
 df = util.load_data()
 
-# Laden aller Daten (ohne Filter)
+# Load raw dataset (no filters)
 df_all = util.load_data(filter=False)
-
-# Laden inkl. jüngerer Jahrgänge (wenn im Filter implementiert, z.B. 14, 16)
-df_youth = util.load_data(youth=True)
 ```
 
-Die Filterlogik basiert auf den Definitionen für geförderte Disziplinen (Sprint, Lauf, Wurf, Sprung, Mehrkampf) pro Altersklasse.
-
-## Plotting (`plotting/plotting_style.py`)
-
-Für einheitliche und publikationsreife Grafiken wird ein eigenes Plotting-Modul verwendet, das auf `matplotlib` und `tueplots` basiert.
-
-### Einrichtung
-
-Importiere das Modul wie folgt. Es ist wichtig, `matplotlib.pyplot` **nicht** separat zu importieren (oder den Import danach zu platzieren), damit die Einstellungen übernommen werden.
+### 3. Plotting
+We use a custom wrapper around `matplotlib` to ensure all plots look consistent (ICML paper style).
 
 ```python
-import plotting.plotting_style as plt
-from plotting.plotting_style import rgb # Für Farben im Tübinger Design
+# Create a plot
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_title("My Analysis")
+
+# Save the plot
+# This AUTOMATICALLY saves to the project's 'Plots/' folder.
+# You can specify a sub-category folder.
+plt.savefig("my_figure_name", category="Exploration") 
+# Result: saved to -> Plots/Exploration/my_figure_name.pdf
 ```
 
-### Verwendung
+### 4. Calculating IAAF Points
+You can calculate points for any performance using the `iaaf_points` module.
 
-Das Modul verhält sich weitgehend wie `matplotlib.pyplot`.
+```python
+# 1. Load the scoring coefficients
+coeffs = score_calculator.get_iaaf_coeffs()
 
-**Wichtige Funktionen:**
+# 2. Calculate points (e.g., Men's 100m, 9.58 seconds)
+points = score_calculator.score_from_mark("men", "100m", 9.58, coeffs)
+print(points)  # Output: ~1374
+```
 
-- **Automatische Styles:** Das Layout (Schriftarten, Größen, Raster) ist automatisch für wissenschaftliche Paper (ICML-Style) konfiguriert.
-- **Speichern (`savefig`):**
-  Die Funktion `plt.savefig("dateiname")` speichert Grafiken **automatisch** in den zentralen Ordner `Plots/` im Hauptverzeichnis des Projekts. Man muss sich also keine Gedanken über relative Pfade machen.
-
-  Optional kann eine Kategorie angegeben werden, um Unterordner zu erstellen:
-
-  ```python
-  plt.savefig("mein_plot", category="Analyse_X")
-  # Speichert unter: Projekt_Root/Plots/Analyse_X/mein_plot.pdf
-  ```
-
-- **Plot-Größe anpassen:**
-  Falls Elemente überlappen, kann die Plotgröße temporär skaliert werden (Werte zwischen 1.0 bis 2.0 funktionieren ganz gut):
-  ```python
-  with plt.rc_context(plt.increase_figsize(1.5)):
-      plt.plot(x, y)
-      plt.title("Größerer Plot")
-      plt.savefig("large_plot.pdf")
-  ```
-
-Weitere Details finden sich in `plotting/plotting.md`.
+## Troubleshooting
+*   **LaTeX Errors:** The plotting style uses LaTeX for professional fonts. If you get errors about missing latex, the code tries to fallback to standard fonts. To get the best results, ensure a TeX distribution (TeX Live, MacTeX, or MiKTeX) is installed and on your system PATH.

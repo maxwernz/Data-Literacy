@@ -202,7 +202,7 @@ def set_wind(value):
         return None
 
 
-_PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 _DATA_DIR = os.path.join(_PROJECT_ROOT, "data_csv")
 
 def load_data(path_file=os.path.join(_DATA_DIR, "final_Data_iaaf_scores_neu_v3.csv"), filter=True, youth=False):
