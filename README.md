@@ -7,7 +7,7 @@ This project analyzes German athletics performance data (DLV Bestenlisten) to in
 
 We use **`uv`** for dependency management and project isolation. 
 
-1.  **Install `uv`**: Follow the instructions at [astral.sh/uv](https://astral.sh/uv).
+1.  **Install `uv`**: Follow the instructions at [here](https://docs.astral.sh/uv/getting-started/installation/).
 2.  **Setup the Project**: Open your terminal in the project folder and run:
     ```bash
     uv sync
@@ -17,11 +17,6 @@ We use **`uv`** for dependency management and project isolation.
     ```bash
     uv run check_setup.py
     ```
-4.  **Run Jupyter**:
-    ```bash
-    uv run jupyter notebook
-    ```
-
 ---
 
 ## Directory Structure
@@ -37,25 +32,18 @@ We use **`uv`** for dependency management and project isolation.
 
 ---
 
-## Usage Guide (Coding Standards)
-
-This project is configured as a Python package. You can import `lib` from **any notebook** or script within the project without modifying system paths.
+## Usage Guide
 
 ### 1. Imports
 Always use this standard import block:
 
 ```python
-import pandas as pd
-import numpy as np
-
-# Project-specific imports
 from lib import util
 from lib import plotting_style as plt
-from lib.iaaf_points import score_calculator
 ```
 
 ### 2. Loading Data
-Use `util.load_data()` to get the cleaned dataframe. It handles type conversions (e.g., time strings to seconds) automatically.
+Use `util.load_data()` to get the cleaned dataframe.
 
 ```python
 # Load standard dataset (filtered for relevant age groups/disciplines)
@@ -66,7 +54,7 @@ df_all = util.load_data(filter=False)
 ```
 
 ### 3. Plotting
-We use a custom wrapper around `matplotlib` to ensure all plots look consistent (ICML paper style).
+We use a custom wrapper around `matplotlib` to ensure all plots look consistent (ICML paper style). Therefore dont use `import matplotlib.pyplot as plt` for plotting.
 
 ```python
 # Create a plot
