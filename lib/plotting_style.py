@@ -52,13 +52,15 @@ def increase_figsize(factor: float):
             "axes.titlesize": axes_titlesize
             }
 
-def set_column(column="half"):
+def set_column(column="half", nrows=1, cols=1):
     if column == "half":
-        _plt.rcParams.update(bundles.icml2024(column="half"))
+        _plt.rcParams.update(bundles.icml2024(column="half", nrows=nrows, ncols=cols))
     elif column == "full":
-        _plt.rcParams.update(bundles.icml2024(column="full"))
+        _plt.rcParams.update(bundles.icml2024(column="full", nrows=nrows, ncols=cols))
     else:
         raise ValueError("Column must be 'half' or 'full'")
+    
+    ensure_latex_on_path()
 
 # Project root is one level up from the 'lib' directory
 _PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
