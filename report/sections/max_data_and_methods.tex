@@ -1,5 +1,3 @@
-\subsection{IAAF Score}
-
 To facilitate comparisons across events (e.g., 100m sprint vs. javelin throw), performances were transformed using World Athletics scoring tables (IAAF scores) \citep{WorldAthleticsTechnical}.
 The IAAF scores are a standardization metric maps performance marks onto a common point scale.
 They are released annually by World Athletics as tables in PDF files, but unfortunately there is no public formula to calculate the scores directly from performance marks.
@@ -8,25 +6,16 @@ He parsed the PDF files of the scoring tables and fitted a quadratic function to
 We implemented his formulas in our data processing pipeline to convert all performance marks into World Athletics points for comparability across disciplines.
 In the following, all our calculations and analyses are based on these IAAF scores.
 
-\subsection{Data Preparation for Analysis}
-
 To ensure a robust and representative sample for all statistical evaluations, the dataset included the top 35 national performances in each group and year. This threshold ensures that there is enough data for all groups. 
 A "Group" is defined as the combination of Gender x Age group x Discipline, maintaining consistency with the original leaderboards.
 The study focuses on the U18, U20, and Adult age groups, as these represent the most relevant categories, since these age groups compete at international world level championships. 
 To allow for cross-disciplinary comparison, four discipline groups were defined based on current team selection criteria \citep{DLVKaderbildungsrichtlinienUndNormen2025}: sprints, runs, throws, and jumps. 
 
-\subsection{Statistical Analysis}
-
 Throughout this study, comparisons between time periods are reported as the relative percentage change. 
 This value represents the percentage difference between the end and start periods, normalized to the start period. 
-When assessing performance levels, a positive value indicates an improvement in performance, while a negative value represents a decline.
-In contrast for examine the performance spread, a positive value indicates an increase widening gap, whereas a negative value indicates a shift toward a more homogenous field.
-To assess general shifts in performance, we utilize the relative percentage change between two medians of two time period pools. 
-The median represents the typical performance level and is more robust against outliers compared to the mean and it doenst assume normal distribution which is not given in our data.
-Statistical significance is tested using the Mann-Whitney U test, which allows for a comparison of the periods without assuming a normal distribution.
-To evaluate the performance spread, we utilize the relative percentage change between a defined analysis-specific performace spread measurment of two time period pools. 
-Statistical significance was determined using bootstrap resampling with B = 10,000 iterations. This is a non-parametric method and is well-suited for the small sample size (N = 12) in our case. 
-By drawing with replacement from the performance pools, we generated a distribution of the differences in performance gaps to calculate the 95\% confidence interval (CI). 
-If the CI contains zero, the null hypothesis that the performance density does not change significantly cannot be rejected.
-
+For performance levels, a positive value indicates improvement. For performance spread, a positive value indicates a widening gap.
+General performance shifts are assessed based on the relative change between the medians. These are selected for their robustness against outliers and the non-normal distribution of the data. 
+Statistical significance is determined using the Mann-Whitney U test.
+To quantify the performance distribution, we analyze the relative change of a specific measure of performance variance. Significance is determined using bootstrap resampling (B = 10,000), which is optimal for our small sample size (N = 12). 
+We calculated 95\% confidence intervals (CIs) for the differences in performance variance. An CI containing zero indicates no significant change in performance density.
 

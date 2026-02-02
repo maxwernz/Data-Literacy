@@ -7,20 +7,8 @@ import plotly.graph_objects as go
 import numpy as np
 from pathlib import Path
 
-# Add project root to path to allow imports from util
-current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(current_dir)
-
-# Add max/iaaf_points to path to import score_calculator
-iaaf_points_dir = os.path.join(current_dir, "max", "iaaf_points")
-sys.path.append(iaaf_points_dir)
-
-import util
-try:
-    import score_calculator
-except ImportError:
-    st.warning("Could not import score_calculator. Ensure 'max/iaaf_points/score_calculator.py' exists.")
-    score_calculator = None
+import lib.util as util
+from lib.iaaf_points import score_calculator
 
 # Page Config
 st.set_page_config(
@@ -514,7 +502,12 @@ with tab_calc:
                 # Better: Use the raw CSV discipline names that map to the calculator's keys
                 valid_csv_disciplines = sorted(score_calculator.DISCIPLINE_TO_EVENT.keys())
                 
-                disc_input = st.selectbox("Discipline", valid_csv_disciplines)
+                # make 100 m default if available
+                if "100 m" in valid_csv_disciplines:
+                    default_disc = "100 m"
+                else:
+                    default_disc = valid_csv_disciplines[0] if valid_csv_disciplines else None
+                disc_input = st.selectbox("Discipline", valid_csv_disciplines, index=valid_csv_disciplines.index(default_disc) if default_disc in valid_csv_disciplines else 0)
                 
                 # Determine unit hint
                 event_code = score_calculator.DISCIPLINE_TO_EVENT[disc_input]
