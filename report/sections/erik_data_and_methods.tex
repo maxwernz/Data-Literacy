@@ -1,11 +1,6 @@
-The data were retrieved from the official archive by the Deutscher Leichtathletik-Verband (DLV), which documents the top performances across the major athletic disciplines 
-(including running events, hurdles and steeplechase, jumping events, throwing events, and combined events) from 2001 to 2025. The archive covers performances across gender 
-(male, female) and age groups (under 14 up to open class). 
+\subsection{Data Acquisition and Standardization}
+The data were retrieved from the official archive of the DLV, documenting top performances by German athletes in national and international competitions across major athletic disciplines (running, hurdles and steeplechase, jumping, throwing, and combined events) from 2001 to 2025. Performances are classified by sex (male, female) and age group (under 14 to open class).
 
-As the data for each year, age group, and gender are stored in separate PDF files, we used \textit{pdfplumber} in combination with specific regular expressions to handle 
-formatting differences over years. Outliers due to entry inconsistencies in the original files (e.g., irregular time formats) were corrected when the intended values could 
-be inferred from external sources. Minor data gaps resulting from parsing errors were manually completed by referencing the original PDF files. Non-recurrent distances 
-(e.g., [3000 m steeplechase and] 7.5 km events in selected youth categories) were excluded, yielding a final dataset of 226,683 entries.
+Data were extracted from various PDF files using regular expressions to handle formatting variations across years. Outliers and entry inconsistencies (e.g., irregular time formats) were corrected via external sources where possible. Minor data gaps from parsing errors were manually completed by referencing the original files. Non-recurrent distances (e.g., 7.5 km youth events) were excluded, resulting in a final dataset of 238,187 entries.
 
-We standardized discipline names, birth years and converted performance marks into numeric values (seconds for track events and meters for field events) to allow statistical 
-analyses. To facilitate comparisons across events, performances were transformed using World Athletics scoring tables, which express results on a common point scale.
+We standardized discipline names, birth years and converted performance marks into numeric values (seconds for track events and meters for field events) to allow statistical analyses. 
