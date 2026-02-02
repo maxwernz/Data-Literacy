@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-literacy-project"
+version = "0.1.0"
+description = "Analysis of German athletics performance data"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "tueplots",
+    "pdfplumber",
+    "jupyter",
+    "notebook",
+    "scikit-learn",
+    "plotly",
+    "streamlit",
+    "seaborn",
+    "statsmodels"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lib*"]
+
+[tool.setuptools.package-data]
+lib = ["*.json", "*.csv", "iaaf_points/*.json", "iaaf_points/*.csv"]

@@ -112,13 +112,14 @@ def score_from_mark(gender, event, mark, coeffs, cutoff='larger', func=None):
 
 
 if __name__ == "__main__":
+    base_path = Path(__file__).resolve().parent
 
-    with open("max/iaaf_points/IAAF_2025.json") as f:
+    with open(base_path / "IAAF_2025.json") as f:
         points_data = json.load(f)
 
-    with open("max/iaaf_points/IAAF_Coefficients_2025.json") as f:
+    with open(base_path / "IAAF_Coefficients_2025.json") as f:
         coeffs = json.load(f)
 
     example_mark = 40
-    pts = score_from_mark("women", "TJ", example_mark, coeffs, cutoff='smaller')
+    pts = score_from_mark("women", "TJ", example_mark, coeffs)
     print(f"TJ {example_mark} -> {pts} Punkte")
