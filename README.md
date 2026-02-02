@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="assets/github_banner.png" width="800" alt="Project Banner">
+</p>
+
 # Data Literacy Project - Athletics Data Analysis
 
 ## Project Overview
