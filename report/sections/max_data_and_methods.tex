@@ -1,7 +1,13 @@
-To facilitate comparisons across events (e.g., 100m sprint vs. javelin throw), performances were transformed using World Athletics scoring tables (IAAF scores).
+To facilitate comparisons across events (e.g., 100m sprint vs. javelin throw), performances were transformed using World Athletics scoring tables (IAAF scores) \citep{WorldAthleticsTechnical}.
 The IAAF scores are a standardization metric maps performance marks onto a common point scale.
 They are released annually by World Athletics as tables in PDF files, but unfortunately there is no public formula to calculate the scores directly from performance marks.
 However, some people have tried to reverse engineer the formulas for the scoring tables. The one that we use, originates from a blog post by Jeff Chen~\citep{chen_iaaf}.
 He parsed the PDF files of the scoring tables and fitted a quadratic function to the data points to get an approximate formula with coefficients for each discipline.
 We implemented his formulas in our data processing pipeline to convert all performance marks into World Athletics points for comparability across disciplines.
 In the following, all our calculations and analyses are based on these IAAF scores.
+
+
+To ensure a robust and representative sample for all statistical evaluations, the dataset included the top 35 national performances in each group and year. This threshold ensures that there is enough data for all groups. 
+A "Group" is defined as the combination of Gender x Age group x Discipline, maintaining consistency with the original leaderboards.
+The study focuses on the U18, U20, and Adult age groups, as these represent the most relevant categories, since these age groups compete at international world level championships. 
+To allow for cross-disciplinary comparison, four discipline groups were defined based on current team selection criteria \citep{DLVKaderbildungsrichtlinienUndNormen2025}: sprints, runs, throws, and jumps. 

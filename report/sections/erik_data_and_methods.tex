@@ -1,7 +1,7 @@
 \subsection{Data Acquisition and Standardization}           
  
 The data were retrieved from the official archive by the Deutscher Leichtathletik-Verband (DLV), which documents the top performances across the major athletic disciplines (including running 
-events, hurdles and steeplechase, jumping events, throwing events, and combined events) from 2001 to 2025. The archive covers performances across gender (male, female) and age groups (under 14 up to adults). 
+events, hurdles and steeplechase, jumping events, throwing events, and combined events) from 2001 to 2025. The archive covers performances across gender (male, female) and age groups (age 14 up to adults). 
 
 As the data for each year, age group, and gender are stored in separate PDF files, we used \textit{pdfplumber} in combination with specific regular expressions to handle formatting differences 
 over years. Outliers due to entry inconsistencies in the original files (e.g., irregular time formats) were corrected when the intended values could be inferred from external sources. Minor data 
