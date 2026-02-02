@@ -93,7 +93,7 @@ coeffs = score_calculator.get_iaaf_coeffs()
 
 # 2. Calculate points (e.g., Men's 100m, 9.58 seconds)
 points = score_calculator.score_from_mark("men", "100m", 9.58, coeffs)
-print(points)  # Output: ~1374
+print(points)  # Output: ~1356
 ```
 
 ## Troubleshooting
