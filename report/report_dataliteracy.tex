@@ -3,6 +3,8 @@
 
 \documentclass{article}
 
+\usepackage[ngerman, english]{babel}
+
 % Recommended, but optional, packages for figures and better typesetting:
 \usepackage{microtype}
 \usepackage{graphicx}
@@ -35,11 +37,12 @@
 % If your build breaks (sometimes temporarily if a hyperlink spans a page)
 % please comment out the following usepackage line and replace
 % \usepackage{icml2023} with \usepackage[nohyperref]{icml2023} above.
-\usepackage{hyperref}
+
 
 
 % Attempt to make hyperref and algorithmic work together better:
 \newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage{hyperref}
 
 \usepackage[accepted]{icml2025}
 
@@ -56,6 +59,9 @@
 %    and comment out the line below the next line to turn off comments
 %\usepackage[disable,textsize=tiny]{todonotes}
 \usepackage[textsize=tiny]{todonotes}
+\usepackage{xurl}
+
+\raggedbottom
 
 
 % The \icmltitle you define below is probably too long as a header.
@@ -157,12 +163,13 @@
 \newpage
 
 \section*{Contribution Statement}
-The authors confirm their contributions to this work as follows: Maximilian Wernz performed data parsing, visualization, and Git repository management. Mattis Dietrich conducted the performance gap analysis.
-Luca Bouché performed the analysis of the impact of the COVID-19 pandemic. Eric Müller performed manual data cleaning.
-All authors conducted exploratory data analysis and contributed equally to the report.
+All authors jointly developed the research idea and collaborated closely throughout the project. Maximilian Wernz mainly contributed to data preparation, visualization, and repository management. Erik Müller contributed to data preparation and writing. Mattis Dietrich focused on the performance gap analyses, while Luca Bouché concentrated on the analysis of the COVID-19 pandemic.
 
+% Forces references to align left, removing ugly gaps
+{\raggedright
 \bibliography{bibliography}
 \bibliographystyle{icml2025}
+}
 
 \end{document}
 
