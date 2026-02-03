@@ -8,7 +8,7 @@
     </a>
 </p>
 
-# Data Literacy Project - Athletics Data Analysis
+# Faster, Higher, Further Apart: Breakdown of the Top Rankings in German Athletics Over the Last 25 Years
 
 ## Project Overview
 

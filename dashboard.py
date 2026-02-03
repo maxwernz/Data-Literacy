@@ -12,7 +12,7 @@ from lib.iaaf_points import score_calculator
 
 # Page Config
 st.set_page_config(
-    page_title="DLV Athletics Data Explorer",
+    page_title="Faster, Higher, Further Apart: Breakdown of the Top Rankings in German Athletics Over the Last 25 Years",
     page_icon="🏃",
     layout="wide"
 )
