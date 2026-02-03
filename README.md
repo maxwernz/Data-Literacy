@@ -39,6 +39,7 @@ We use **`uv`** for dependency management and project isolation.
   - `util.py`: Helper functions for loading and cleaning data.
   - `plotting_style.py`: Central plotting configuration (Tübingen Corporate Design).
   - `iaaf_points/`: Logic and data for calculating IAAF performance scores.
+- **`notebooks/`**: Jupyter notebooks containing the main analysis pipelines.
 - **`data_csv/`**: Processed data files (e.g., `final_Data_iaaf_scores_neu.csv`).
 - **`Data_pdf/`**: Raw source PDF files (DLV Bestenlisten).
 - **`Plots/`**: Destination folder where `plt.savefig()` saves figures.
